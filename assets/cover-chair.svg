@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <rect width="800" height="800" fill="#f25b2a"/>
+  <circle cx="610" cy="160" r="110" fill="#ffd533"/>
+  <path d="M220 250h335v255H220z" fill="#126c55"/>
+  <path d="M185 510h410v55H185zM220 565l-48 185h55l56-185zm335 0l48 185h-55l-56-185z" fill="#183b31"/>
+  <path d="M250 285h275v185H250z" fill="#24a578"/>
+  <text x="42" y="75" fill="#171714" font-family="Arial" font-size="36" font-weight="700">OBJECT / AFTERLIFE</text>
+</svg>

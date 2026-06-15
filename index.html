@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="application-version" content="0.2.0" />
+    <meta
+      name="description"
+      content="三号设计周刊网页原型，以报刊式编辑结构呈现一周设计观察。"
+    />
+    <title>三号设计周刊 · Vol.23</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="newspaper">
+      <header class="masthead">
+        <div class="masthead__kicker">
+          <span>NO. 03 EDITORIAL OFFICE</span>
+          <span>DESIGN / BRAND / CULTURE</span>
+        </div>
+
+        <a class="masthead__brand" href="#" aria-label="三号设计周刊首页">
+          <span class="masthead__title" aria-hidden="true">
+            <span>三</span>
+            <span>号</span>
+            <span>设</span>
+            <span>计</span>
+            <span>周</span>
+            <span>刊</span>
+          </span>
+        </a>
+
+        <div class="issue-bar">
+          <label class="issue-control">
+            <span>2026</span>
+            <select id="issue-select" aria-label="选择周刊期数">
+              <option value="23" selected>Vol.23（最新）</option>
+              <option value="22">Vol.22</option>
+            </select>
+          </label>
+          <p>资讯 · 工具 · 阅读 · UX Bites</p>
+          <time data-date datetime="2026-06-08">2026 年 6 月 8 日 / 星期一</time>
+        </div>
+      </header>
+
+      <section class="edition-intro" aria-labelledby="edition-title">
+        <p class="section-label">THIS WEEK'S EDIT</p>
+        <div>
+          <p class="edition-intro__meta">
+            <span data-issue>ISSUE 023</span>
+            <span data-range>06.01—06.07</span>
+          </p>
+          <h1 id="edition-title" data-headline>
+            碎片带来灵感，<br />整理形成认知，连接构成体系。
+          </h1>
+        </div>
+        <p class="edition-intro__note" data-note>
+          本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。
+        </p>
+      </section>
+
+      <section
+        class="lead-layout"
+        id="lead-layout"
+        aria-label="本期头条"
+      ></section>
+
+      <section
+        class="story-grid"
+        id="story-grid"
+        aria-label="本期精选"
+      ></section>
+
+      <footer class="footer">
+        <form class="subscribe-form">
+          <label for="email">订阅下一期</label>
+          <div>
+            <input id="email" type="email" placeholder="your@email.com" />
+            <button type="submit">订阅 ↗</button>
+          </div>
+          <p class="subscribe-form__privacy">
+            邮箱仅用于周刊更新通知，不公开、不出售，可随时退订。
+          </p>
+        </form>
+        <div class="footer__statement">
+          <p class="section-label">SANHAO DESIGN WEEKLY</p>
+          <h2>每周三件事：观察、筛选、重新连接。</h2>
+        </div>
+        <p class="footer__status" id="issue-status" aria-live="polite">
+          当前展示 Vol.23 · 2026.06.01—06.07
+        </p>
+      </footer>
+
+      <section class="community-panel" aria-labelledby="community-title">
+        <div class="community-panel__intro">
+          <p class="section-label">STAY CONNECTED</p>
+          <h2 id="community-title">继续和三号设计周刊保持联系</h2>
+          <p>获取每周更新，也欢迎加入读者群交流设计观察与实践。</p>
+        </div>
+
+        <div class="community-grid">
+              <figure class="community-card">
+                <div class="community-card__image">
+                  <img
+                    src="./assets/qr-official-account-code.png?v=2"
+                    alt="三号设计情报站公众号二维码"
+                  />
+                </div>
+            <figcaption>
+              <span>01 / OFFICIAL ACCOUNT</span>
+              <strong>关注公众号</strong>
+              <p>长按或使用微信扫码，接收周刊更新。</p>
+            </figcaption>
+          </figure>
+
+          <figure class="community-card community-card--dark">
+            <div class="community-card__image">
+              <img
+                src="./assets/qr-wechat-personal.png?v=2"
+                alt="张老三个人微信二维码，扫码发送设计交流即可入群"
+              />
+            </div>
+            <figcaption>
+              <span>02 / READER COMMUNITY</span>
+              <strong>扫码加入交流群</strong>
+              <p>扫码添加微信，发送【设计交流】即可入群。</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="reaction-panel" aria-label="为本期周刊点赞">
+        <div class="toast" role="status" aria-live="polite" aria-atomic="true">
+          <span class="toast__check" aria-hidden="true">✓</span>
+          <span data-toast-message>谢谢你的点赞！</span>
+        </div>
+
+        <button
+          class="reaction-button"
+          type="button"
+          aria-pressed="false"
+          aria-describedby="like-count"
+        >
+          <span class="reaction-button__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img">
+              <path
+                d="M12 20.7 3.8 13A5.2 5.2 0 0 1 11.1 5.6l.9.9.9-.9A5.2 5.2 0 0 1 20.2 13Z"
+              />
+            </svg>
+            <i></i>
+            <i></i>
+            <i></i>
+          </span>
+          <span class="reaction-button__copy">
+            <strong>给本期点个赞</strong>
+            <span id="like-count" data-like-label>已有23人觉得赞</span>
+          </span>
+        </button>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="motion" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff4b78"/>
+      <stop offset=".52" stop-color="#7147d9"/>
+      <stop offset="1" stop-color="#1d67ef"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="#171714"/>
+  <path d="M-80 570C130 120 350 140 500 430s370 300 770-120v490H-80z" fill="url(#motion)"/>
+  <path d="M-40 430C180 30 390 100 535 345s360 250 720-110" fill="none" stroke="#f2efe7" stroke-width="28"/>
+  <circle cx="286" cy="225" r="55" fill="#ffc934"/>
+  <text x="70" y="100" fill="#f2efe7" font-family="Arial" font-size="48" font-weight="900" letter-spacing="7">SLOW MOTION</text>
+</svg>

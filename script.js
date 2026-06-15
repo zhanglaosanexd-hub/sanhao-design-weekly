@@ -1,0 +1,437 @@
+const issues = {
+  23: {
+    issue: "ISSUE 023",
+    range: "06.01—06.07",
+    date: "2026 年 6 月 8 日 / 星期一",
+    datetime: "2026-06-08",
+    likes: 23,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source:
+      "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/gal1yi8v5lryn1bn?singleDoc",
+    lead: {
+      category: "01 / 业界动态",
+      meta: "AI NATIVE DESIGN",
+      title: "腾讯设计发布两款 AI 设计智能体：Ardot 与 Miora",
+      description:
+        "Ardot 聚焦企业级产研设协作，Miora 面向创意设计场景。AI 正从辅助工具逐步演变为设计流程中的核心生产力。",
+      image: "./assets/vol23-tencent.png",
+      alt: "腾讯 AI 开FUN夜与 Miora、Ardot 产品发布画面",
+      url: "https://ardot.tencent.com",
+    },
+    briefing: [
+      {
+        title: "Figma 新增 Check Designs 设计检查功能",
+        tag: "设计工具",
+        url: "https://www.figma.com/release-notes/?title=check-designs-catch-whats-off-ship-whats-right",
+      },
+      {
+        title: "苹果 WWDC 2026 预告 AI 将成为核心主题",
+        tag: "AI 资讯",
+        url: "https://economictimes.indiatimes.com/news/new-updates/apple-wwdc-2026-ios-27-a-smarter-siri-and-new-ai-features-expected/articleshow/131566174.cms?from=mdr",
+      },
+      {
+        title: "QoderWork CN 推出 AI 生产力计划",
+        tag: "产品推荐",
+        url: "https://qoder.com.cn/referral?referral_code=zsNZa3XLSMV05E8eqPNyhl0ngqAR9p6S",
+      },
+      {
+        title: "Lucky Graphics 综合设计资源库",
+        tag: "设计素材",
+        url: "https://lucky.graphics/",
+      },
+    ],
+    quote:
+      "不用一味追随新工具和新事物，需要自己去感受、理解，然后再运用。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 业界动态",
+        meta: "DESIGN QA",
+        title: "Figma 新增 Check Designs 设计检查功能",
+        description:
+          "自动识别设计稿中的规范问题、组件异常与布局偏差，设计质量管理正在从人工 Review 转向系统化与自动化。",
+        image: "./assets/vol23-figma.png",
+        alt: "Figma Check Designs 设计检查功能界面",
+        url: "https://www.figma.com/release-notes/?title=check-designs-catch-whats-off-ship-whats-right",
+      },
+      {
+        category: "03 / AI 资讯",
+        meta: "WWDC 2026",
+        title: "Apple Intelligence 与 Siri 能力升级",
+        description:
+          "跨应用理解、任务执行与个人上下文感知，让 AI 从问答助手走向系统级智能助理。",
+        image: "./assets/vol23-wwdc.png",
+        alt: "WWDC 2026 预告视觉",
+        url: "https://economictimes.indiatimes.com/news/new-updates/apple-wwdc-2026-ios-27-a-smarter-siri-and-new-ai-features-expected/articleshow/131566174.cms?from=mdr",
+      },
+      {
+        category: "04 / AI 资讯",
+        meta: "AGENT FIRST",
+        title: "微软提出「Apps → Agents」新平台方向",
+        description:
+          "Project Solara 希望由 AI Agent 替代传统 App，成为用户与系统交互的主要入口。",
+        image: "./assets/vol23-solara.png",
+        alt: "微软 Project Solara 发布画面",
+        url: "https://timesofindia.indiatimes.com/technology/tech-news/build-2026-microsoft-unveils-project-solara-platform-for-ai-agent-devices/articleshow/131475343.cms",
+      },
+      {
+        type: "wide",
+        category: "05 / 产品推荐",
+        meta: "SCREENSHOT TO DESIGN",
+        title: "Refore：截图一键转换为设计稿",
+        description:
+          "适用于竞品分析与界面研究场景。Screenshot to Design 正在成为设计师值得持续关注的工具方向。",
+        image: "./assets/vol23-refore.png",
+        alt: "Refore Screenshot to Design 产品页面",
+        url: "https://reforeai.cn/screenshot-to-design",
+      },
+      {
+        type: "feature",
+        category: "06 / 设计细节",
+        meta: "PHYSICAL TOUCHPOINT",
+        title: "麦当劳把外卖小票变成了儿童节小游戏",
+        description:
+          "订单小票被赋予漫画剧情与迷宫玩法。体验设计不只存在于 App 和网页，也存在于用户接触品牌的每一个物理触点。",
+        image: "./assets/vol23-mcdonalds.png",
+        alt: "麦当劳儿童节迷宫主题互动小票",
+        url: "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/gal1yi8v5lryn1bn?singleDoc",
+      },
+    ],
+  },
+  22: {
+    issue: "ISSUE 022",
+    range: "05.25—05.31",
+    date: "2026 年 6 月 1 日 / 星期一",
+    datetime: "2026-06-01",
+    likes: 17,
+    headline: "从设计到构建，<br />工具之间的边界正在消失。",
+    note: "业界动态、AI 资讯、产品推荐与设计素材，共同构成三号设计周刊 Vol.22。",
+    source:
+      "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/uwyuq90npgquweg9?singleDoc",
+    lead: {
+      category: "01 / 业界动态",
+      meta: "MATERIAL 3",
+      title: "Gmail 图标基于 Material 3 色彩体系更新",
+      description:
+        "新图标引入 tonal color system，以更柔和的层级与光感统一 Google 产品视觉。品牌图标也在跟随设计系统持续演进。",
+      image: "./assets/vol22-gmail.png",
+      alt: "Gmail 图标与 Google Material 3 色彩更新",
+      url: "https://m3.material.io/",
+    },
+    briefing: [
+      {
+        title: "Figma Dev Mode 与 AI 工作流继续收敛",
+        tag: "业界动态",
+        url: "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/uwyuq90npgquweg9?singleDoc",
+      },
+      {
+        title: "Claude Opus 4.8 强化动态工作流",
+        tag: "AI 资讯",
+        url: "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/uwyuq90npgquweg9?singleDoc",
+      },
+      {
+        title: "Google 进军 AI 设计工具赛道",
+        tag: "AI 资讯",
+        url: "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/uwyuq90npgquweg9?singleDoc",
+      },
+      {
+        title: "Phosphor Icons 图标资源库",
+        tag: "设计素材",
+        url: "https://phosphoricons.com/",
+      },
+    ],
+    quote: "希望周刊对你有帮助。我是老三，我们下周一见。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 业界动态",
+        meta: "DESIGN TO BUILD",
+        title: "Figma：从设计到构建的链路继续缩短",
+        description:
+          "Dev Mode 与 AI 辅助能力持续优化，让设计文件逐步成为可直接用于工程实现的结构化资产。",
+        image: "./assets/vol22-figma.png",
+        alt: "Figma 从构思到交付的产品工作流",
+        url: "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/uwyuq90npgquweg9?singleDoc",
+      },
+      {
+        category: "03 / AI 资讯",
+        meta: "DYNAMIC WORKFLOWS",
+        title: "AI 开始进入动态工作流阶段",
+        description:
+          "模型能够根据任务自动规划步骤、调用工具并持续执行，复杂后台操作路径可能被 Agent 重新定义。",
+        image: "./assets/vol22-claude.png",
+        alt: "2026 年 5 月 AI 模型与 Claude Opus 4.8 数据图",
+        url: "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/uwyuq90npgquweg9?singleDoc",
+      },
+      {
+        category: "04 / AI 资讯",
+        meta: "GENERATIVE DESIGN",
+        title: "Google 推出 AI 设计产品 Pics",
+        description:
+          "通过自然语言生成海报、营销素材与社交媒体设计稿，并支持后续编辑和协作。",
+        image: "./assets/vol22-google-pics.png",
+        alt: "Google Pics AI 设计产品视觉",
+        url: "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/uwyuq90npgquweg9?singleDoc",
+      },
+      {
+        type: "wide",
+        category: "05 / 产品推荐",
+        meta: "SAAS DIRECTORY",
+        title: "Direct2App：筛选 AI 与 SaaS 产品",
+        description:
+          "一个聚合和筛选 AI 工具与 SaaS 产品的导航站，也是观察新产品定位与落地页设计的窗口。",
+        image: "./assets/vol22-direct2app.png",
+        alt: "Direct2App AI 与 SaaS 产品导航页面",
+        url: "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/uwyuq90npgquweg9?singleDoc",
+      },
+      {
+        type: "feature",
+        category: "06 / 设计素材",
+        meta: "DESIGN SYSTEM",
+        title: "Figma to DESIGN.md：把设计图层整理成结构化文档",
+        description:
+          "插件将选中的 Figma 图层或页面整理成 DESIGN.md 草稿，服务于 AI 辅助设计、页面生成与设计系统梳理。",
+        image: "./assets/vol22-design-md.png",
+        alt: "Figma to DESIGN.md 插件生成的设计系统文档",
+        url: "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/uwyuq90npgquweg9?singleDoc",
+      },
+    ],
+  },
+};
+
+const select = document.querySelector("#issue-select");
+const issueLabel = document.querySelector("[data-issue]");
+const rangeLabel = document.querySelector("[data-range]");
+const dateLabel = document.querySelector("[data-date]");
+const headline = document.querySelector("[data-headline]");
+const note = document.querySelector("[data-note]");
+const leadLayout = document.querySelector("#lead-layout");
+const storyGrid = document.querySelector("#story-grid");
+const status = document.querySelector("#issue-status");
+const subscribeForm = document.querySelector(".subscribe-form");
+const reactionButton = document.querySelector(".reaction-button");
+const likeLabel = document.querySelector("[data-like-label]");
+const toast = document.querySelector(".toast");
+const toastMessage = document.querySelector("[data-toast-message]");
+
+const externalLinkAttributes = 'target="_blank" rel="noreferrer"';
+let currentIssue = select?.value || "23";
+let toastTimer;
+
+function renderBriefing(items) {
+  return `
+    <aside class="briefing" aria-labelledby="briefing-title">
+      <div class="briefing__head">
+        <p class="section-label">SHORT SIGNALS</p>
+        <h2 id="briefing-title">本期速览</h2>
+      </div>
+      <ol class="briefing__list">
+        ${items
+          .map(
+            (item, index) => `
+              <li>
+                <a href="${item.url}" ${externalLinkAttributes}>
+                  <span>${String(index + 1).padStart(2, "0")}</span>
+                  <strong>${item.title}</strong>
+                  <time>${item.tag}</time>
+                </a>
+              </li>
+            `,
+          )
+          .join("")}
+      </ol>
+    </aside>
+  `;
+}
+
+function renderLead(lead) {
+  return `
+    <article class="story story--lead">
+      <a href="${lead.url}" class="story__link" ${externalLinkAttributes}>
+        <div class="story__media story__media--lead">
+          <img src="${lead.image}" alt="${lead.alt}" />
+        </div>
+        <div class="story__content">
+          <p class="story__eyebrow">
+            <span>${lead.category}</span>
+            <span>${lead.meta}</span>
+          </p>
+          <h2>${lead.title}</h2>
+          <p class="story__dek">${lead.description}</p>
+          <p class="story__byline">整理 / 张老三</p>
+        </div>
+      </a>
+    </article>
+  `;
+}
+
+function renderStory(story) {
+  const typeClass = story.type ? ` story--${story.type}` : "";
+  const media = `
+    <div class="story__media">
+      <img src="${story.image}" alt="${story.alt}" />
+    </div>
+  `;
+  const content = `
+    <div class="story__content">
+      <p class="story__eyebrow">
+        <span>${story.category}</span>
+        <span>${story.meta}</span>
+      </p>
+      <h3>${story.title}</h3>
+      <p>${story.description}</p>
+      ${story.type === "feature" ? '<span class="story__arrow" aria-hidden="true">↗</span>' : ""}
+    </div>
+  `;
+
+  return `
+    <article class="story${typeClass}">
+      <a href="${story.url}" class="story__link" ${externalLinkAttributes}>
+        ${story.type === "feature" ? `${content}${media}` : `${media}${content}`}
+      </a>
+    </article>
+  `;
+}
+
+function renderQuote(text, source) {
+  return `
+    <article class="story story--quote">
+      <a href="${source}" class="story__link" ${externalLinkAttributes}>
+        <p class="story__eyebrow">
+          <span>LAOSAN'S NOTE</span>
+          <span>老三碎碎念</span>
+        </p>
+        <blockquote>“${text}”</blockquote>
+        <span class="story__arrow" aria-hidden="true">↗</span>
+      </a>
+    </article>
+  `;
+}
+
+function renderIndex(issue) {
+  const topics = [...new Set(issue.briefing.map((item) => item.tag))].join(" · ");
+
+  return `
+    <article class="story story--index">
+      <p class="section-label">WEEKLY INDEX</p>
+      <h3>本期内容索引</h3>
+      <div class="weekly-index">
+        <div>
+          <strong>06</strong>
+          <span>篇精选内容</span>
+        </div>
+        <div>
+          <strong>04</strong>
+          <span>条短讯速览</span>
+        </div>
+        <div class="weekly-index__topics">
+          <span>覆盖主题</span>
+          <strong>${topics}</strong>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function renderSourceCard(issue, value) {
+  return `
+    <article class="story story--source-card">
+      <a href="${issue.source}" class="story__link" ${externalLinkAttributes}>
+        <p class="story__eyebrow">
+          <span>ORIGINAL EDITION</span>
+          <span>VOL.${value}</span>
+        </p>
+        <h3>阅读语雀完整原刊</h3>
+        <p>查看全部正文、原始链接与图片说明，保留本期周刊的完整阅读脉络。</p>
+        <span class="story__arrow" aria-hidden="true">↗</span>
+      </a>
+    </article>
+  `;
+}
+
+function getReactionState(value) {
+  const fallback = { liked: false, count: issues[value].likes };
+
+  try {
+    const saved = localStorage.getItem(`sanhao-weekly-like-${value}`);
+    return saved ? { ...fallback, ...JSON.parse(saved) } : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function saveReactionState(value, state) {
+  try {
+    localStorage.setItem(`sanhao-weekly-like-${value}`, JSON.stringify(state));
+  } catch {
+    // The interaction still works when storage is unavailable.
+  }
+}
+
+function renderReaction(value) {
+  const state = getReactionState(value);
+  reactionButton?.setAttribute("aria-pressed", String(state.liked));
+  if (likeLabel) {
+    likeLabel.textContent = `已有${state.count}人觉得赞`;
+  }
+}
+
+function showToast(message) {
+  if (!toast || !toastMessage) return;
+  window.clearTimeout(toastTimer);
+  toastMessage.textContent = message;
+  toast.classList.add("is-visible");
+  toastTimer = window.setTimeout(() => {
+    toast.classList.remove("is-visible");
+  }, 2200);
+}
+
+function renderIssue(value, announce = false) {
+  const issue = issues[value];
+  currentIssue = value;
+
+  issueLabel.textContent = issue.issue;
+  rangeLabel.textContent = issue.range;
+  dateLabel.textContent = issue.date;
+  dateLabel.dateTime = issue.datetime;
+  headline.innerHTML = issue.headline;
+  note.textContent = issue.note;
+  leadLayout.innerHTML = `${renderLead(issue.lead)}${renderBriefing(issue.briefing)}`;
+  storyGrid.innerHTML = [
+    renderStory(issue.stories[0]),
+    renderStory(issue.stories[1]),
+    renderStory(issue.stories[2]),
+    renderQuote(issue.quote, issue.source),
+    renderIndex(issue),
+    renderStory(issue.stories[3]),
+    renderSourceCard(issue, value),
+    renderStory(issue.stories[4]),
+  ].join("");
+  status.textContent = `${announce ? "已切换至" : "当前展示"} Vol.${value} · 2026.${issue.range}`;
+  document.title = `三号设计周刊 · Vol.${value}`;
+  renderReaction(value);
+}
+
+select?.addEventListener("change", (event) => {
+  renderIssue(event.target.value, true);
+});
+
+subscribeForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  status.textContent = "订阅入口目前为视觉原型，尚未连接邮件服务。";
+});
+
+reactionButton?.addEventListener("click", () => {
+  const state = getReactionState(currentIssue);
+  const nextState = {
+    liked: !state.liked,
+    count: Math.max(issues[currentIssue].likes, state.count + (state.liked ? -1 : 1)),
+  };
+
+  saveReactionState(currentIssue, nextState);
+  renderReaction(currentIssue);
+  showToast(nextState.liked ? "谢谢你的点赞！" : "已取消点赞");
+});
+
+renderIssue(select?.value || "23");

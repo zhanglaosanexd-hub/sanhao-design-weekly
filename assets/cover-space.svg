@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#2454d4"/>
+  <path d="M0 650L1200 420v380H0z" fill="#ffc82f"/>
+  <path d="M140 90h360v490H140z" fill="#f0ede3"/>
+  <path d="M200 150h240v430H200z" fill="#e84f30"/>
+  <path d="M670 120h350v410H670z" fill="#14224c"/>
+  <circle cx="845" cy="320" r="125" fill="#f0ede3"/>
+  <path d="M0 650l1200-230M500 580l170-460" stroke="#171714" stroke-width="10"/>
+  <text x="700" y="715" fill="#171714" font-family="Arial" font-size="52" font-weight="900">SPACE TELLS</text>
+</svg>
