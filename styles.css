@@ -607,10 +607,23 @@ img {
   outline: 0;
 }
 
+.subscribe-form__trap {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
 .subscribe-form button {
   color: var(--accent);
   font-weight: 800;
   cursor: pointer;
+}
+
+.subscribe-form button:disabled {
+  cursor: wait;
+  opacity: 0.55;
 }
 
 .subscribe-form__privacy {
@@ -618,6 +631,19 @@ img {
   color: var(--muted);
   font-size: 10px;
   line-height: 1.6;
+}
+
+.subscribe-form__message {
+  min-height: 18px;
+  margin: 8px 0 0;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.subscribe-form__message.is-error {
+  color: #a43422;
 }
 
 .footer__status {

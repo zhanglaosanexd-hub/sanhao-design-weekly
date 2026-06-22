@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="application-version" content="0.2.2" />
+    <meta name="application-version" content="0.3.0" />
     <meta
       name="description"
       content="三号设计周刊网页原型，以报刊式编辑结构呈现一周设计观察。"
@@ -97,15 +97,36 @@
       ></section>
 
       <footer class="footer">
-        <form class="subscribe-form">
+        <form class="subscribe-form" data-subscribe-endpoint="/api/subscribe">
           <label for="email">订阅下一期</label>
           <div>
-            <input id="email" type="email" placeholder="your@email.com" />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="your@email.com"
+              autocomplete="email"
+              required
+            />
+            <input
+              class="subscribe-form__trap"
+              name="website"
+              type="text"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+            />
             <button type="submit">订阅 ↗</button>
           </div>
           <p class="subscribe-form__privacy">
             邮箱仅用于周刊更新通知，不公开、不出售，可随时退订。
           </p>
+          <p
+            class="subscribe-form__message"
+            data-subscribe-message
+            role="status"
+            aria-live="polite"
+          ></p>
         </form>
         <div class="footer__statement">
           <p class="section-label">SANHAO DESIGN WEEKLY</p>

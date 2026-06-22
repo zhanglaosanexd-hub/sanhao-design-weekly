@@ -410,6 +410,9 @@ const leadLayout = document.querySelector("#lead-layout");
 const storyGrid = document.querySelector("#story-grid");
 const status = document.querySelector("#issue-status");
 const subscribeForm = document.querySelector(".subscribe-form");
+const subscribeInput = subscribeForm?.querySelector('input[name="email"]');
+const subscribeButton = subscribeForm?.querySelector('button[type="submit"]');
+const subscribeMessage = document.querySelector("[data-subscribe-message]");
 const reactionButton = document.querySelector(".reaction-button");
 const likeLabel = document.querySelector("[data-like-label]");
 const toast = document.querySelector(".toast");
@@ -619,8 +622,67 @@ select?.addEventListener("change", (event) => {
 
 subscribeForm?.addEventListener("submit", (event) => {
   event.preventDefault();
-  status.textContent = "订阅入口目前为视觉原型，尚未连接邮件服务。";
+  submitSubscription();
 });
+
+async function submitSubscription() {
+  if (!subscribeForm || !subscribeInput || !subscribeButton) return;
+
+  const formData = new FormData(subscribeForm);
+  const email = String(formData.get("email") || "").trim();
+  const website = String(formData.get("website") || "").trim();
+
+  if (website) {
+    setSubscribeMessage("订阅成功，下一期更新会发到这个邮箱。");
+    return;
+  }
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    setSubscribeMessage("请填写有效的邮箱地址。", true);
+    subscribeInput.focus();
+    return;
+  }
+
+  const endpoint = subscribeForm.dataset.subscribeEndpoint || "/api/subscribe";
+  const originalButtonText = subscribeButton.textContent;
+  subscribeButton.disabled = true;
+  subscribeButton.textContent = "提交中...";
+  setSubscribeMessage("");
+
+  try {
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        issue: currentIssue,
+        source: window.location.href,
+      }),
+    });
+    const result = await response.json().catch(() => ({}));
+
+    if (!response.ok || !result.ok) {
+      throw new Error(result.message || "订阅暂时没有成功，请稍后再试。");
+    }
+
+    subscribeForm.reset();
+    setSubscribeMessage(result.message || "订阅成功，下一期更新会发到这个邮箱。");
+    status.textContent = "订阅成功，邮箱已写入订阅列表。";
+  } catch (error) {
+    setSubscribeMessage(error.message, true);
+  } finally {
+    subscribeButton.disabled = false;
+    subscribeButton.textContent = originalButtonText;
+  }
+}
+
+function setSubscribeMessage(message, isError = false) {
+  if (!subscribeMessage) return;
+  subscribeMessage.textContent = message;
+  subscribeMessage.classList.toggle("is-error", Boolean(isError));
+}
 
 reactionButton?.addEventListener("click", () => {
   const state = getReactionState(currentIssue);
