@@ -1,7 +1,10 @@
 @font-face {
   font-family: "BiaoXiaoZhi WuJieHei";
-  src: url("./assets/fonts/biaoxiaozhi-wujiehei.ttf") format("truetype");
-  font-display: swap;
+  src:
+    local("BiaoXiaoZhiWuJieHei"),
+    local("BiaoXiaoZhi WuJieHei"),
+    url("./assets/fonts/biaoxiaozhi-wujiehei.ttf") format("truetype");
+  font-display: block;
   font-style: normal;
   font-weight: 400;
 }
@@ -89,6 +92,14 @@ img {
   line-height: 0.9;
   letter-spacing: 0;
   white-space: nowrap;
+}
+
+.masthead-font-loading .masthead__title {
+  opacity: 0;
+}
+
+.masthead-font-ready .masthead__title {
+  opacity: 1;
 }
 
 .masthead__title span:first-child {

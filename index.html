@@ -3,13 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="application-version" content="0.2.1" />
+    <meta name="application-version" content="0.2.2" />
     <meta
       name="description"
       content="三号设计周刊网页原型，以报刊式编辑结构呈现一周设计观察。"
     />
     <title>三号设计周刊 · Vol.25</title>
+    <script>
+      document.documentElement.classList.add("masthead-font-loading");
+    </script>
+    <link
+      rel="preload"
+      href="./assets/fonts/biaoxiaozhi-wujiehei.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
     <link rel="stylesheet" href="./styles.css" />
+    <script>
+      if ("fonts" in document && document.fonts.load) {
+        Promise.race([
+          document.fonts.load('1em "BiaoXiaoZhi WuJieHei"'),
+          new Promise((resolve) => window.setTimeout(resolve, 3500)),
+        ]).finally(() => {
+          document.documentElement.classList.remove("masthead-font-loading");
+          document.documentElement.classList.add("masthead-font-ready");
+        });
+      } else {
+        document.documentElement.classList.remove("masthead-font-loading");
+      }
+    </script>
   </head>
   <body>
     <main class="newspaper">
