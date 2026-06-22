@@ -1,4 +1,204 @@
 const issues = {
+  25: {
+    issue: "ISSUE 025",
+    range: "06.15—06.21",
+    date: "2026 年 6 月 22 日 / 星期一",
+    datetime: "2026-06-22",
+    likes: 25,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source:
+      "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/dwbpgsfpsuu9vfkg?singleDoc",
+    lead: {
+      category: "01 / 业界动态",
+      meta: "BRAND SYSTEM",
+      title: "KFC「Bucketverse」补足了品牌系统升级的细节",
+      description:
+        "JKR 将 KFC 标志性的炸鸡桶从包装符号升级为品牌系统核心资产。新系统把 3D Logo、桶形语言、字体与 Colonel 形象串成可延展的品牌系统。",
+      image: "./assets/vol25-kfc.png",
+      alt: "KFC Bucketverse 品牌系统升级视觉",
+      url: "https://www.jkrglobal.com/work/kfc",
+    },
+    briefing: [
+      {
+        title: "Figma Desktop Tab Groups 上线",
+        tag: "设计工具",
+        url: "https://mp.weixin.qq.com/s/dmuI61Yr5wv_ftNkcmtzzw",
+      },
+      {
+        title: "Figma MCP Server 扩展到 Slides、字体与 Xcode",
+        tag: "设计工具",
+        url: "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/dwbpgsfpsuu9vfkg?singleDoc",
+      },
+      {
+        title: "支付宝 AI 版开启内测，「阿宝」亮相",
+        tag: "AI 资讯",
+        url: "https://mp.weixin.qq.com/s/sP5rmaVeG8JuKGVfwKYmbw",
+      },
+      {
+        title: "Taste Lab 提取网站「设计 DNA」",
+        tag: "产品推荐",
+        url: "https://www.tastelab.xyz/",
+      },
+    ],
+    quote:
+      "AI Agent 不再只是读取设计稿，而开始参与演示文档、设计交付、字体还原以及开发协作流程。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 业界动态",
+        meta: "WORKFLOW TABS",
+        title: "Figma Desktop Tab Groups：工作流收纳依然是高频需求",
+        description:
+          "Figma 桌面端 Tab Groups 让多文件、多项目的设计工作流获得更清晰的收纳结构。AI 时代之前，基础整理仍然决定效率。",
+        image: "./assets/vol25-figma-tabs.png",
+        alt: "Figma Desktop Tab Groups 工作流界面",
+        url: "https://mp.weixin.qq.com/s/dmuI61Yr5wv_ftNkcmtzzw",
+      },
+      {
+        category: "03 / 业界动态",
+        meta: "MCP WORKFLOW",
+        title: "Figma MCP Server 扩展到 Slides、字体、资产导出与 Xcode",
+        description:
+          "Figma MCP Server 新增 Slides 创建更新、本地字体渲染、download_assets 导出以及 Xcode 工作流支持，设计上下文继续向交付和开发环境靠近。",
+        image: "./assets/vol25-figma-mcp.png",
+        alt: "Figma MCP Server 更新说明视觉",
+        url: "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/dwbpgsfpsuu9vfkg?singleDoc",
+      },
+      {
+        category: "04 / AI 资讯",
+        meta: "AI ASSISTANT",
+        title: "支付宝 AI 版开启内测，「阿宝」正式亮相",
+        description:
+          "支付宝 AI 版已支持搜索、问答与生活服务等场景，后续可能继续连接支付、出行、医疗等生态能力。",
+        image: "./assets/vol25-alipay-ai.png",
+        alt: "支付宝 AI 版阿宝助手界面",
+        url: "https://mp.weixin.qq.com/s/sP5rmaVeG8JuKGVfwKYmbw",
+      },
+      {
+        type: "wide",
+        category: "05 / 产品推荐",
+        meta: "DESIGN DNA",
+        title: "Taste Lab：提取任意网站的「设计 DNA」",
+        description:
+          "Taste Lab 尝试从网站中识别颜色、字体、布局和视觉风格，并服务于 Vibe Coding。效率提升之外，也带来参考、复制与同质化边界的讨论。",
+        image: "./assets/vol25-tastelab.png",
+        alt: "Taste Lab 网站设计 DNA 提取界面",
+        url: "https://www.tastelab.xyz/",
+      },
+      {
+        type: "feature",
+        category: "06 / 设计素材",
+        meta: "GAME REFERENCE",
+        title: "Game Maker’s Sketchbook 2026：游戏视觉参考集",
+        description:
+          "2026 Game Maker’s Sketchbook 收录游戏概念、环境、图标与 Storyboard 等优秀作品，可作为交互叙事和视觉氛围的参考库。",
+        image: "./assets/vol25-game-sketchbook.png",
+        alt: "Game Maker’s Sketchbook 2026 游戏视觉作品集",
+        url: "https://www.gamemakerssketchbook.com/",
+      },
+    ],
+  },
+  24: {
+    issue: "ISSUE 024",
+    range: "06.08—06.14",
+    date: "2026 年 6 月 15 日 / 星期一",
+    datetime: "2026-06-15",
+    likes: 24,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source:
+      "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/fyale84a4dp04r2d?singleDoc",
+    lead: {
+      category: "01 / 业界动态",
+      meta: "LOGO REFRESH",
+      title: "山姆新 LOGO，更蓝了",
+      description:
+        "新标识继续保留菱形结构，但蓝色更重、识别更直接。山姆的品牌更新更像一次资产整理：保留熟悉度，同时把零售品牌的视觉触点做得更醒目。",
+      image: "./assets/vol24-sams-club.png",
+      alt: "山姆会员店新 Logo 与品牌形象",
+      url: "https://www.logonews.cn/sams-club-new-logo.html",
+    },
+    briefing: [
+      {
+        title: "Apple 在 WWDC26 公布新一代系统与 Siri AI",
+        tag: "业界动态",
+        url: "https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/",
+      },
+      {
+        title: "Figma MCP Server 进入 Xcode",
+        tag: "设计工具",
+        url: "https://x.com/figma/status/2064120455808888873?s=20",
+      },
+      {
+        title: "Siri AI 转向屏幕理解与跨应用执行",
+        tag: "AI 资讯",
+        url: "https://www.apple.com/newsroom/2026/06/apple-introduces-siri-ai-a-profoundly-more-capable-and-personal-assistant/",
+      },
+      {
+        title: "CliperX 把剪贴板历史放进灵动岛",
+        tag: "产品推荐",
+        url: "https://cliperx.com/",
+      },
+    ],
+    quote:
+      "自从开始恢复办公，发现每周的内容素材越来越充实了，逐渐开始用减法来做筛选。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 业界动态",
+        meta: "WWDC 2026",
+        title: "Apple 公布新一代系统、Siri AI 与体验改进",
+        description:
+          "Apple 集中预览多端系统更新，并披露应用启动、照片加载和 AirDrop 等性能提升。系统 AI、跨应用动作与新交互框架被放进同一条产品叙事。",
+        image: "./assets/vol24-wwdc26.png",
+        alt: "Apple WWDC26 系统与 AI 更新视觉",
+        url: "https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/",
+      },
+      {
+        category: "03 / 业界动态",
+        meta: "DESIGN TO CODE",
+        title: "Figma MCP Server 进入 Xcode",
+        description:
+          "设计上下文继续靠近开发环境，AI 辅助开发不再只读取截图，而是开始理解组件、变量、资源与设计文件里的结构信息。",
+        image: "./assets/vol24-figma-mcp.png",
+        alt: "Figma MCP Server 进入 Xcode 的信息图",
+        url: "https://x.com/figma/status/2064120455808888873?s=20",
+      },
+      {
+        category: "04 / AI 资讯",
+        meta: "SYSTEM AI",
+        title: "Siri AI 转向屏幕理解、个人上下文与跨应用执行",
+        description:
+          "新的 Siri AI 叙事更强调屏幕理解、个人上下文与跨应用执行能力，系统级助手正在从问答入口转向行动入口。",
+        image: "./assets/vol24-siri-ai.png",
+        alt: "Siri AI 系统级能力升级视觉",
+        url: "https://www.apple.com/newsroom/2026/06/apple-introduces-siri-ai-a-profoundly-more-capable-and-personal-assistant/",
+      },
+      {
+        type: "wide",
+        category: "05 / 产品推荐",
+        meta: "CLIPBOARD FLOW",
+        title: "CliperX：把剪贴板历史放进灵动岛",
+        description:
+          "CliperX 是一款 macOS 剪贴板历史工具，可在灵动岛中快速查看和调用复制内容。小工具的价值，常常来自高频动作的摩擦减少。",
+        image: "./assets/vol24-cliperx.png",
+        alt: "CliperX 灵动岛剪贴板历史工具界面",
+        url: "https://cliperx.com/",
+      },
+      {
+        type: "feature",
+        category: "06 / 设计细节",
+        meta: "ICON DETAILS",
+        title: "WWDC26 后，Apple 系统图标发生了哪些微调",
+        description:
+          "系统图标的变化通常不是单点更新，而是围绕材质、光感、层级和跨端一致性的持续校准，值得作为设计细节观察样本。",
+        image: "./assets/vol24-apple-icons.png",
+        alt: "Apple 系统图标微调对比图",
+        url: "https://mp.weixin.qq.com/s/w_6b85Y2LDY4kMVec7Y3tQ",
+      },
+    ],
+  },
   23: {
     issue: "ISSUE 023",
     range: "06.01—06.07",
@@ -216,7 +416,7 @@ const toast = document.querySelector(".toast");
 const toastMessage = document.querySelector("[data-toast-message]");
 
 const externalLinkAttributes = 'target="_blank" rel="noreferrer"';
-let currentIssue = select?.value || "23";
+let currentIssue = select?.value || "25";
 let toastTimer;
 
 function renderBriefing(items) {
@@ -434,4 +634,4 @@ reactionButton?.addEventListener("click", () => {
   showToast(nextState.liked ? "谢谢你的点赞！" : "已取消点赞");
 });
 
-renderIssue(select?.value || "23");
+renderIssue(select?.value || "25");

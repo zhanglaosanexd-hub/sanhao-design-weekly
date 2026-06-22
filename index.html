@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="application-version" content="0.2.0" />
+    <meta name="application-version" content="0.2.1" />
     <meta
       name="description"
       content="三号设计周刊网页原型，以报刊式编辑结构呈现一周设计观察。"
     />
-    <title>三号设计周刊 · Vol.23</title>
+    <title>三号设计周刊 · Vol.25</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -34,12 +34,14 @@
           <label class="issue-control">
             <span>2026</span>
             <select id="issue-select" aria-label="选择周刊期数">
-              <option value="23" selected>Vol.23（最新）</option>
+              <option value="25" selected>Vol.25（最新）</option>
+              <option value="24">Vol.24</option>
+              <option value="23">Vol.23</option>
               <option value="22">Vol.22</option>
             </select>
           </label>
           <p>资讯 · 工具 · 阅读 · UX Bites</p>
-          <time data-date datetime="2026-06-08">2026 年 6 月 8 日 / 星期一</time>
+          <time data-date datetime="2026-06-22">2026 年 6 月 22 日 / 星期一</time>
         </div>
       </header>
 
@@ -47,8 +49,8 @@
         <p class="section-label">THIS WEEK'S EDIT</p>
         <div>
           <p class="edition-intro__meta">
-            <span data-issue>ISSUE 023</span>
-            <span data-range>06.01—06.07</span>
+            <span data-issue>ISSUE 025</span>
+            <span data-range>06.15—06.21</span>
           </p>
           <h1 id="edition-title" data-headline>
             碎片带来灵感，<br />整理形成认知，连接构成体系。
@@ -87,7 +89,7 @@
           <h2>每周三件事：观察、筛选、重新连接。</h2>
         </div>
         <p class="footer__status" id="issue-status" aria-live="polite">
-          当前展示 Vol.23 · 2026.06.01—06.07
+          当前展示 Vol.25 · 2026.06.15—06.21
         </p>
       </footer>
 
@@ -153,7 +155,7 @@
           </span>
           <span class="reaction-button__copy">
             <strong>给本期点个赞</strong>
-            <span id="like-count" data-like-label>已有23人觉得赞</span>
+            <span id="like-count" data-like-label>已有25人觉得赞</span>
           </span>
         </button>
       </section>
