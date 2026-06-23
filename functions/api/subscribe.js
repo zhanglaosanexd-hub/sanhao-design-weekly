@@ -132,7 +132,7 @@ async function getTenantAccessToken(env) {
   const result = await response.json();
 
   if (!response.ok || result.code !== 0) {
-    throw new Error(result.msg || "无法获取飞书 tenant_access_token。");
+    throw new Error(formatFeishuError("tenant_access_token", response, result));
   }
 
   return result.tenant_access_token;
@@ -151,10 +151,16 @@ async function feishuRequest(env, path, options = {}) {
   const result = await response.json();
 
   if (!response.ok || result.code !== 0) {
-    throw new Error(result.msg || `飞书接口请求失败：${path}`);
+    throw new Error(formatFeishuError("bitable", response, result));
   }
 
   return result.data;
+}
+
+function formatFeishuError(step, response, result) {
+  const code = result?.code ?? response.status;
+  const msg = result?.msg || result?.message || response.statusText || "Unknown error";
+  return `Feishu ${step} failed: code=${code}, msg=${msg}`;
 }
 
 async function findRecordByField(env, fieldName, value) {
