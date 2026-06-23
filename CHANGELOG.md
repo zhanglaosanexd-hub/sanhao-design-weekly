@@ -1,5 +1,10 @@
 # 更新记录
 
+## v0.3.1 - 2026-06-23
+
+- 将底部订阅入口改为直达飞书多维表格表单，订阅邮箱由飞书表单直接写入订阅用户表。
+- 保留 Cloudflare Pages Functions 代码作为后续 Open API 方案备用。
+
 ## v0.3.0 - 2026-06-22
 
 - 增加 `/api/subscribe` 与 `/api/unsubscribe` Cloudflare Pages Functions，用于写入飞书多维表格订阅记录。

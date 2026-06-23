@@ -97,29 +97,18 @@
       ></section>
 
       <footer class="footer">
-        <form class="subscribe-form" data-subscribe-endpoint="/api/subscribe">
-          <label for="email">订阅下一期</label>
-          <div>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="your@email.com"
-              autocomplete="email"
-              required
-            />
-            <input
-              class="subscribe-form__trap"
-              name="website"
-              type="text"
-              tabindex="-1"
-              autocomplete="off"
-              aria-hidden="true"
-            />
-            <button type="submit">订阅 ↗</button>
-          </div>
+        <div class="subscribe-form">
+          <p class="subscribe-form__label">订阅下一期</p>
+          <a
+            class="subscribe-form__action"
+            href="https://my.feishu.cn/share/base/form/shrcnYT1QRX7SJYfxSk32tAgblg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            前往飞书表单订阅 ↗
+          </a>
           <p class="subscribe-form__privacy">
-            邮箱仅用于周刊更新通知，不公开、不出售，可随时退订。
+            邮箱将直接写入飞书订阅用户表，仅用于周刊更新通知。
           </p>
           <p
             class="subscribe-form__message"
@@ -127,7 +116,7 @@
             role="status"
             aria-live="polite"
           ></p>
-        </form>
+        </div>
         <div class="footer__statement">
           <p class="section-label">SANHAO DESIGN WEEKLY</p>
           <h2>每周三件事：观察、筛选、重新连接。</h2>
