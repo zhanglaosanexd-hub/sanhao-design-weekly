@@ -417,8 +417,11 @@ const subscribeDialog = document.querySelector(".subscribe-dialog");
 const subscribeDialogOpen = document.querySelector("[data-open-subscribe]");
 const subscribeDialogClose = document.querySelector("[data-close-subscribe]");
 const subscribeFrame = document.querySelector("[data-subscribe-frame]");
+const reactionPanel = document.querySelector(".reaction-panel");
 const reactionButton = document.querySelector(".reaction-button");
+const reactionEffects = document.querySelector("[data-reaction-effects]");
 const likeLabel = document.querySelector("[data-like-label]");
+const likeHint = document.querySelector("[data-like-hint]");
 const toast = document.querySelector(".toast");
 const toastMessage = document.querySelector("[data-toast-message]");
 
@@ -426,12 +429,26 @@ const externalLinkAttributes = 'target="_blank" rel="noreferrer"';
 let currentIssue = select?.value || "25";
 let toastTimer;
 let reactionRequest;
+let reactionBusy = false;
+let holdAnimationFrame;
+let holdStartedAt = 0;
+let holdTriggered = false;
+let suppressReactionClick = false;
 const FEISHU_SUBSCRIBE_URL =
   "https://my.feishu.cn/share/base/form/shrcnYT1QRX7SJYfxSk32tAgblg";
 const BASE_LIKE_TOTAL = Object.values(issues).reduce(
   (total, issue) => total + issue.likes,
   0,
 );
+const HOLD_DURATION = 900;
+const CONFETTI_COLORS = [
+  "#f54a20",
+  "#ffc928",
+  "#20bfa9",
+  "#4d7cff",
+  "#f173b7",
+  "#8acb4a",
+];
 
 function renderBriefing(items) {
   return `
@@ -596,15 +613,17 @@ function saveReactionState(value, state) {
 function renderReaction(value) {
   const state = getReactionState(value);
   reactionButton?.setAttribute("aria-pressed", String(state.liked));
-  if (reactionButton) {
-    reactionButton.disabled = state.liked;
-  }
   const actionLabel = reactionButton?.querySelector("strong");
   if (actionLabel) {
     actionLabel.textContent = state.liked ? "本期已点赞" : "给本期点个赞";
   }
   if (likeLabel) {
     likeLabel.textContent = `周刊累计收到${state.count}个赞`;
+  }
+  if (likeHint) {
+    likeHint.textContent = state.liked
+      ? "再次轻点可取消本期点赞"
+      : "轻点点赞 · 长按触发礼花";
   }
 }
 
@@ -639,6 +658,196 @@ function showToast(message) {
   toastTimer = window.setTimeout(() => {
     toast.classList.remove("is-visible");
   }, 2200);
+}
+
+function launchReactionEffect(mode = "small") {
+  if (
+    !reactionEffects ||
+    !reactionPanel ||
+    !reactionButton ||
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ) {
+    return;
+  }
+
+  const layerRect = reactionEffects.getBoundingClientRect();
+  const iconRect = reactionButton
+    .querySelector(".reaction-button__icon")
+    ?.getBoundingClientRect();
+  if (!iconRect) return;
+
+  const originX = iconRect.left - layerRect.left + iconRect.width / 2;
+  const originY = iconRect.top - layerRect.top + iconRect.height / 2;
+  const particleCount = mode === "large" ? 72 : 18;
+  const fragment = document.createDocumentFragment();
+  const shockwave = document.createElement("span");
+  shockwave.className = "reaction-shockwave";
+  shockwave.style.left = `${originX}px`;
+  shockwave.style.top = `${originY}px`;
+  fragment.append(shockwave);
+
+  for (let index = 0; index < particleCount; index += 1) {
+    const particle = document.createElement("i");
+    const isLarge = mode === "large";
+    const size = isLarge ? 5 + Math.random() * 8 : 5 + Math.random() * 6;
+    particle.className = `reaction-confetti reaction-confetti--${
+      isLarge ? "rain" : "burst"
+    }`;
+    particle.style.setProperty(
+      "--color",
+      CONFETTI_COLORS[index % CONFETTI_COLORS.length],
+    );
+    particle.style.setProperty("--size", `${size}px`);
+    particle.style.setProperty(
+      "--radius",
+      Math.random() > 0.78 ? "50%" : "2px",
+    );
+    particle.style.setProperty(
+      "--rotation",
+      `${180 + Math.round(Math.random() * 720)}deg`,
+    );
+
+    if (isLarge) {
+      const startY = 20 + Math.random() * 110;
+      particle.style.left = `${4 + Math.random() * 92}%`;
+      particle.style.top = `${startY}px`;
+      particle.style.setProperty("--drift", `${-90 + Math.random() * 180}px`);
+      particle.style.setProperty(
+        "--fall-distance",
+        `${Math.max(260, originY - startY + Math.random() * 140)}px`,
+      );
+      particle.style.setProperty("--delay", `${Math.random() * 420}ms`);
+      particle.style.setProperty(
+        "--duration",
+        `${1450 + Math.random() * 850}ms`,
+      );
+    } else {
+      const angle = (-155 + Math.random() * 130) * (Math.PI / 180);
+      const distance = 50 + Math.random() * 75;
+      particle.style.left = `${originX}px`;
+      particle.style.top = `${originY}px`;
+      particle.style.setProperty(
+        "--burst-x",
+        `${Math.cos(angle) * distance}px`,
+      );
+      particle.style.setProperty(
+        "--burst-y",
+        `${Math.sin(angle) * distance}px`,
+      );
+      particle.style.setProperty("--delay", `${Math.random() * 80}ms`);
+      particle.style.setProperty(
+        "--duration",
+        `${600 + Math.random() * 320}ms`,
+      );
+    }
+
+    fragment.append(particle);
+  }
+
+  reactionEffects.append(fragment);
+  reactionButton.classList.add("is-celebrating");
+  window.setTimeout(
+    () => {
+      reactionEffects.replaceChildren();
+      reactionButton.classList.remove("is-celebrating");
+    },
+    mode === "large" ? 2800 : 1200,
+  );
+}
+
+function resetHoldProgress() {
+  window.cancelAnimationFrame(holdAnimationFrame);
+  holdAnimationFrame = undefined;
+  holdStartedAt = 0;
+  reactionButton?.classList.remove("is-holding");
+  reactionButton?.style.setProperty("--hold-progress", "0");
+}
+
+function startHold(event) {
+  if (
+    !reactionButton ||
+    reactionBusy ||
+    getReactionState(currentIssue).liked ||
+    (event.pointerType === "mouse" && event.button !== 0)
+  ) {
+    return;
+  }
+
+  holdTriggered = false;
+  holdStartedAt = performance.now();
+  reactionButton.classList.add("is-holding");
+  reactionButton.setPointerCapture?.(event.pointerId);
+
+  const update = (now) => {
+    const progress = Math.min(1, (now - holdStartedAt) / HOLD_DURATION);
+    reactionButton.style.setProperty("--hold-progress", String(progress));
+
+    if (progress >= 1) {
+      holdTriggered = true;
+      suppressReactionClick = true;
+      resetHoldProgress();
+      navigator.vibrate?.(35);
+      updateReaction("large");
+      return;
+    }
+
+    holdAnimationFrame = window.requestAnimationFrame(update);
+  };
+
+  holdAnimationFrame = window.requestAnimationFrame(update);
+}
+
+function endHold(event) {
+  if (holdStartedAt) {
+    resetHoldProgress();
+  }
+  if (holdTriggered) {
+    event.preventDefault();
+  }
+}
+
+async function updateReaction(celebration = "small") {
+  if (!reactionButton || reactionBusy) return;
+
+  const issue = currentIssue;
+  const state = getReactionState(issue);
+  const removing = state.liked;
+  reactionBusy = true;
+  reactionButton.classList.add("is-busy");
+  reactionButton.setAttribute("aria-disabled", "true");
+
+  try {
+    const response = await fetch("/api/reactions", {
+      method: removing ? "DELETE" : "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ issue }),
+    });
+    const result = await response.json();
+
+    if (!response.ok || !result.ok) {
+      throw new Error(result.message || "点赞暂时没有成功，请稍后再试。");
+    }
+
+    saveReactionState(issue, {
+      liked: Boolean(result.liked),
+      count: Number(result.count) || Math.max(BASE_LIKE_TOTAL, state.count),
+    });
+    if (currentIssue === issue) {
+      renderReaction(issue);
+    }
+    if (result.liked) {
+      launchReactionEffect(celebration);
+    }
+    showToast(
+      result.message || (result.liked ? "谢谢你的点赞！" : "已取消本期点赞。"),
+    );
+  } catch (error) {
+    showToast(error.message);
+  } finally {
+    reactionBusy = false;
+    reactionButton.classList.remove("is-busy");
+    reactionButton.removeAttribute("aria-disabled");
+  }
 }
 
 function renderIssue(value, announce = false) {
@@ -754,42 +963,23 @@ function setSubscribeMessage(message, isError = false) {
   subscribeMessage.classList.toggle("is-error", Boolean(isError));
 }
 
-reactionButton?.addEventListener("click", async () => {
-  const issue = currentIssue;
-  const state = getReactionState(issue);
-  if (state.liked) {
-    showToast("本期已经点过赞啦。");
+reactionButton?.addEventListener("pointerdown", startHold);
+reactionButton?.addEventListener("pointerup", endHold);
+reactionButton?.addEventListener("pointercancel", endHold);
+reactionButton?.addEventListener("lostpointercapture", endHold);
+reactionButton?.addEventListener("contextmenu", (event) => {
+  if (holdStartedAt || holdTriggered) {
+    event.preventDefault();
+  }
+});
+reactionButton?.addEventListener("click", (event) => {
+  if (suppressReactionClick) {
+    suppressReactionClick = false;
+    holdTriggered = false;
+    event.preventDefault();
     return;
   }
-
-  reactionButton.disabled = true;
-
-  try {
-    const response = await fetch("/api/reactions", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ issue }),
-    });
-    const result = await response.json();
-
-    if (!response.ok || !result.ok) {
-      throw new Error(result.message || "点赞暂时没有成功，请稍后再试。");
-    }
-
-    saveReactionState(issue, {
-      liked: true,
-      count: Number(result.count) || state.count + 1,
-    });
-    if (currentIssue === issue) {
-      renderReaction(issue);
-    }
-    showToast(result.message || "谢谢你的点赞！");
-  } catch (error) {
-    if (currentIssue === issue) {
-      reactionButton.disabled = false;
-    }
-    showToast(error.message);
-  }
+  updateReaction("small");
 });
 
 renderIssue(select?.value || "25");

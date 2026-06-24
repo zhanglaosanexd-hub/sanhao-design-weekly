@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="application-version" content="0.3.4" />
+    <meta name="application-version" content="0.3.5" />
     <meta
       name="description"
       content="三号设计周刊网页原型，以报刊式编辑结构呈现一周设计观察。"
@@ -182,6 +182,12 @@
       </section>
 
       <section class="reaction-panel" aria-label="为本期周刊点赞">
+        <div
+          class="reaction-effects"
+          data-reaction-effects
+          aria-hidden="true"
+        ></div>
+
         <div class="toast" role="status" aria-live="polite" aria-atomic="true">
           <span class="toast__check" aria-hidden="true">✓</span>
           <span data-toast-message>谢谢你的点赞！</span>
@@ -194,6 +200,7 @@
           aria-describedby="like-count"
         >
           <span class="reaction-button__icon" aria-hidden="true">
+            <span class="reaction-button__progress"></span>
             <svg viewBox="0 0 24 24" role="img">
               <path
                 d="M12 20.7 3.8 13A5.2 5.2 0 0 1 11.1 5.6l.9.9.9-.9A5.2 5.2 0 0 1 20.2 13Z"
@@ -206,6 +213,7 @@
           <span class="reaction-button__copy">
             <strong>给本期点个赞</strong>
             <span id="like-count" data-like-label>周刊累计收到89个赞</span>
+            <small data-like-hint>轻点点赞 · 长按触发礼花</small>
           </span>
         </button>
       </section>

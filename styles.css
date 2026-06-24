@@ -798,20 +798,30 @@ img {
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 64px 0 24px;
+  min-height: 260px;
+  padding: 72px 0 32px;
+  overflow: visible;
 }
 
 .reaction-button {
+  --hold-progress: 0;
+
+  position: relative;
+  z-index: 10;
   display: flex;
-  gap: 18px;
+  flex-direction: column;
+  gap: 16px;
   align-items: center;
-  min-width: 250px;
+  min-width: 280px;
   padding: 0;
   color: var(--ink);
   border: 0;
   background: transparent;
-  text-align: left;
+  text-align: center;
   cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .reaction-button__icon {
@@ -823,10 +833,45 @@ img {
   place-items: center;
   border: 2px solid var(--ink);
   border-radius: 50%;
+  background: var(--paper);
   transition:
     color 0.25s ease,
     background 0.25s ease,
     transform 0.25s ease;
+}
+
+.reaction-button__progress {
+  position: absolute;
+  inset: -9px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--accent) calc(var(--hold-progress) * 1turn),
+    rgb(23 23 20 / 10%) 0
+  );
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.92);
+  transition:
+    opacity 0.16s ease,
+    transform 0.16s ease;
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 5px),
+    #000 calc(100% - 4px)
+  );
+  mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 5px),
+    #000 calc(100% - 4px)
+  );
+}
+
+.reaction-button.is-holding .reaction-button__progress {
+  opacity: 1;
+  transform: rotate(-90deg) scale(1);
+}
+
+.reaction-button.is-holding .reaction-button__icon {
+  transform: scale(0.94);
 }
 
 .reaction-button__icon svg {
@@ -873,6 +918,14 @@ img {
   font-size: 12px;
 }
 
+.reaction-button__copy small {
+  display: block;
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+
 .reaction-button:hover .reaction-button__icon,
 .reaction-button:focus-visible .reaction-button__icon,
 .reaction-button[aria-pressed="true"] .reaction-button__icon {
@@ -886,14 +939,59 @@ img {
   animation: heart-burst 0.55s ease both;
 }
 
-.reaction-button:disabled {
-  cursor: default;
-  opacity: 1;
+.reaction-button.is-celebrating .reaction-button__icon {
+  animation: reaction-button-pop 0.55s cubic-bezier(0.2, 0.8, 0.25, 1);
+}
+
+.reaction-button.is-busy {
+  cursor: wait;
 }
 
 .reaction-button:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 8px;
+}
+
+.reaction-effects {
+  position: absolute;
+  z-index: 6;
+  top: -360px;
+  right: min(-4vw, -24px);
+  bottom: 0;
+  left: min(-4vw, -24px);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.reaction-confetti {
+  position: absolute;
+  width: var(--size, 8px);
+  height: calc(var(--size, 8px) * 0.55);
+  border-radius: var(--radius, 2px);
+  background: var(--color, var(--accent));
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.reaction-confetti--burst {
+  animation: reaction-confetti-burst var(--duration, 760ms)
+    cubic-bezier(0.16, 0.7, 0.25, 1) var(--delay, 0ms) both;
+}
+
+.reaction-confetti--rain {
+  animation: reaction-confetti-rain var(--duration, 1900ms)
+    cubic-bezier(0.2, 0.55, 0.35, 1) var(--delay, 0ms) both;
+}
+
+.reaction-shockwave {
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  animation: reaction-shockwave 680ms ease-out both;
 }
 
 .toast {
@@ -944,6 +1042,69 @@ img {
   100% {
     opacity: 0;
     transform: translate(var(--burst-x, 0), var(--burst-y, -28px)) scale(0.4);
+  }
+}
+
+@keyframes reaction-button-pop {
+  0%,
+  100% {
+    transform: translateY(-3px) scale(1);
+  }
+
+  45% {
+    transform: translateY(-7px) scale(1.12);
+  }
+}
+
+@keyframes reaction-confetti-burst {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(0deg) scale(0.3);
+  }
+
+  18% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translate(
+        calc(-50% + var(--burst-x)),
+        calc(-50% + var(--burst-y))
+      )
+      rotate(var(--rotation))
+      scale(0.8);
+  }
+}
+
+@keyframes reaction-confetti-rain {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0) rotate(0deg);
+  }
+
+  12% {
+    opacity: 0.95;
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translate3d(var(--drift), var(--fall-distance), 0)
+      rotate(var(--rotation));
+  }
+}
+
+@keyframes reaction-shockwave {
+  0% {
+    opacity: 0.75;
+    transform: translate(-50%, -50%) scale(0.55);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.9);
   }
 }
 

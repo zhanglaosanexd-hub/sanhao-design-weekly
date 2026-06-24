@@ -71,7 +71,7 @@ https://你的项目名.pages.dev
 数据库：sanhao-weekly-reactions
 ```
 
-`functions/api/reactions.js` 会用匿名设备 Cookie 与期数组成唯一记录，因此同一浏览器每一期只能点赞一次。页面显示的“周刊累计收到 xxx 个赞”是各期基础点赞数与 D1 真实点赞记录之和。新增期数时，需要同步更新该文件中的 `BASE_LIKE_TOTAL`。
+`functions/api/reactions.js` 会用匿名设备 Cookie 与期数组成唯一记录，因此同一浏览器每一期只保留一条点赞记录。用户可以再次轻点取消当前期点赞，取消后也可以重新点赞。页面显示的“周刊累计收到 xxx 个赞”是各期基础点赞数与 D1 真实点赞记录之和。新增期数时，需要同步更新该文件中的 `BASE_LIKE_TOTAL`。
 
 ## 飞书订阅收集配置
 

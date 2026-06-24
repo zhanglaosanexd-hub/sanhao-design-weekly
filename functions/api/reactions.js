@@ -75,6 +75,49 @@ export async function onRequestPost({ request, env }) {
   );
 }
 
+export async function onRequestDelete({ request, env }) {
+  if (!env.REACTIONS_DB) {
+    return jsonResponse({ ok: false, message: "点赞服务尚未配置。" }, 503);
+  }
+
+  let payload;
+  try {
+    payload = await request.json();
+  } catch {
+    return jsonResponse({ ok: false, message: "请求格式不正确。" }, 400);
+  }
+
+  const issue = getIssue(payload.issue);
+  if (!issue) {
+    return jsonResponse({ ok: false, message: "期数不正确。" }, 400);
+  }
+
+  await ensureSchema(env.REACTIONS_DB);
+  const visitorId = getCookie(request, VISITOR_COOKIE);
+  let removed = false;
+
+  if (visitorId) {
+    const deleteResult = await env.REACTIONS_DB.prepare(
+      "DELETE FROM reactions WHERE visitor_id = ? AND issue = ?",
+    )
+      .bind(visitorId, issue)
+      .run();
+    removed = Number(deleteResult.meta?.changes || 0) > 0;
+  }
+
+  const totalResult = await env.REACTIONS_DB.prepare(
+    "SELECT COUNT(*) AS count FROM reactions",
+  ).first();
+
+  return jsonResponse({
+    ok: true,
+    count: BASE_LIKE_TOTAL + Number(totalResult?.count || 0),
+    liked: false,
+    removed,
+    message: removed ? "已取消本期点赞。" : "本期尚未点赞。",
+  });
+}
+
 async function ensureSchema(database) {
   await database
     .prepare(
