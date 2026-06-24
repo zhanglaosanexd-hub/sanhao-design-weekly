@@ -62,6 +62,17 @@ https://你的项目名.pages.dev
 
 以后每次向 `main` 分支推送代码，Cloudflare 会自动更新线上网站。
 
+## 点赞累计配置
+
+点赞数据由 Cloudflare D1 保存，Pages 项目需要配置生产环境绑定：
+
+```text
+变量名：REACTIONS_DB
+数据库：sanhao-weekly-reactions
+```
+
+`functions/api/reactions.js` 会用匿名设备 Cookie 与期数组成唯一记录，因此同一浏览器每一期只能点赞一次。页面显示的“周刊累计收到 xxx 个赞”是各期基础点赞数与 D1 真实点赞记录之和。新增期数时，需要同步更新该文件中的 `BASE_LIKE_TOTAL`。
+
 ## 飞书订阅收集配置
 
 订阅链路：

@@ -425,8 +425,13 @@ const toastMessage = document.querySelector("[data-toast-message]");
 const externalLinkAttributes = 'target="_blank" rel="noreferrer"';
 let currentIssue = select?.value || "25";
 let toastTimer;
+let reactionRequest;
 const FEISHU_SUBSCRIBE_URL =
   "https://my.feishu.cn/share/base/form/shrcnYT1QRX7SJYfxSk32tAgblg";
+const BASE_LIKE_TOTAL = Object.values(issues).reduce(
+  (total, issue) => total + issue.likes,
+  0,
+);
 
 function renderBriefing(items) {
   return `
@@ -560,11 +565,20 @@ function renderSourceCard(issue, value) {
 }
 
 function getReactionState(value) {
-  const fallback = { liked: false, count: issues[value].likes };
+  const fallback = { liked: false, count: BASE_LIKE_TOTAL };
 
   try {
     const saved = localStorage.getItem(`sanhao-weekly-like-${value}`);
-    return saved ? { ...fallback, ...JSON.parse(saved) } : fallback;
+    const parsed = saved ? JSON.parse(saved) : null;
+    const liked = parsed === true || parsed?.liked === true;
+    const savedCount = Number(localStorage.getItem("sanhao-weekly-like-total"));
+    return {
+      liked,
+      count:
+        Number.isFinite(savedCount) && savedCount >= BASE_LIKE_TOTAL
+          ? savedCount
+          : BASE_LIKE_TOTAL,
+    };
   } catch {
     return fallback;
   }
@@ -572,7 +586,8 @@ function getReactionState(value) {
 
 function saveReactionState(value, state) {
   try {
-    localStorage.setItem(`sanhao-weekly-like-${value}`, JSON.stringify(state));
+    localStorage.setItem(`sanhao-weekly-like-${value}`, JSON.stringify(state.liked));
+    localStorage.setItem("sanhao-weekly-like-total", String(state.count));
   } catch {
     // The interaction still works when storage is unavailable.
   }
@@ -581,8 +596,38 @@ function saveReactionState(value, state) {
 function renderReaction(value) {
   const state = getReactionState(value);
   reactionButton?.setAttribute("aria-pressed", String(state.liked));
+  if (reactionButton) {
+    reactionButton.disabled = state.liked;
+  }
+  const actionLabel = reactionButton?.querySelector("strong");
+  if (actionLabel) {
+    actionLabel.textContent = state.liked ? "本期已点赞" : "给本期点个赞";
+  }
   if (likeLabel) {
-    likeLabel.textContent = `已有${state.count}人觉得赞`;
+    likeLabel.textContent = `周刊累计收到${state.count}个赞`;
+  }
+}
+
+async function syncReaction(value) {
+  const request = fetch(`/api/reactions?issue=${encodeURIComponent(value)}`, {
+    headers: { accept: "application/json" },
+  });
+  reactionRequest = request;
+
+  try {
+    const response = await request;
+    const result = await response.json();
+    if (reactionRequest !== request || !response.ok || !result.ok) return;
+
+    saveReactionState(value, {
+      liked: Boolean(result.liked),
+      count: Number(result.count) || BASE_LIKE_TOTAL,
+    });
+    if (currentIssue === value) {
+      renderReaction(value);
+    }
+  } catch {
+    // Keep the local fallback visible if the shared counter is unavailable.
   }
 }
 
@@ -620,6 +665,7 @@ function renderIssue(value, announce = false) {
   status.textContent = `${announce ? "已切换至" : "当前展示"} Vol.${value} · 2026.${issue.range}`;
   document.title = `三号设计周刊 · Vol.${value}`;
   renderReaction(value);
+  syncReaction(value);
 }
 
 select?.addEventListener("change", (event) => {
@@ -708,16 +754,42 @@ function setSubscribeMessage(message, isError = false) {
   subscribeMessage.classList.toggle("is-error", Boolean(isError));
 }
 
-reactionButton?.addEventListener("click", () => {
-  const state = getReactionState(currentIssue);
-  const nextState = {
-    liked: !state.liked,
-    count: Math.max(issues[currentIssue].likes, state.count + (state.liked ? -1 : 1)),
-  };
+reactionButton?.addEventListener("click", async () => {
+  const issue = currentIssue;
+  const state = getReactionState(issue);
+  if (state.liked) {
+    showToast("本期已经点过赞啦。");
+    return;
+  }
 
-  saveReactionState(currentIssue, nextState);
-  renderReaction(currentIssue);
-  showToast(nextState.liked ? "谢谢你的点赞！" : "已取消点赞");
+  reactionButton.disabled = true;
+
+  try {
+    const response = await fetch("/api/reactions", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ issue }),
+    });
+    const result = await response.json();
+
+    if (!response.ok || !result.ok) {
+      throw new Error(result.message || "点赞暂时没有成功，请稍后再试。");
+    }
+
+    saveReactionState(issue, {
+      liked: true,
+      count: Number(result.count) || state.count + 1,
+    });
+    if (currentIssue === issue) {
+      renderReaction(issue);
+    }
+    showToast(result.message || "谢谢你的点赞！");
+  } catch (error) {
+    if (currentIssue === issue) {
+      reactionButton.disabled = false;
+    }
+    showToast(error.message);
+  }
 });
 
 renderIssue(select?.value || "25");
