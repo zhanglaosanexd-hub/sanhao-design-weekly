@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="application-version" content="0.3.0" />
+    <meta name="application-version" content="0.3.2" />
     <meta
       name="description"
       content="三号设计周刊网页原型，以报刊式编辑结构呈现一周设计观察。"
@@ -99,16 +99,15 @@
       <footer class="footer">
         <div class="subscribe-form">
           <p class="subscribe-form__label">订阅下一期</p>
-          <a
+          <button
             class="subscribe-form__action"
-            href="https://my.feishu.cn/share/base/form/shrcnYT1QRX7SJYfxSk32tAgblg"
-            target="_blank"
-            rel="noopener noreferrer"
+            type="button"
+            data-open-subscribe
           >
-            前往飞书表单订阅 ↗
-          </a>
+            填写邮箱订阅 ↗
+          </button>
           <p class="subscribe-form__privacy">
-            邮箱将直接写入飞书订阅用户表，仅用于周刊更新通知。
+            在当前页面完成提交。邮箱仅用于周刊更新通知。
           </p>
           <p
             class="subscribe-form__message"
@@ -193,6 +192,32 @@
         </button>
       </section>
     </main>
+
+    <dialog class="subscribe-dialog" aria-labelledby="subscribe-dialog-title">
+      <div class="subscribe-dialog__header">
+        <div>
+          <p class="section-label">SUBSCRIBE</p>
+          <h2 id="subscribe-dialog-title">订阅下一期</h2>
+        </div>
+        <button
+          class="subscribe-dialog__close"
+          type="button"
+          data-close-subscribe
+          aria-label="关闭订阅表单"
+        >
+          ×
+        </button>
+      </div>
+      <iframe
+        class="subscribe-dialog__frame"
+        data-subscribe-frame
+        title="三号设计周刊邮箱订阅表单"
+        loading="lazy"
+      ></iframe>
+      <p class="subscribe-dialog__hint">
+        提交后将自动记录订阅时间与“已订阅”状态。
+      </p>
+    </dialog>
 
     <script src="./script.js"></script>
   </body>

@@ -413,6 +413,10 @@ const subscribeForm = document.querySelector(".subscribe-form");
 const subscribeInput = subscribeForm?.querySelector('input[name="email"]');
 const subscribeButton = subscribeForm?.querySelector('button[type="submit"]');
 const subscribeMessage = document.querySelector("[data-subscribe-message]");
+const subscribeDialog = document.querySelector(".subscribe-dialog");
+const subscribeDialogOpen = document.querySelector("[data-open-subscribe]");
+const subscribeDialogClose = document.querySelector("[data-close-subscribe]");
+const subscribeFrame = document.querySelector("[data-subscribe-frame]");
 const reactionButton = document.querySelector(".reaction-button");
 const likeLabel = document.querySelector("[data-like-label]");
 const toast = document.querySelector(".toast");
@@ -421,6 +425,8 @@ const toastMessage = document.querySelector("[data-toast-message]");
 const externalLinkAttributes = 'target="_blank" rel="noreferrer"';
 let currentIssue = select?.value || "25";
 let toastTimer;
+const FEISHU_SUBSCRIBE_URL =
+  "https://my.feishu.cn/share/base/form/shrcnYT1QRX7SJYfxSk32tAgblg";
 
 function renderBriefing(items) {
   return `
@@ -623,6 +629,24 @@ select?.addEventListener("change", (event) => {
 subscribeForm?.addEventListener("submit", (event) => {
   event.preventDefault();
   submitSubscription();
+});
+
+subscribeDialogOpen?.addEventListener("click", () => {
+  if (!subscribeDialog || !subscribeFrame) return;
+  if (!subscribeFrame.src) {
+    subscribeFrame.src = FEISHU_SUBSCRIBE_URL;
+  }
+  subscribeDialog.showModal();
+});
+
+subscribeDialogClose?.addEventListener("click", () => {
+  subscribeDialog?.close();
+});
+
+subscribeDialog?.addEventListener("click", (event) => {
+  if (event.target === subscribeDialog) {
+    subscribeDialog.close();
+  }
 });
 
 async function submitSubscription() {
