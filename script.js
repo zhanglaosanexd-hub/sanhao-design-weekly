@@ -755,12 +755,11 @@ function launchReactionEffect(mode = "small") {
   );
 }
 
-function resetHoldProgress() {
+function resetHoldState() {
   window.cancelAnimationFrame(holdAnimationFrame);
   holdAnimationFrame = undefined;
   holdStartedAt = 0;
   reactionButton?.classList.remove("is-holding");
-  reactionButton?.style.setProperty("--hold-progress", "0");
 }
 
 function startHold(event) {
@@ -780,12 +779,10 @@ function startHold(event) {
 
   const update = (now) => {
     const progress = Math.min(1, (now - holdStartedAt) / HOLD_DURATION);
-    reactionButton.style.setProperty("--hold-progress", String(progress));
-
     if (progress >= 1) {
       holdTriggered = true;
       suppressReactionClick = true;
-      resetHoldProgress();
+      resetHoldState();
       navigator.vibrate?.(35);
       updateReaction("large");
       return;
@@ -799,7 +796,7 @@ function startHold(event) {
 
 function endHold(event) {
   if (holdStartedAt) {
-    resetHoldProgress();
+    resetHoldState();
   }
   if (holdTriggered) {
     event.preventDefault();
@@ -812,9 +809,23 @@ async function updateReaction(celebration = "small") {
   const issue = currentIssue;
   const state = getReactionState(issue);
   const removing = state.liked;
+  const optimisticState = {
+    liked: !removing,
+    count: Math.max(
+      BASE_LIKE_TOTAL,
+      state.count + (removing ? -1 : 1),
+    ),
+  };
   reactionBusy = true;
   reactionButton.classList.add("is-busy");
   reactionButton.setAttribute("aria-disabled", "true");
+  saveReactionState(issue, optimisticState);
+  if (currentIssue === issue) {
+    renderReaction(issue);
+  }
+  if (!removing) {
+    launchReactionEffect(celebration);
+  }
 
   try {
     const response = await fetch("/api/reactions", {
@@ -835,13 +846,14 @@ async function updateReaction(celebration = "small") {
     if (currentIssue === issue) {
       renderReaction(issue);
     }
-    if (result.liked) {
-      launchReactionEffect(celebration);
-    }
     showToast(
       result.message || (result.liked ? "谢谢你的点赞！" : "已取消本期点赞。"),
     );
   } catch (error) {
+    saveReactionState(issue, state);
+    if (currentIssue === issue) {
+      renderReaction(issue);
+    }
     showToast(error.message);
   } finally {
     reactionBusy = false;

@@ -804,8 +804,6 @@ img {
 }
 
 .reaction-button {
-  --hold-progress: 0;
-
   position: relative;
   z-index: 10;
   display: flex;
@@ -834,44 +832,11 @@ img {
   border: 2px solid var(--ink);
   border-radius: 50%;
   background: var(--paper);
-  transition:
-    color 0.25s ease,
-    background 0.25s ease,
-    transform 0.25s ease;
-}
-
-.reaction-button__progress {
-  position: absolute;
-  inset: -9px;
-  border-radius: 50%;
-  background: conic-gradient(
-    var(--accent) calc(var(--hold-progress) * 1turn),
-    rgb(23 23 20 / 10%) 0
-  );
-  opacity: 0;
-  transform: rotate(-90deg) scale(0.92);
-  transition:
-    opacity 0.16s ease,
-    transform 0.16s ease;
-  -webkit-mask: radial-gradient(
-    farthest-side,
-    transparent calc(100% - 5px),
-    #000 calc(100% - 4px)
-  );
-  mask: radial-gradient(
-    farthest-side,
-    transparent calc(100% - 5px),
-    #000 calc(100% - 4px)
-  );
-}
-
-.reaction-button.is-holding .reaction-button__progress {
-  opacity: 1;
-  transform: rotate(-90deg) scale(1);
+  transition: transform 0.2s ease;
 }
 
 .reaction-button.is-holding .reaction-button__icon {
-  transform: scale(0.94);
+  animation: reaction-hold-shake 0.16s ease-in-out infinite;
 }
 
 .reaction-button__icon svg {
@@ -926,13 +891,23 @@ img {
   letter-spacing: 0.04em;
 }
 
-.reaction-button:hover .reaction-button__icon,
-.reaction-button:focus-visible .reaction-button__icon,
 .reaction-button[aria-pressed="true"] .reaction-button__icon {
   color: var(--paper);
   background: var(--accent);
   border-color: var(--accent);
   transform: translateY(-3px);
+}
+
+.reaction-button:focus-visible .reaction-button__icon {
+  border-color: var(--accent);
+}
+
+@media (hover: hover) {
+  .reaction-button:not([aria-pressed="true"]):hover .reaction-button__icon {
+    color: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-3px);
+  }
 }
 
 .reaction-button[aria-pressed="true"] .reaction-button__icon i {
@@ -1053,6 +1028,17 @@ img {
 
   45% {
     transform: translateY(-7px) scale(1.12);
+  }
+}
+
+@keyframes reaction-hold-shake {
+  0%,
+  100% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateX(3px) rotate(2deg);
   }
 }
 
