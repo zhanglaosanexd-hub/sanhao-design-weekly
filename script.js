@@ -422,12 +422,9 @@ const reactionButton = document.querySelector(".reaction-button");
 const reactionEffects = document.querySelector("[data-reaction-effects]");
 const likeLabel = document.querySelector("[data-like-label]");
 const likeHint = document.querySelector("[data-like-hint]");
-const toast = document.querySelector(".toast");
-const toastMessage = document.querySelector("[data-toast-message]");
 
 const externalLinkAttributes = 'target="_blank" rel="noreferrer"';
 let currentIssue = select?.value || "25";
-let toastTimer;
 let reactionRequest;
 let reactionBusy = false;
 let holdAnimationFrame;
@@ -650,16 +647,6 @@ async function syncReaction(value) {
   }
 }
 
-function showToast(message) {
-  if (!toast || !toastMessage) return;
-  window.clearTimeout(toastTimer);
-  toastMessage.textContent = message;
-  toast.classList.add("is-visible");
-  toastTimer = window.setTimeout(() => {
-    toast.classList.remove("is-visible");
-  }, 2200);
-}
-
 function launchReactionEffect(mode = "small") {
   if (
     !reactionEffects ||
@@ -755,6 +742,24 @@ function launchReactionEffect(mode = "small") {
   );
 }
 
+function triggerReactionHaptic() {
+  if (!reactionButton) return;
+
+  reactionButton.blur();
+  reactionButton.classList.remove("is-tactile");
+  void reactionButton.offsetWidth;
+  reactionButton.classList.add("is-tactile");
+  window.setTimeout(() => {
+    reactionButton.classList.remove("is-tactile");
+  }, 320);
+
+  try {
+    navigator.vibrate?.(18);
+  } catch {
+    // Desktop browsers use the visual press-and-release feedback instead.
+  }
+}
+
 function resetHoldState() {
   window.cancelAnimationFrame(holdAnimationFrame);
   holdAnimationFrame = undefined;
@@ -783,7 +788,6 @@ function startHold(event) {
       holdTriggered = true;
       suppressReactionClick = true;
       resetHoldState();
-      navigator.vibrate?.(35);
       updateReaction("large");
       return;
     }
@@ -824,6 +828,7 @@ async function updateReaction(celebration = "small") {
     renderReaction(issue);
   }
   if (!removing) {
+    triggerReactionHaptic();
     launchReactionEffect(celebration);
   }
 
@@ -846,15 +851,12 @@ async function updateReaction(celebration = "small") {
     if (currentIssue === issue) {
       renderReaction(issue);
     }
-    showToast(
-      result.message || (result.liked ? "谢谢你的点赞！" : "已取消本期点赞。"),
-    );
   } catch (error) {
     saveReactionState(issue, state);
     if (currentIssue === issue) {
       renderReaction(issue);
     }
-    showToast(error.message);
+    console.error(error);
   } finally {
     reactionBusy = false;
     reactionButton.classList.remove("is-busy");

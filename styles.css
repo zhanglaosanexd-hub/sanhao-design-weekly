@@ -918,6 +918,11 @@ img {
   animation: reaction-button-pop 0.55s cubic-bezier(0.2, 0.8, 0.25, 1);
 }
 
+.reaction-button.is-tactile {
+  animation: reaction-tactile-feedback 0.28s
+    cubic-bezier(0.2, 0.8, 0.25, 1);
+}
+
 .reaction-button.is-busy {
   cursor: wait;
 }
@@ -969,44 +974,6 @@ img {
   animation: reaction-shockwave 680ms ease-out both;
 }
 
-.toast {
-  position: absolute;
-  bottom: 112px;
-  left: 50%;
-  z-index: 20;
-  display: flex;
-  gap: 14px;
-  align-items: center;
-  min-width: 300px;
-  padding: 14px 18px;
-  color: #fff;
-  background: #1fa57a;
-  box-shadow: 0 14px 50px rgba(23, 23, 20, 0.2);
-  font-weight: 700;
-  opacity: 0;
-  pointer-events: none;
-  transform: translate(-50%, 20px);
-  transition:
-    opacity 0.25s ease,
-    transform 0.25s ease;
-}
-
-.toast.is-visible {
-  opacity: 1;
-  transform: translate(-50%, 0);
-}
-
-.toast__check {
-  display: grid;
-  width: 36px;
-  height: 36px;
-  place-items: center;
-  color: #1fa57a;
-  border-radius: 50%;
-  background: #fff;
-  font-size: 20px;
-}
-
 @keyframes heart-burst {
   0% {
     opacity: 0;
@@ -1017,6 +984,21 @@ img {
   100% {
     opacity: 0;
     transform: translate(var(--burst-x, 0), var(--burst-y, -28px)) scale(0.4);
+  }
+}
+
+@keyframes reaction-tactile-feedback {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  35% {
+    transform: translateY(2px) scale(0.96);
+  }
+
+  68% {
+    transform: translateY(-1px) scale(1.015);
   }
 }
 
@@ -1317,12 +1299,6 @@ img {
     min-height: 420px;
   }
 
-  .toast {
-    bottom: 108px;
-    left: 50%;
-    width: min(320px, calc(100vw - 36px));
-    min-width: 0;
-  }
 }
 
 @media (hover: none) {
@@ -1337,8 +1313,11 @@ img {
   }
 
   .story__media img,
-  .toast,
   .reaction-button__icon {
     transition: none;
+  }
+
+  .reaction-button.is-tactile {
+    animation: none;
   }
 }
