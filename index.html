@@ -3,12 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="application-version" content="0.3.8" />
+    <meta name="application-version" content="0.3.9" />
     <meta
       name="description"
       content="三号设计周刊网页原型，以报刊式编辑结构呈现一周设计观察。"
     />
     <title>三号设计周刊 · Vol.25</title>
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="三号设计周刊 RSS"
+      href="https://sanhao-design-weekly.pages.dev/feed.xml"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -135,6 +141,15 @@
           >
             填写邮箱订阅 ↗
           </button>
+          <a
+            class="subscribe-form__rss"
+            href="./feed.xml"
+            type="application/rss+xml"
+            target="_blank"
+            rel="alternate"
+          >
+            使用 RSS 订阅 ↗
+          </a>
           <p class="subscribe-form__privacy">
             在当前页面完成提交。邮箱仅用于周刊更新通知。
           </p>

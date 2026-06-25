@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss
+  version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+>
+  <channel>
+    <title>三号设计周刊</title>
+    <link>https://sanhao-design-weekly.pages.dev/</link>
+    <description>每周整理设计、品牌、工具与 AI 领域的观察、案例和灵感。</description>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 25 Jun 2026 00:00:00 +0800</lastBuildDate>
+    <generator>Sanhao Design Weekly</generator>
+    <ttl>1440</ttl>
+    <atom:link
+      href="https://sanhao-design-weekly.pages.dev/feed.xml"
+      rel="self"
+      type="application/rss+xml"
+    />
+    <image>
+      <url>https://sanhao-design-weekly.pages.dev/assets/favicon-192.png</url>
+      <title>三号设计周刊</title>
+      <link>https://sanhao-design-weekly.pages.dev/</link>
+      <width>144</width>
+      <height>144</height>
+    </image>
+
+    <item>
+      <title>三号设计周刊 Vol.25</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=25</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=25</guid>
+      <pubDate>Mon, 22 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[
+        本期关注 KFC「Bucketverse」品牌系统、Figma Desktop Tab Groups、
+        Figma MCP Server、支付宝 AI 版、Taste Lab 与 Game Maker’s Sketchbook 2026。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>碎片带来灵感，整理形成认知，连接构成体系。</p>
+        <ul>
+          <li>KFC「Bucketverse」补足了品牌系统升级的细节</li>
+          <li>Figma Desktop Tab Groups：工作流收纳依然是高频需求</li>
+          <li>Figma MCP Server 扩展到 Slides、字体、资产导出与 Xcode</li>
+          <li>支付宝 AI 版开启内测，「阿宝」正式亮相</li>
+          <li>Taste Lab：提取任意网站的「设计 DNA」</li>
+          <li>Game Maker’s Sketchbook 2026：游戏视觉参考集</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/dwbpgsfpsuu9vfkg?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol25-kfc.png"
+        length="805800"
+        type="image/png"
+      />
+    </item>
+
+    <item>
+      <title>三号设计周刊 Vol.24</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=24</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=24</guid>
+      <pubDate>Mon, 15 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[
+        本期关注山姆新 Logo、WWDC26、Figma MCP Server 进入 Xcode、
+        Siri AI、CliperX 与 Apple 系统图标细节。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>碎片带来灵感，整理形成认知，连接构成体系。</p>
+        <ul>
+          <li>山姆新 LOGO，更蓝了</li>
+          <li>Apple 公布新一代系统、Siri AI 与体验改进</li>
+          <li>Figma MCP Server 进入 Xcode</li>
+          <li>Siri AI 转向屏幕理解、个人上下文与跨应用执行</li>
+          <li>CliperX：把剪贴板历史放进灵动岛</li>
+          <li>WWDC26 后，Apple 系统图标发生了哪些微调</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/fyale84a4dp04r2d?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol24-sams-club.png"
+        length="482791"
+        type="image/png"
+      />
+    </item>
+
+    <item>
+      <title>三号设计周刊 Vol.23</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=23</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=23</guid>
+      <pubDate>Mon, 08 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[
+        本期关注腾讯 AI 设计智能体、Figma Check Designs、WWDC 2026、
+        Project Solara、Refore 与麦当劳互动小票。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>碎片带来灵感，整理形成认知，连接构成体系。</p>
+        <ul>
+          <li>腾讯设计发布两款 AI 设计智能体：Ardot 与 Miora</li>
+          <li>Figma 新增 Check Designs 设计检查功能</li>
+          <li>Apple Intelligence 与 Siri 能力升级</li>
+          <li>微软提出「Apps → Agents」新平台方向</li>
+          <li>Refore：截图一键转换为设计稿</li>
+          <li>麦当劳把外卖小票变成了儿童节小游戏</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/gal1yi8v5lryn1bn?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol23-tencent.png"
+        length="1136035"
+        type="image/png"
+      />
+    </item>
+
+    <item>
+      <title>三号设计周刊 Vol.22</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=22</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=22</guid>
+      <pubDate>Mon, 01 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[
+        本期关注 Gmail Material 3 图标、Figma 设计到构建工作流、
+        AI 动态工作流、Google Pics、Direct2App 与 DESIGN.md。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>从设计到构建，工具之间的边界正在消失。</p>
+        <ul>
+          <li>Gmail 图标基于 Material 3 色彩体系更新</li>
+          <li>Figma：从设计到构建的链路继续缩短</li>
+          <li>AI 开始进入动态工作流阶段</li>
+          <li>Google 推出 AI 设计产品 Pics</li>
+          <li>Direct2App：筛选 AI 与 SaaS 产品</li>
+          <li>Figma to DESIGN.md：把设计图层整理成结构化文档</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/uwyuq90npgquweg9?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol22-gmail.png"
+        length="289502"
+        type="image/png"
+      />
+    </item>
+  </channel>
+</rss>

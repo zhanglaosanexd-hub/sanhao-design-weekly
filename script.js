@@ -424,7 +424,15 @@ const likeLabel = document.querySelector("[data-like-label]");
 const likeHint = document.querySelector("[data-like-hint]");
 
 const externalLinkAttributes = 'target="_blank" rel="noreferrer"';
-let currentIssue = select?.value || "25";
+const requestedIssue = new URLSearchParams(window.location.search).get("issue");
+const initialIssue =
+  requestedIssue && issues[requestedIssue]
+    ? requestedIssue
+    : select?.value || "25";
+if (select) {
+  select.value = initialIssue;
+}
+let currentIssue = initialIssue;
 let reactionRequest;
 let reactionBusy = false;
 let holdAnimationFrame;
@@ -892,7 +900,11 @@ function renderIssue(value, announce = false) {
 }
 
 select?.addEventListener("change", (event) => {
-  renderIssue(event.target.value, true);
+  const value = event.target.value;
+  const url = new URL(window.location.href);
+  url.searchParams.set("issue", value);
+  window.history.replaceState({}, "", url);
+  renderIssue(value, true);
 });
 
 subscribeForm?.addEventListener("submit", (event) => {
@@ -996,4 +1008,4 @@ reactionButton?.addEventListener("click", (event) => {
   updateReaction("small");
 });
 
-renderIssue(select?.value || "25");
+renderIssue(initialIssue);

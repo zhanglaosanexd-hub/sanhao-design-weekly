@@ -1,6 +1,6 @@
 # 三号设计周刊
 
-当前版本：`v0.3.0`
+当前版本：`v0.3.9`
 
 纯 HTML、CSS、JavaScript 静态网站，不依赖框架、数据库或付费服务器。
 
@@ -125,6 +125,16 @@ https://my.feishu.cn/share/base/form/shrcnYT1QRX7SJYfxSk32tAgblg
 
 页面在 `index.html` 的 `</head>` 前加载 51.LA V6 官方统计 SDK，当前统计应用为“三号设计周刊”。仅启用基础访问统计，未开启事件分析、SPA 模式和屏幕录制。
 
+## RSS 订阅
+
+RSS 地址：
+
+```text
+https://sanhao-design-weekly.pages.dev/feed.xml
+```
+
+网页 `<head>` 已配置 RSS 自动发现，底部也提供可见订阅入口。每一期使用 `https://sanhao-design-weekly.pages.dev/?issue=期数` 作为固定链接。
+
 ## 日常维护流程
 
 ### 发布新一期
@@ -133,8 +143,9 @@ https://my.feishu.cn/share/base/form/shrcnYT1QRX7SJYfxSk32tAgblg
 2. 在 `script.js` 的 `issues` 对象顶部新增一期数据。
 3. 在 `index.html` 的 `#issue-select` 中新增选项，并设置为 `selected`。
 4. 修改页面初始标题、日期与默认期数。
-5. 本地预览并检查桌面端、手机端和外部链接。
-6. 提交并推送：
+5. 在 `feed.xml` 顶部追加新一期 `<item>`，并更新 `lastBuildDate`。
+6. 本地预览并检查桌面端、手机端、RSS 和外部链接。
+7. 提交并推送：
 
 ```bash
 git add .
@@ -174,6 +185,7 @@ git push origin v0.3.0
 ├── assets/        # 周刊图片
 │   └── fonts/     # 网站内嵌字体
 ├── index.html     # 页面结构和期数选项
+├── feed.xml       # RSS 2.0 订阅源
 ├── styles.css     # 页面视觉和响应式样式
 ├── script.js      # 周刊数据和交互逻辑
 ├── VERSION        # 当前版本
