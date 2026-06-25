@@ -134,6 +134,8 @@ LA51_CK
 
 当前仅启用基础访问统计，未开启事件分析、SPA 模式和屏幕录制。
 
+本地使用 Wrangler 预览时，可以复制 `.dev.vars.example` 为 `.dev.vars` 后填写自己的值。`.dev.vars` 已加入 `.gitignore`，不要提交真实配置。
+
 ## RSS 订阅
 
 RSS 地址：
