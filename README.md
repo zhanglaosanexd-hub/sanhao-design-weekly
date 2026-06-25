@@ -121,6 +121,10 @@ https://你的项目名.pages.dev
 https://my.feishu.cn/share/base/form/shrcnYT1QRX7SJYfxSk32tAgblg
 ```
 
+## 51.LA 访问统计
+
+页面在 `index.html` 的 `</head>` 前加载 51.LA V6 官方统计 SDK，当前统计应用为“三号设计周刊”。仅启用基础访问统计，未开启事件分析、SPA 模式和屏幕录制。
+
 ## 日常维护流程
 
 ### 发布新一期
