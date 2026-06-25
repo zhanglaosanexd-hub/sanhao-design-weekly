@@ -1,6 +1,6 @@
 # 三号设计周刊
 
-当前版本：`v0.3.9`
+当前版本：`v0.4.0`
 
 纯 HTML、CSS、JavaScript 静态网站，不依赖框架、数据库或付费服务器。
 
@@ -123,7 +123,16 @@ https://my.feishu.cn/share/base/form/shrcnYT1QRX7SJYfxSk32tAgblg
 
 ## 51.LA 访问统计
 
-页面在 `index.html` 的 `</head>` 前加载 51.LA V6 官方统计 SDK，当前统计应用为“三号设计周刊”。仅启用基础访问统计，未开启事件分析、SPA 模式和屏幕录制。
+页面通过 `/analytics` Pages Function 加载 51.LA V6 官方统计 SDK。统计标识不写入仓库，需要在 Cloudflare Pages 的生产环境配置：
+
+```text
+LA51_ID
+LA51_CK
+```
+
+未配置这两个变量时，统计功能保持关闭，因此公开仓库被他人克隆后不会把访问计入本站。变量值仍会在访问者浏览器运行时可见，这是前端统计 SDK 的正常工作方式，不应把它当作密码使用。
+
+当前仅启用基础访问统计，未开启事件分析、SPA 模式和屏幕录制。
 
 ## RSS 订阅
 
@@ -184,6 +193,8 @@ git push origin v0.3.0
 .
 ├── assets/        # 周刊图片
 │   └── fonts/     # 网站内嵌字体
+├── functions/     # Cloudflare Pages Functions
+│   └── analytics.js # 从环境变量加载 51.LA
 ├── index.html     # 页面结构和期数选项
 ├── feed.xml       # RSS 2.0 订阅源
 ├── styles.css     # 页面视觉和响应式样式
