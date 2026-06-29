@@ -9,7 +9,7 @@
     <link>https://sanhao-design-weekly.pages.dev/</link>
     <description>每周整理设计、品牌、工具与 AI 领域的观察、案例和灵感。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 25 Jun 2026 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 16:20:00 +0800</lastBuildDate>
     <generator>Sanhao Design Weekly</generator>
     <ttl>1440</ttl>
     <atom:link
@@ -24,6 +24,34 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>三号设计周刊 Vol.26</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=26</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=26</guid>
+      <pubDate>Mon, 29 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[
+        本期关注 Figma Config 2026、法国阿尔卑斯 2030 冬奥会徽、
+        video-use、GPT-5.6 Sol、Cowart 与 Rapha 新字体系统。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>碎片带来灵感，整理形成认知，连接构成体系。</p>
+        <ul>
+          <li>Config 2026：Figma 将设计、代码、动效与 AI 带到同一画布</li>
+          <li>法国阿尔卑斯 2030 冬奥会会徽：把山峰与数字 30 合并</li>
+          <li>video-use：让 Coding Agent 接管视频剪辑</li>
+          <li>OpenAI 预览 GPT-5.6 Sol</li>
+          <li>Cowart：开源版 Codex AI 画布工具</li>
+          <li>Rapha 新字体系统：从赛事文化中提炼品牌字体语言</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/wxetrd322mxlctbg?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol26-figma-config.png"
+        length="2692100"
+        type="image/png"
+      />
+    </item>
 
     <item>
       <title>三号设计周刊 Vol.25</title>

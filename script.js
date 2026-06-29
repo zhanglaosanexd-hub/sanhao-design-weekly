@@ -1,4 +1,104 @@
 const issues = {
+  26: {
+    issue: "ISSUE 026",
+    range: "06.22—06.28",
+    date: "2026 年 6 月 29 日 / 星期一",
+    datetime: "2026-06-29",
+    likes: 26,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source:
+      "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/wxetrd322mxlctbg?singleDoc",
+    lead: {
+      category: "01 / 业界动态",
+      meta: "CONFIG 2026",
+      title: "Config 2026：Figma 将设计、代码、动效与 AI 带到同一画布",
+      description:
+        "Figma 在 Config 2026 发布 Motion、3D Transforms、Shaders、Code Layers、Agent Skills、Generative Plugins 与 Weave 等能力，设计、开发与 AI 工作流继续靠近。",
+      image: "./assets/vol26-figma-config.png",
+      alt: "Figma Config 2026 发布的新功能视觉",
+      url: "https://www.figma.com/release-notes/?title=config-2026",
+    },
+    briefing: [
+      {
+        title: "法国阿尔卑斯 2030 冬奥会会徽发布",
+        tag: "品牌识别",
+        url: "https://www.olympics.com/ioc/alpes-2030",
+      },
+      {
+        title: "video-use 让 Coding Agent 接管视频剪辑",
+        tag: "AI 资讯",
+        url: "https://github.com/browser-use/video-use",
+      },
+      {
+        title: "Genspark Design 一句 Prompt 生成 UI 与代码",
+        tag: "产品推荐",
+        url: "https://www.genspark.ai/agents?type=design",
+      },
+      {
+        title: "Secret 7 先看作品，再揭晓作者",
+        tag: "设计细节",
+        url: "https://secret-7.co.uk/",
+      },
+    ],
+    quote:
+      "好的设计和体验是需要细细打磨的，浏览过程中也会看到越来越多产品开始关注那些容易被忽略的体验细节。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 品牌识别",
+        meta: "ALPES 2030",
+        title: "法国阿尔卑斯 2030 冬奥会会徽：把山峰与数字 30 合并",
+        description:
+          "会徽以连续、倾斜的光线勾勒山峰，并在负形中压缩出「30」，把地点、年份与雪山意象融合为一个可缩放的赛事品牌符号。",
+        image: "./assets/vol26-alpes-2030.png",
+        alt: "法国阿尔卑斯 2030 冬奥会会徽视觉",
+        url: "https://www.olympics.com/ioc/alpes-2030",
+      },
+      {
+        category: "03 / AI 资讯",
+        meta: "VIDEO AGENT",
+        title: "video-use：让 Coding Agent 接管视频剪辑",
+        description:
+          "GitHub Trending 项目 video-use 支持 Claude Code、Codex、Gemini CLI 等工具，通过 Python、MoviePy 与 Manim 自动完成剪辑、字幕、动画和导出。",
+        image: "./assets/vol26-video-use.png",
+        alt: "video-use 项目示意图",
+        url: "https://github.com/browser-use/video-use",
+      },
+      {
+        category: "04 / AI 资讯",
+        meta: "MODEL PREVIEW",
+        title: "OpenAI 预览 GPT-5.6 Sol",
+        description:
+          "GPT-5.6 Sol Preview 重点放在推理、长上下文理解与工具调用能力上，Sol、Terra、Luna 也开始形成新的模型层级叙事。",
+        image: "./assets/vol26-gpt-sol.png",
+        alt: "GPT-5.6 Sol Preview 信息视觉",
+        url: "https://openai.com/index/previewing-gpt-5-6-sol/",
+      },
+      {
+        type: "wide",
+        category: "05 / 产品推荐",
+        meta: "AI CANVAS",
+        title: "Cowart：开源版 Codex AI 画布工具",
+        description:
+          "Cowart 将聊天、画布标注与图像编辑结合在一起，用户可以直接圈选和批注修改区域，让 AI 在保留上下文的情况下参与视觉创作。",
+        image: "./assets/vol26-cowart.png",
+        alt: "Cowart AI 画布工具界面",
+        url: "https://github.com/zhongerxin/cowart",
+      },
+      {
+        type: "feature",
+        category: "06 / 设计素材",
+        meta: "TYPE SYSTEM",
+        title: "Rapha 新字体系统：从赛事文化中提炼品牌字体语言",
+        description:
+          "Rapha 与 Frost 合作推出全新字体系统，将骑行刊物、赛事传单、车衣与技术手册中的视觉语言转译为适用于品牌、界面和编辑设计的现代字体家族。",
+        image: "./assets/vol26-rapha-type.png",
+        alt: "Rapha 新字体系统视觉样张",
+        url: "https://www.frostype.xyz/",
+      },
+    ],
+  },
   25: {
     issue: "ISSUE 025",
     range: "06.15—06.21",
@@ -428,7 +528,7 @@ const requestedIssue = new URLSearchParams(window.location.search).get("issue");
 const initialIssue =
   requestedIssue && issues[requestedIssue]
     ? requestedIssue
-    : select?.value || "25";
+    : select?.value || "26";
 if (select) {
   select.value = initialIssue;
 }
