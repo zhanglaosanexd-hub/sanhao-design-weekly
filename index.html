@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="application-version" content="0.4.3" />
+    <meta name="application-version" content="0.5.0" />
     <meta
       name="description"
       content="三号设计周刊网页原型，以报刊式编辑结构呈现一周设计观察。"
@@ -257,6 +257,54 @@
       </p>
     </dialog>
 
-    <script src="./script.js?v=0.4.3"></script>
+    <dialog class="story-preview-dialog" aria-labelledby="story-preview-title">
+      <div class="story-preview">
+        <div
+          class="story-preview__media"
+          data-preview-media
+          aria-label="内容预览媒体"
+        ></div>
+        <aside class="story-preview__panel">
+          <button
+            class="story-preview__close"
+            type="button"
+            data-preview-close
+            aria-label="关闭内容预览"
+          >
+            ×
+          </button>
+          <p class="section-label" data-preview-category>DESIGN</p>
+          <h2 id="story-preview-title" data-preview-title></h2>
+          <p class="story-preview__author" data-preview-author></p>
+          <p class="story-preview__description" data-preview-description></p>
+          <dl class="story-preview__meta">
+            <div>
+              <dt>Source</dt>
+              <dd data-preview-source></dd>
+            </div>
+            <div>
+              <dt>Category</dt>
+              <dd data-preview-module></dd>
+            </div>
+            <div>
+              <dt>Style</dt>
+              <dd data-preview-style></dd>
+            </div>
+          </dl>
+          <a
+            class="story-preview__jump"
+            data-preview-link
+            href="#"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>一键跳转</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </aside>
+      </div>
+    </dialog>
+
+    <script src="./script.js?v=0.5.0"></script>
   </body>
 </html>

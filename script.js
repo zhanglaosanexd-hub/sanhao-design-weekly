@@ -617,6 +617,17 @@ const subscribeDialog = document.querySelector(".subscribe-dialog");
 const subscribeDialogOpen = document.querySelector("[data-open-subscribe]");
 const subscribeDialogClose = document.querySelector("[data-close-subscribe]");
 const subscribeFrame = document.querySelector("[data-subscribe-frame]");
+const storyPreviewDialog = document.querySelector(".story-preview-dialog");
+const storyPreviewClose = document.querySelector("[data-preview-close]");
+const storyPreviewMedia = document.querySelector("[data-preview-media]");
+const storyPreviewCategory = document.querySelector("[data-preview-category]");
+const storyPreviewTitle = document.querySelector("[data-preview-title]");
+const storyPreviewAuthor = document.querySelector("[data-preview-author]");
+const storyPreviewDescription = document.querySelector("[data-preview-description]");
+const storyPreviewSource = document.querySelector("[data-preview-source]");
+const storyPreviewModule = document.querySelector("[data-preview-module]");
+const storyPreviewStyle = document.querySelector("[data-preview-style]");
+const storyPreviewLink = document.querySelector("[data-preview-link]");
 const reactionPanel = document.querySelector(".reaction-panel");
 const reactionButton = document.querySelector(".reaction-button");
 const reactionEffects = document.querySelector("[data-reaction-effects]");
@@ -655,6 +666,118 @@ const CONFETTI_COLORS = [
   "#8acb4a",
 ];
 
+function getStoryModule(category = "") {
+  return String(category).replace(/^\d+\s*\/\s*/, "").trim() || "精选内容";
+}
+
+function getStorySourceLabel(url = "") {
+  try {
+    return new URL(url, window.location.href).hostname.replace(/^www\./, "");
+  } catch {
+    return "原始链接";
+  }
+}
+
+function createStoryPreviewPayload(item, options = {}) {
+  const category = item.category || options.category || item.tag || "Design";
+  const url = item.url || options.url || "#";
+
+  return {
+    title: item.title || options.title || "未命名内容",
+    category: getStoryModule(category),
+    author: item.author || options.author || "整理 / 张老三",
+    description:
+      item.description ||
+      options.description ||
+      "这条内容来自三号设计周刊，点击跳转入口可查看原始页面。",
+    source: item.sourceLabel || options.sourceLabel || getStorySourceLabel(url),
+    module: item.module || options.module || getStoryModule(category),
+    style: item.meta || item.tag || options.style || "SANHAO WEEKLY",
+    image: item.image || options.image || "",
+    video: item.video || options.video || "",
+    alt: item.alt || item.title || options.alt || "内容预览图",
+    url,
+  };
+}
+
+function getStoryPreviewAttribute(item, options = {}) {
+  const payload = createStoryPreviewPayload(item, options);
+  return `data-preview-story="${encodeURIComponent(JSON.stringify(payload))}"`;
+}
+
+function setStoryPreviewText(node, value) {
+  if (node) {
+    node.textContent = value || "";
+  }
+}
+
+function renderStoryPreviewMedia(payload) {
+  if (!storyPreviewMedia) return;
+
+  storyPreviewMedia.innerHTML = "";
+
+  if (payload.video) {
+    const video = document.createElement("video");
+    video.src = payload.video;
+    video.controls = true;
+    video.playsInline = true;
+    video.preload = "metadata";
+    if (payload.image) {
+      video.poster = payload.image;
+    }
+    storyPreviewMedia.append(video);
+    return;
+  }
+
+  if (payload.image) {
+    const image = document.createElement("img");
+    image.src = payload.image;
+    image.alt = payload.alt || payload.title || "内容预览图";
+    storyPreviewMedia.append(image);
+    return;
+  }
+
+  const fallback = document.createElement("div");
+  fallback.className = "story-preview__media-empty";
+  fallback.textContent = "暂无预览图";
+  storyPreviewMedia.append(fallback);
+}
+
+function openStoryPreview(payload) {
+  if (!storyPreviewDialog) return;
+
+  renderStoryPreviewMedia(payload);
+  setStoryPreviewText(storyPreviewCategory, payload.category);
+  setStoryPreviewText(storyPreviewTitle, payload.title);
+  setStoryPreviewText(storyPreviewAuthor, payload.author);
+  setStoryPreviewText(storyPreviewDescription, payload.description);
+  setStoryPreviewText(storyPreviewSource, payload.source);
+  setStoryPreviewText(storyPreviewModule, payload.module);
+  setStoryPreviewText(storyPreviewStyle, payload.style);
+
+  if (storyPreviewLink) {
+    storyPreviewLink.href = payload.url || "#";
+  }
+
+  if (typeof storyPreviewDialog.showModal === "function") {
+    storyPreviewDialog.showModal();
+  } else {
+    storyPreviewDialog.setAttribute("open", "");
+  }
+  document.body.classList.add("story-preview-open");
+}
+
+function closeStoryPreview() {
+  if (!storyPreviewDialog) return;
+
+  if (typeof storyPreviewDialog.close === "function") {
+    storyPreviewDialog.close();
+  } else {
+    storyPreviewDialog.removeAttribute("open");
+    document.body.classList.remove("story-preview-open");
+  }
+}
+
 function renderBriefing(items) {
   return `
     <aside class="briefing" aria-labelledby="briefing-title">
@@ -667,7 +790,16 @@ function renderBriefing(items) {
           .map(
             (item, index) => `
               <li>
-                <a href="${item.url}" ${externalLinkAttributes}>
+                <a
+                  href="${item.url}"
+                  ${externalLinkAttributes}
+                  ${getStoryPreviewAttribute(item, {
+                    category: `短讯 / ${item.tag}`,
+                    description:
+                      "这条内容来自本期速览，点击跳转入口可查看原始页面。",
+                    style: "SHORT SIGNALS",
+                  })}
+                >
                   <span>${String(index + 1).padStart(2, "0")}</span>
                   <strong>${item.title}</strong>
                   <time>${item.tag}</time>
@@ -684,7 +816,7 @@ function renderBriefing(items) {
 function renderLead(lead) {
   return `
     <article class="story story--lead">
-      <a href="${lead.url}" class="story__link" ${externalLinkAttributes}>
+      <a href="${lead.url}" class="story__link" ${externalLinkAttributes} ${getStoryPreviewAttribute(lead)}>
         <div class="story__media story__media--lead">
           <img src="${lead.image}" alt="${lead.alt}" />
         </div>
@@ -723,7 +855,7 @@ function renderStory(story) {
 
   return `
     <article class="story${typeClass}">
-      <a href="${story.url}" class="story__link" ${externalLinkAttributes}>
+      <a href="${story.url}" class="story__link" ${externalLinkAttributes} ${getStoryPreviewAttribute(story)}>
         ${story.type === "feature" ? `${content}${media}` : `${media}${content}`}
       </a>
     </article>
@@ -1141,6 +1273,45 @@ subscribeDialogClose?.addEventListener("click", () => {
 subscribeDialog?.addEventListener("click", (event) => {
   if (event.target === subscribeDialog) {
     subscribeDialog.close();
+  }
+});
+
+document.addEventListener("click", (event) => {
+  const trigger = event.target.closest("[data-preview-story]");
+  if (!trigger) return;
+  if (
+    event.defaultPrevented ||
+    event.button !== 0 ||
+    event.metaKey ||
+    event.ctrlKey ||
+    event.shiftKey ||
+    event.altKey
+  ) {
+    return;
+  }
+
+  event.preventDefault();
+
+  try {
+    openStoryPreview(JSON.parse(decodeURIComponent(trigger.dataset.previewStory)));
+  } catch (error) {
+    console.error("Unable to open story preview.", error);
+    window.open(trigger.href, "_blank", "noopener,noreferrer");
+  }
+});
+
+storyPreviewClose?.addEventListener("click", closeStoryPreview);
+
+storyPreviewDialog?.addEventListener("click", (event) => {
+  if (event.target === storyPreviewDialog) {
+    closeStoryPreview();
+  }
+});
+
+storyPreviewDialog?.addEventListener("close", () => {
+  document.body.classList.remove("story-preview-open");
+  if (storyPreviewMedia) {
+    storyPreviewMedia.innerHTML = "";
   }
 });
 
