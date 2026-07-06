@@ -1,4 +1,104 @@
 const issues = {
+  27: {
+    issue: "ISSUE 027",
+    range: "06.29—07.05",
+    date: "2026 年 7 月 6 日 / 星期一",
+    datetime: "2026-07-06",
+    likes: 27,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source:
+      "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/cq88a9w1ng0v6b9g?singleDoc",
+    lead: {
+      category: "01 / 业界动态",
+      meta: "FIGMA SKILLS",
+      title: "Figma：用 Skills 让 Design Agent 更懂团队工作方式",
+      description:
+        "Figma 介绍如何用 Skills 把团队提示词、设计判断、品牌语气、组件规则和上下文沉淀进 Agent 协作流程，让工具逐渐成为承载团队知识与设计规范的协作系统。",
+      image: "./assets/vol27-figma-skills.png",
+      alt: "Figma Skills 与 Design Agent 协作视觉",
+      url: "https://www.figma.com/blog/got-skills-make-the-figma-agent-a-better-collaborator/",
+    },
+    briefing: [
+      {
+        title: "阿里据称将禁用 Claude Code，AI 工具选择进入安全合规阶段",
+        tag: "AI 合规",
+        url: "https://www.reuters.com/world/china/alibaba-ban-claude-code-workplace-over-alleged-backdoor-risks-source-says-2026-07-03/",
+      },
+      {
+        title: "茉莉奶白被判赔 LV 1030 万元",
+        tag: "品牌侵权",
+        url: "https://global.chinadaily.com.cn/a/202607/02/WS6a466e92a310986e2b4633a5.html",
+      },
+      {
+        title: "Flowly 开源 Agent Core，个人 AI 助手继续向系统操作层演进",
+        tag: "AI Agent",
+        url: "https://useflowlyapp.com/",
+      },
+      {
+        title: "Quick Sub 2 把视频字幕编辑做得更像设计工具",
+        tag: "产品推荐",
+        url: "https://apps.apple.com/us/app/quick-sub-2-video-subtitling/id6783561492?mt=12",
+      },
+    ],
+    quote:
+      "工具是服务于人的，该怎么用，如何去用，都要结合实际情况去落地。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / AI 资讯",
+        meta: "WORKPLACE AI",
+        title: "阿里据称将禁用 Claude Code，企业 AI 工具选择进入安全合规阶段",
+        description:
+          "据 Reuters 报道，阿里将禁止员工在办公环境下使用 Claude Code，并推荐自研工具 Qoder。企业 AI 工具选择开始进入安全、风控与合规共同决定的阶段。",
+        image: "./assets/vol27-alibaba-claude.png",
+        alt: "阿里据称将禁用 Claude Code 的新闻配图",
+        url: "https://www.reuters.com/world/china/alibaba-ban-claude-code-workplace-over-alleged-backdoor-risks-source-says-2026-07-03/",
+      },
+      {
+        category: "03 / 品牌观察",
+        meta: "BRAND RISK",
+        title: "茉莉奶白被判赔 LV 1030 万元，品牌视觉借势进入高风险区",
+        description:
+          "LV 诉茉莉奶白商标侵权案一审判决引发关注，茉莉奶白被判赔经济损失及合理开支共 1030 万元。品牌视觉借势的边界正在变得更硬。",
+        image: "./assets/vol27-lv-moli.png",
+        alt: "茉莉奶白与 LV 商标侵权案报道配图",
+        url: "https://global.chinadaily.com.cn/a/202607/02/WS6a466e92a310986e2b4633a5.html",
+      },
+      {
+        category: "04 / AI 资讯",
+        meta: "AGENT CORE",
+        title: "Flowly 开源 Agent Core，个人 AI 助手继续向系统操作层演进",
+        description:
+          "Flowly 定位为可运行在桌面和 iPhone 上的个人 AI Agent，并开源 Agent Core。AI 入口正在从网页聊天框迁移到桌面、菜单栏、全局唤起和跨应用操作。",
+        image: "./assets/vol27-flowly.png",
+        alt: "Flowly 个人 AI Agent 产品界面",
+        url: "https://useflowlyapp.com/",
+      },
+      {
+        type: "wide",
+        category: "05 / 产品推荐",
+        meta: "SUBTITLE TOOL",
+        title: "Quick Sub 2：把视频字幕编辑做得更像设计工具",
+        description:
+          "Quick Sub 2 支持直接在视频画布上拖拽字幕对象，并控制样式、容器、旋转角度和时间轴精度，适合产品演示、教程片段和社媒内容制作。",
+        image: "./assets/vol27-quick-sub.png",
+        alt: "Quick Sub 2 视频字幕编辑工具界面",
+        url: "https://apps.apple.com/us/app/quick-sub-2-video-subtitling/id6783561492?mt=12",
+      },
+      {
+        type: "feature",
+        category: "06 / 设计素材",
+        meta: "DESIGN PSYCHOLOGY",
+        title: "Product Design Psychology：面向产品设计师的心理学电子书",
+        description:
+          "这本在线电子书从心理学角度理解产品设计，讨论认知偏差、界面感知、用户行为和组织决策，适合作为设计复盘与体验分析资料。",
+        image: "./assets/vol27-design-psychology.png",
+        alt: "Product Design Psychology 在线电子书页面",
+        url: "https://productdesignpsychology.com/",
+      },
+    ],
+  },
   26: {
     issue: "ISSUE 026",
     range: "06.22—06.28",
@@ -528,7 +628,7 @@ const requestedIssue = new URLSearchParams(window.location.search).get("issue");
 const initialIssue =
   requestedIssue && issues[requestedIssue]
     ? requestedIssue
-    : select?.value || "26";
+    : select?.value || "27";
 if (select) {
   select.value = initialIssue;
 }

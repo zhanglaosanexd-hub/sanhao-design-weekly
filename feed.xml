@@ -9,7 +9,7 @@
     <link>https://sanhao-design-weekly.pages.dev/</link>
     <description>每周整理设计、品牌、工具与 AI 领域的观察、案例和灵感。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 29 Jun 2026 16:20:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2026 16:10:00 +0800</lastBuildDate>
     <generator>Sanhao Design Weekly</generator>
     <ttl>1440</ttl>
     <atom:link
@@ -24,6 +24,34 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>三号设计周刊 Vol.27</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=27</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=27</guid>
+      <pubDate>Mon, 06 Jul 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[
+        本期关注 Figma Skills、企业 AI 工具合规、茉莉奶白与 LV 商标侵权案、
+        Flowly Agent Core、Quick Sub 2 与 Product Design Psychology。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>碎片带来灵感，整理形成认知，连接构成体系。</p>
+        <ul>
+          <li>Figma：用 Skills 让 Design Agent 更懂团队工作方式</li>
+          <li>阿里据称将禁用 Claude Code，企业 AI 工具选择进入安全合规阶段</li>
+          <li>茉莉奶白被判赔 LV 1030 万元，品牌视觉借势进入高风险区</li>
+          <li>Flowly 开源 Agent Core，个人 AI 助手继续向系统操作层演进</li>
+          <li>Quick Sub 2：把视频字幕编辑做得更像设计工具</li>
+          <li>Product Design Psychology：面向产品设计师的心理学电子书</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/cq88a9w1ng0v6b9g?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol27-figma-skills.png"
+        length="543662"
+        type="image/png"
+      />
+    </item>
 
     <item>
       <title>三号设计周刊 Vol.26</title>
