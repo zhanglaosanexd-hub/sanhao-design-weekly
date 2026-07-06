@@ -1,4 +1,15 @@
-const BASE_LIKE_TOTAL = 89;
+const ISSUE_BASE_LIKES = {
+  22: 17,
+  23: 23,
+  24: 24,
+  25: 25,
+  26: 26,
+  27: 27,
+};
+const BASE_LIKE_TOTAL = Object.values(ISSUE_BASE_LIKES).reduce(
+  (total, count) => total + count,
+  0,
+);
 const VISITOR_COOKIE = "sanhao_like_visitor";
 const COOKIE_MAX_AGE = 60 * 60 * 24 * 365 * 2;
 

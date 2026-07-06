@@ -815,6 +815,11 @@ function saveReactionState(value, state) {
   }
 }
 
+function normalizeReactionCount(value, fallback = BASE_LIKE_TOTAL) {
+  const count = Number(value);
+  return Number.isFinite(count) ? Math.max(BASE_LIKE_TOTAL, count) : fallback;
+}
+
 function renderReaction(value) {
   const state = getReactionState(value);
   reactionButton?.setAttribute("aria-pressed", String(state.liked));
@@ -845,7 +850,7 @@ async function syncReaction(value) {
 
     saveReactionState(value, {
       liked: Boolean(result.liked),
-      count: Number(result.count) || BASE_LIKE_TOTAL,
+      count: normalizeReactionCount(result.count),
     });
     if (currentIssue === value) {
       renderReaction(value);
@@ -1054,7 +1059,16 @@ async function updateReaction(celebration = "small") {
 
     saveReactionState(issue, {
       liked: Boolean(result.liked),
-      count: Number(result.count) || Math.max(BASE_LIKE_TOTAL, state.count),
+      count:
+        !removing && result.added !== false
+          ? Math.max(
+              normalizeReactionCount(result.count, optimisticState.count),
+              optimisticState.count,
+            )
+          : normalizeReactionCount(
+              result.count,
+              Math.max(BASE_LIKE_TOTAL, state.count),
+            ),
     });
     if (currentIssue === issue) {
       renderReaction(issue);
