@@ -9,7 +9,7 @@
     <link>https://sanhao-design-weekly.pages.dev/</link>
     <description>每周整理设计、品牌、工具与 AI 领域的观察、案例和灵感。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 06 Jul 2026 16:10:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2026 16:10:00 +0800</lastBuildDate>
     <generator>Sanhao Design Weekly</generator>
     <ttl>1440</ttl>
     <atom:link
@@ -24,6 +24,34 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>三号设计周刊 Vol.29</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=29</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=29</guid>
+      <pubDate>Mon, 20 Jul 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[
+        本期关注 Codex 并入 ChatGPT、阿里 D20 2026、Apple 官方设计资源、
+        Qwen3.8-Max Preview、WorkBuddy 与 VibeLoft。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>碎片带来灵感，整理形成认知，连接构成体系。</p>
+        <ul>
+          <li>OpenAI：Codex 正式并入 ChatGPT</li>
+          <li>阿里 D20 2026 全球设计院长峰会举办</li>
+          <li>苹果开放 iOS 27 / iPadOS 27 官方设计资源</li>
+          <li>Qwen3.8-Max Preview 上线，千问平台同步完成后台重构</li>
+          <li>WorkBuddy：AI Agent 工作流实践教程</li>
+          <li>VibeLoft：把整个社区设计成一架飞机</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/pg3mz3ogecie3e9u?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol29-openai-codex.webp"
+        length="345486"
+        type="image/webp"
+      />
+    </item>
 
     <item>
       <title>三号设计周刊 Vol.27</title>

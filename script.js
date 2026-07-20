@@ -1,4 +1,104 @@
 const issues = {
+  29: {
+    issue: "ISSUE 029",
+    range: "07.13—07.19",
+    date: "2026 年 7 月 20 日 / 星期一",
+    datetime: "2026-07-20",
+    likes: 29,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source:
+      "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/pg3mz3ogecie3e9u?singleDoc",
+    lead: {
+      category: "01 / 业界动态",
+      meta: "CHATGPT WORK",
+      title: "OpenAI：Codex 正式并入 ChatGPT",
+      description:
+        "OpenAI 宣布将 Codex 正式整合进 ChatGPT，独立入口逐步退出。未来无需再单独使用 Codex，即可在 ChatGPT 中完成代码生成、项目协作与 Agent 工作流。",
+      image: "./assets/vol29-openai-codex.webp",
+      alt: "OpenAI 将 Codex 并入 ChatGPT 的产品工作流视觉",
+      url: "https://openai.com/zh-Hans-CN/index/chatgpt-for-your-most-ambitious-work/",
+    },
+    briefing: [
+      {
+        title: "阿里 D20 2026 全球设计院长峰会举办",
+        tag: "业界动态",
+        url: "https://my.feishu.cn/wiki/W5wiwsm2giIzQckfYo2cUJJnnVh?from=from_copylink",
+      },
+      {
+        title: "苹果开放 iOS 27 / iPadOS 27 官方设计资源",
+        tag: "设计资源",
+        url: "https://developer.apple.com/design/resources/",
+      },
+      {
+        title: "Qwen3.8-Max Preview 上线，千问平台后台重构",
+        tag: "AI 资讯",
+        url: "https://platform.qianwenai.com/home",
+      },
+      {
+        title: "Workbox 把 AI Skill 工具箱做成可逛书架",
+        tag: "产品推荐",
+        url: "https://workbox.xiaoerai.xyz/",
+      },
+    ],
+    quote:
+      "好的设计，很多时候不是多做一点，而是换一种更容易被理解、更愿意被体验的表达方式。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 业界动态",
+        meta: "DESIGN SUMMIT",
+        title: "阿里 D20 2026 全球设计院长峰会举办",
+        description:
+          "D20 2026 全球设计院长峰会在杭州举办，AI 创意创作生态的重要玩家齐聚，讨论 AI 创作平台、Agent 工作流与设计生态的下一阶段。",
+        image: "./assets/vol29-d20-summit.png",
+        alt: "阿里 D20 2026 全球设计院长峰会现场视觉",
+        url: "https://my.feishu.cn/wiki/W5wiwsm2giIzQckfYo2cUJJnnVh?from=from_copylink",
+      },
+      {
+        category: "03 / 设计资源",
+        meta: "IOS 27 UI KIT",
+        title: "苹果开放 iOS 27 / iPadOS 27 官方设计资源",
+        description:
+          "Apple 更新 Design Resources，正式提供 iOS 27 与 iPadOS 27 的官方设计资源，并支持 Figma 与 Sketch 两种格式下载。",
+        image: "./assets/vol29-ios-resources.png",
+        alt: "Apple Design Resources 官方资源页面",
+        url: "https://developer.apple.com/design/resources/",
+      },
+      {
+        category: "04 / AI 资讯",
+        meta: "QWEN PLATFORM",
+        title: "Qwen3.8-Max Preview 上线，千问平台同步完成后台重构",
+        description:
+          "阿里千问上线 Qwen3.8-Max Preview，并完成新版平台后台重构，从模型管理到 API 使用流程都进行了重新设计。",
+        image: "./assets/vol29-qwen-platform.png",
+        alt: "千问 Qwen 平台后台界面",
+        url: "https://platform.qianwenai.com/home",
+      },
+      {
+        type: "wide",
+        category: "05 / 产品推荐",
+        meta: "AGENT WORKFLOW",
+        title: "WorkBuddy：AI Agent 工作流实践教程",
+        description:
+          "WorkBuddy 通过真实项目展示 Agent 如何协同完成复杂任务，更偏向真实工作流程的拆解，适合希望搭建 AI 工作流的设计师和开发者参考。",
+        image: "./assets/vol29-workbuddy.png",
+        alt: "WorkBuddy AI Agent 工作流实践教程界面",
+        url: "https://codebuddy.work/agents/share/NZrbRhTgtyn3cpj7nvjXbZwGSVD_977mJv3BZegE-gUMzlyfZHRgW5MtpRRToQHK?platform=workbuddy",
+      },
+      {
+        type: "feature",
+        category: "06 / 设计细节",
+        meta: "COMMUNITY DESIGN",
+        title: "VibeLoft：把整个社区设计成一架飞机",
+        description:
+          "VibeLoft 将社区比喻成一架飞机：用户拥有座位，产品发布成为登机展示，不同频道对应不同机舱功能，形成完整的主题化社区体验。",
+        image: "./assets/vol29-vibeloft.png",
+        alt: "VibeLoft 飞机主题社区产品界面",
+        url: "https://vibeloft.ai/",
+      },
+    ],
+  },
   27: {
     issue: "ISSUE 027",
     range: "06.29—07.05",
@@ -639,7 +739,7 @@ const requestedIssue = new URLSearchParams(window.location.search).get("issue");
 const initialIssue =
   requestedIssue && issues[requestedIssue]
     ? requestedIssue
-    : select?.value || "27";
+    : select?.value || "29";
 if (select) {
   select.value = initialIssue;
 }
