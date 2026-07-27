@@ -9,7 +9,7 @@
     <link>https://sanhao-design-weekly.pages.dev/</link>
     <description>每周整理设计、品牌、工具与 AI 领域的观察、案例和灵感。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 20 Jul 2026 16:10:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 12:00:00 +0800</lastBuildDate>
     <generator>Sanhao Design Weekly</generator>
     <ttl>1440</ttl>
     <atom:link
@@ -24,6 +24,34 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>三号设计周刊 Vol.30</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=30</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=30</guid>
+      <pubDate>Mon, 27 Jul 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[
+        本期关注 Figma AI Agent、设计组织位置变化、OpenAI Presence、
+        ditto.site、Scriptyard 与 Light Flip。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>碎片带来灵感，整理形成认知，连接构成体系。</p>
+        <ul>
+          <li>Figma 用 AI Agent 守护代码安全</li>
+          <li>设计究竟还存在于哪里？</li>
+          <li>OpenAI Presence：面向企业的语音与聊天 Agent 平台</li>
+          <li>ditto.site：将网页转换成可编辑的前端代码</li>
+          <li>Scriptyard：用无限画布规划故事、脚本与内容结构</li>
+          <li>Light Flip：一台主动拒绝 AI 和信息流的翻盖手机</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/bew8s0rp9hmozr4n?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol30-figma-agent.png"
+        length="2552449"
+        type="image/png"
+      />
+    </item>
 
     <item>
       <title>三号设计周刊 Vol.29</title>

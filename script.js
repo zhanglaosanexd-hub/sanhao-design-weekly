@@ -1,4 +1,104 @@
 const issues = {
+  30: {
+    issue: "ISSUE 030",
+    range: "07.20—07.26",
+    date: "2026 年 7 月 27 日 / 星期一",
+    datetime: "2026-07-27",
+    likes: 30,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source:
+      "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/bew8s0rp9hmozr4n?singleDoc",
+    lead: {
+      category: "01 / 业界动态",
+      meta: "AGENT SECURITY",
+      title: "Figma 用 AI Agent 守护代码安全",
+      description:
+        "Figma 公开了 AI Agent 在内部安全研发中的实际应用：在代码编写阶段检查安全策略、审查 Pull Request，并对大型代码库进行自动化审计。",
+      image: "./assets/vol30-figma-agent.png",
+      alt: "Figma 使用 AI Agent 守护代码安全的视觉配图",
+      url: "https://www.figma.com/blog/how-figma-stays-ahead-of-vulnerabilities-with-agents",
+    },
+    briefing: [
+      {
+        title: "设计究竟还存在于哪里？",
+        tag: "设计观察",
+        url: "https://www.designweek.co.uk/where-does-design-reside-now/",
+      },
+      {
+        title: "OpenAI 推出 ChatGPT 小企业计划",
+        tag: "AI 资讯",
+        url: "https://openai.com/index/introducing-chatgpt-small-business-program/",
+      },
+      {
+        title: "OpenAI Presence：面向企业的语音与聊天 Agent 平台",
+        tag: "企业 Agent",
+        url: "https://openai.com/index/introducing-openai-presence/",
+      },
+      {
+        title: "LayerProof Mylar 从网页和文档生成可编辑产品动效视频",
+        tag: "产品推荐",
+        url: "https://layerproof.app/mylar",
+      },
+    ],
+    quote:
+      "设计的价值，最终可能还是回到同一个问题：什么应该被创造，什么其实不必存在。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 设计观察",
+        meta: "DESIGN ORG",
+        title: "设计究竟还存在于哪里？",
+        description:
+          "Design Week 讨论 AI 和模板化工具普及后，设计在组织中的位置变化：设计正在进入系统、工具、模板、模型、提示词与约束规则之中。",
+        image: "./assets/vol30-design-reside.png",
+        alt: "Design Week 关于设计组织位置变化的文章配图",
+        url: "https://www.designweek.co.uk/where-does-design-reside-now/",
+      },
+      {
+        category: "03 / AI 资讯",
+        meta: "OPENAI PRESENCE",
+        title: "OpenAI Presence：面向企业的语音与聊天 Agent 平台",
+        description:
+          "OpenAI 发布 Presence，用于企业客户服务和内部工作流。未来设计师需要定义的不只是页面，还包括 Agent 的身份、语气、响应边界和人工接管机制。",
+        image: "./assets/vol30-openai-presence.png",
+        alt: "OpenAI Presence 企业语音与聊天 Agent 平台界面",
+        url: "https://openai.com/index/introducing-openai-presence/",
+      },
+      {
+        category: "04 / 产品推荐",
+        meta: "WEBSITE TO CODE",
+        title: "ditto.site：将网页转换成可编辑的前端代码",
+        description:
+          "ditto.site 可以读取公开网页的实际渲染结果，并生成组件化的 Next.js 或 Vite 项目，尽可能保留页面结构、设计变量、响应式布局和交互状态。",
+        image: "./assets/vol30-ditto-site.png",
+        alt: "ditto.site 将网页转换成前端代码的产品界面",
+        url: "https://www.ditto.site/",
+      },
+      {
+        type: "wide",
+        category: "05 / 设计素材",
+        meta: "STORY CANVAS",
+        title: "Scriptyard：用无限画布规划故事、脚本与内容结构",
+        description:
+          "Scriptyard 可以在无限画布上组织人物、地点、场景和叙事结构，适合梳理品牌故事、产品演示脚本、用户旅程、交互叙事和长内容选题。",
+        image: "./assets/vol30-scriptyard.png",
+        alt: "Scriptyard 空间化故事规划工具界面",
+        url: "https://www.minimalhumans.com/scriptyard/",
+      },
+      {
+        type: "feature",
+        category: "06 / 随便看看",
+        meta: "PRODUCT RESTRAINT",
+        title: "Light Flip：一台主动拒绝 AI 和信息流的翻盖手机",
+        description:
+          "当多数手机都在加入更多 AI、应用与推荐内容时，Light Flip 只保留通话、短信、导航、相机和音乐等基础功能，用克制提醒我们删减也是产品能力。",
+        image: "./assets/vol30-light-flip.png",
+        alt: "Light Flip 极简翻盖手机产品界面",
+        url: "https://www.thelightphone.com/light-flip",
+      },
+    ],
+  },
   29: {
     issue: "ISSUE 029",
     range: "07.13—07.19",
@@ -739,7 +839,7 @@ const requestedIssue = new URLSearchParams(window.location.search).get("issue");
 const initialIssue =
   requestedIssue && issues[requestedIssue]
     ? requestedIssue
-    : select?.value || "29";
+    : select?.value || "30";
 if (select) {
   select.value = initialIssue;
 }
