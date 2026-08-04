@@ -346,33 +346,80 @@ img {
 
 .briefing__list a {
   display: grid;
-  grid-template-columns: 28px 1fr auto;
+  grid-template-columns: 22px 56px minmax(0, 1fr);
   gap: 12px;
-  align-items: start;
-  padding: 17px 0;
+  align-items: center;
+  padding: 13px 0;
   font-size: 12px;
 }
 
+.briefing__index {
+  align-self: start;
+  padding-top: 3px;
+}
+
+.briefing__thumb {
+  position: relative;
+  display: grid;
+  width: 56px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  place-items: center;
+  border: var(--line);
+  background: var(--ink);
+  color: var(--paper) !important;
+}
+
+.briefing__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(0.94);
+  transition:
+    filter 180ms ease,
+    transform 240ms ease;
+}
+
+.briefing__thumb i {
+  font: 900 16px / 1 Arial, sans-serif;
+  font-style: normal;
+}
+
+.briefing__copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 5px;
+}
+
 .briefing__list strong {
+  order: 2;
   font-size: 15px;
   line-height: 1.45;
 }
 
 .briefing__list time,
-.briefing__list span {
+.briefing__index {
   color: var(--muted);
   font: 700 9px / 1.5 Arial, sans-serif;
 }
 
 .briefing__list time {
-  max-width: 74px;
-  text-align: right;
+  order: 1;
+  max-width: none;
+  text-align: left;
   text-transform: uppercase;
 }
 
 .briefing__list a:hover strong,
 .briefing__list a:focus-visible strong {
   color: var(--accent);
+}
+
+.briefing__list a:hover .briefing__thumb img,
+.briefing__list a:focus-visible .briefing__thumb img {
+  filter: grayscale(0) contrast(1);
+  transform: scale(1.04);
 }
 
 .story-grid {
@@ -614,15 +661,39 @@ body.story-preview-open {
 }
 
 .story-preview__media-empty {
-  display: grid;
+  display: flex;
   width: min(100%, 560px);
   min-height: 360px;
-  place-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(24px, 5vw, 52px);
   border: var(--line);
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 700;
+  background:
+    linear-gradient(rgba(242, 239, 231, 0.08) 1px, transparent 1px),
+    var(--ink);
+  background-size: 100% 8px;
+  color: var(--paper);
+}
+
+.story-preview__media-empty-label,
+.story-preview__media-empty-source {
+  color: var(--accent);
+  font: 800 11px / 1.5 Arial, sans-serif;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.story-preview__media-empty-title {
+  max-width: 9em;
+  font-family: "Songti SC", "STSong", serif;
+  font-size: clamp(34px, 5vw, 64px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.story-preview__media-empty-source {
+  color: var(--paper);
 }
 
 .story-preview__panel {

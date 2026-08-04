@@ -1084,7 +1084,16 @@ function renderStoryPreviewMedia(payload) {
 
   const fallback = document.createElement("div");
   fallback.className = "story-preview__media-empty";
-  fallback.textContent = "暂无预览图";
+  const label = document.createElement("span");
+  label.className = "story-preview__media-empty-label";
+  label.textContent = payload.category || "SHORT SIGNALS";
+  const title = document.createElement("strong");
+  title.className = "story-preview__media-empty-title";
+  title.textContent = payload.title || "三号设计周刊";
+  const source = document.createElement("small");
+  source.className = "story-preview__media-empty-source";
+  source.textContent = payload.source || "SANHAO DESIGN WEEKLY";
+  fallback.append(label, title, source);
   storyPreviewMedia.append(fallback);
 }
 
@@ -1123,7 +1132,58 @@ function closeStoryPreview() {
   }
 }
 
-function renderBriefing(items) {
+function normalizeStoryIdentity(value = "") {
+  return String(value)
+    .toLocaleLowerCase()
+    .replace(/[^\p{Letter}\p{Number}]+/gu, "");
+}
+
+function getSharedPrefixLength(first, second) {
+  const limit = Math.min(first.length, second.length);
+  let index = 0;
+  while (index < limit && first[index] === second[index]) {
+    index += 1;
+  }
+  return index;
+}
+
+function hydrateBriefingItem(item, issue) {
+  const candidates = [issue.lead, ...issue.stories];
+  const normalizedTitle = normalizeStoryIdentity(item.title);
+  let match = candidates.find(
+    (candidate) => normalizeStoryIdentity(candidate.title) === normalizedTitle,
+  );
+
+  if (!match) {
+    match = candidates.find((candidate) => {
+      const candidateTitle = normalizeStoryIdentity(candidate.title);
+      return (
+        (normalizedTitle && candidateTitle && normalizedTitle.includes(candidateTitle)) ||
+        (normalizedTitle && candidateTitle && candidateTitle.includes(normalizedTitle)) ||
+        getSharedPrefixLength(normalizedTitle, candidateTitle) >= 12
+      );
+    });
+  }
+
+  if (!match && item.url !== issue.source) {
+    match = candidates.find((candidate) => candidate.url === item.url);
+  }
+
+  if (!match) return item;
+
+  return {
+    ...match,
+    ...item,
+    description: item.description || match.description,
+    image: item.image || match.image,
+    video: item.video || match.video,
+    alt: item.alt || match.alt,
+    meta: item.meta || item.tag || match.meta,
+  };
+}
+
+function renderBriefing(issue) {
+  const items = issue.briefing;
   return `
     <aside class="briefing" aria-labelledby="briefing-title">
       <div class="briefing__head">
@@ -1132,26 +1192,36 @@ function renderBriefing(items) {
       </div>
       <ol class="briefing__list">
         ${items
-          .map(
-            (item, index) => `
+          .map((item, index) => {
+            const previewItem = hydrateBriefingItem(item, issue);
+            const previewCategory = `短讯 / ${item.tag}`;
+            const previewPayload = { ...previewItem, category: previewCategory };
+            const thumbnail = previewItem.image
+              ? `<img src="${previewItem.image}" alt="" loading="lazy" decoding="async" />`
+              : `<i>${String(index + 1).padStart(2, "0")}</i>`;
+
+            return `
               <li>
                 <a
                   href="${item.url}"
                   ${externalLinkAttributes}
-                  ${getStoryPreviewAttribute(item, {
-                    category: `短讯 / ${item.tag}`,
+                  ${getStoryPreviewAttribute(previewPayload, {
+                    category: previewCategory,
                     description:
                       "这条内容来自本期速览，点击跳转入口可查看原始页面。",
                     style: "SHORT SIGNALS",
                   })}
                 >
-                  <span>${String(index + 1).padStart(2, "0")}</span>
-                  <strong>${item.title}</strong>
-                  <time>${item.tag}</time>
+                  <span class="briefing__index">${String(index + 1).padStart(2, "0")}</span>
+                  <span class="briefing__thumb" aria-hidden="true">${thumbnail}</span>
+                  <span class="briefing__copy">
+                    <time>${item.tag}</time>
+                    <strong>${item.title}</strong>
+                  </span>
                 </a>
               </li>
-            `,
-          )
+            `;
+          })
           .join("")}
       </ol>
     </aside>
@@ -1608,7 +1678,7 @@ function renderIssue(value, announce = false) {
   dateLabel.dateTime = issue.datetime;
   headline.innerHTML = issue.headline;
   note.textContent = issue.note;
-  leadLayout.innerHTML = `${renderLead(issue.lead)}${renderBriefing(issue.briefing)}`;
+  leadLayout.innerHTML = `${renderLead(issue.lead)}${renderBriefing(issue)}`;
   const openingStories = issue.stories.slice(0, 3).map(renderStory);
   const remainingStories = issue.stories.slice(3).map(renderStory);
   storyGrid.innerHTML = [
