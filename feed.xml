@@ -9,7 +9,7 @@
     <link>https://sanhao-design-weekly.pages.dev/</link>
     <description>每周整理设计、品牌、工具与 AI 领域的观察、案例和灵感。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 27 Jul 2026 12:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 12:00:00 +0800</lastBuildDate>
     <generator>Sanhao Design Weekly</generator>
     <ttl>1440</ttl>
     <atom:link
@@ -24,6 +24,38 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>三号设计周刊 Vol.31</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=31</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=31</guid>
+      <pubDate>Tue, 04 Aug 2026 10:16:00 +0800</pubDate>
+      <description><![CDATA[
+        本期关注设计师岗位边界、Figma Make、Framer Agents、Config 2026、
+        Google Earth AI、Lottie Creator、SceneNote、GSAP 与 Grainient。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>AI 正在打破岗位边界，设计师开始接管更多工作。</p>
+        <ul>
+          <li>OpenAI 研究：设计师正在大量承担跨岗位任务</li>
+          <li>Figma Make 加入属性面板和画布批注</li>
+          <li>Framer Agents 开始补齐真实网站的设计细节</li>
+          <li>Figma 公开 Config 2026 视觉体系</li>
+          <li>Google Earth 上线 AI 场景生成，第二天就暂停了</li>
+          <li>Lottie Creator 2.0：浏览器里的轻量动效工作台</li>
+          <li>SceneNote：不用注册也能审视频</li>
+          <li>Made With GSAP：专门收集高质量网页动效案例</li>
+          <li>Grainient v2：渐变、颗粒和 Shader 素材库</li>
+          <li>KFC 大神卡开始送 WorkBuddy 积分</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/qls8kbhvnt7ztf3l?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol31-openai-work.png"
+        length="125535"
+        type="image/png"
+      />
+    </item>
 
     <item>
       <title>三号设计周刊 Vol.30</title>

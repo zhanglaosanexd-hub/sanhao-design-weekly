@@ -1,4 +1,149 @@
 const issues = {
+  31: {
+    issue: "ISSUE 031",
+    range: "07.27—08.02",
+    date: "2026 年 8 月 4 日 / 星期二",
+    datetime: "2026-08-04",
+    likes: 31,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source:
+      "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/qls8kbhvnt7ztf3l?singleDoc",
+    lead: {
+      category: "01 / AI 资讯",
+      meta: "ROLE BOUNDARIES",
+      title: "OpenAI 研究：设计师正在大量承担跨岗位任务",
+      description:
+        "OpenAI 分析超过 80 万条工作相关消息后发现，设计岗位中 75% 的职业特定消息涉及其他岗位工作。设计师正在更多地写代码、做分析和处理营销任务，岗位边界也随之变得模糊。",
+      image: "./assets/vol31-openai-work.png",
+      alt: "OpenAI 关于 AI 扩展工作边界的研究图表",
+      url: "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work/",
+    },
+    briefing: [
+      {
+        title: "Figma Make 加入属性面板和画布批注",
+        tag: "设计工具",
+        url: "https://www.figma.com/blog/properties-panel-and-annotations-now-in-figma-make/",
+      },
+      {
+        title: "Framer Agents 开始补齐真实网站的设计细节",
+        tag: "AI 建站",
+        url: "https://www.framer.com/updates",
+      },
+      {
+        title: "Google Earth 上线 AI 场景生成后次日暂停",
+        tag: "AI 资讯",
+        url: "https://www.reuters.com/business/media-telecom/alphabet-rolls-back-ai-image-generation-google-earth-over-policy-violations-2026-07-31/",
+      },
+      {
+        title: "Obys 把未采用的设计方案做成互动档案",
+        tag: "设计观察",
+        url: "https://experiment.obys.agency/",
+      },
+      {
+        title: "QQ 宠物时隔 8 年回归，并接入 AI",
+        tag: "产品观察",
+        url: "https://news.qq.com/rain/a/20260727A0BKFO00",
+      },
+    ],
+    quote:
+      "AI 正在打破各个岗位的边界线，设计师开始接管更多工作，也在重新定义自己的角色。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 业界动态",
+        meta: "VISUAL EDITING",
+        title: "Figma Make 加入属性面板和画布批注",
+        description:
+          "Figma Make 现在可以直接选中元素，在属性面板中调整间距、排版与布局；遇到交互或动效需求，也能圈选画布上的具体位置，让 Agent 定点修改。",
+        image: "./assets/vol31-figma-make.png",
+        alt: "Figma Make 属性面板与画布批注功能界面",
+        url: "https://www.figma.com/blog/properties-panel-and-annotations-now-in-figma-make/",
+      },
+      {
+        category: "03 / 业界动态",
+        meta: "FRAMER AGENTS",
+        title: "Framer Agents 开始补齐真实网站的设计细节",
+        description:
+          "Framer Agents 新增页面动效、无障碍属性、拖拽交互、复杂浮层、CMS 视频和安全区域等能力，并改善长对话、变量与代码修改记录的稳定性。",
+        image: "./assets/vol31-framer-agents.png",
+        alt: "Framer Agents 产品更新界面",
+        url: "https://www.framer.com/updates",
+      },
+      {
+        category: "04 / 品牌设计",
+        meta: "CONFIG IDENTITY",
+        title: "Figma 公开 Config 2026 视觉体系",
+        description:
+          "Figma Brand Studio 围绕演化、流动与协作建立字形、颗粒、模糊渐变和动态构图系统，并使用 Figma Make 批量生成纹理、统一嘉宾素材。",
+        image: "./assets/vol31-config-identity.png",
+        alt: "Figma Config 2026 品牌视觉体系",
+        url: "https://www.figma.com/blog/the-visual-identity-behind-config-2026/",
+      },
+      {
+        type: "wide",
+        category: "05 / AI 资讯",
+        meta: "TRUST BOUNDARY",
+        title: "Google Earth 上线 AI 场景生成，第二天就暂停了",
+        description:
+          "Google Earth 一度允许用户基于真实卫星、航拍与三维地图素材生成写实场景，但上线仅一天就因政策风险暂停。真实性产品需要比水印更清晰的生成内容边界。",
+        image: "./assets/vol31-google-earth.png",
+        alt: "Google Earth AI 场景生成能力示意图",
+        url: "https://blog.google/products-and-platforms/products/earth/nano-banana-google-earth-image-generation/",
+      },
+      {
+        category: "06 / 产品推荐",
+        meta: "MOTION DESIGN",
+        title: "Lottie Creator 2.0：浏览器里的轻量动效工作台",
+        description:
+          "Lottie Creator 2.0 提供时间轴、关键帧、状态机与 Motion Copilot，可在浏览器里制作可编辑的矢量动画，并直接用于网站和 App。",
+        image: "./assets/vol31-lottie-creator.png",
+        alt: "Lottie Creator 2.0 动效编辑界面",
+        url: "https://lottiefiles.com/lottie-creator",
+      },
+      {
+        category: "07 / 产品推荐",
+        meta: "VIDEO REVIEW",
+        title: "SceneNote：不用注册也能审视频",
+        description:
+          "SceneNote 支持粘贴视频链接或上传音频，让客户在具体时间点留言、圈选画面和录制语音反馈，还能管理版本并导出剪辑标记。",
+        image: "./assets/vol31-scenenote.png",
+        alt: "SceneNote 视频审阅与时间点批注界面",
+        url: "https://scenenote.visual-tone.com/",
+      },
+      {
+        category: "08 / 设计素材",
+        meta: "GSAP SHOWCASE",
+        title: "Made With GSAP：专门收集高质量网页动效案例",
+        description:
+          "Made With GSAP 收录滚动、拖拽、鼠标跟随与循环动画案例，可按交互类型寻找实现参考，适合 Framer、Webflow 和创意网页项目。",
+        image: "./assets/vol31-made-with-gsap.png",
+        alt: "Made With GSAP 网页动效案例库",
+        url: "https://madewithgsap.com/",
+      },
+      {
+        type: "wide",
+        category: "09 / 设计素材",
+        meta: "VISUAL MATERIALS",
+        title: "Grainient v2：渐变、颗粒和 Shader 素材库",
+        description:
+          "Grainient v2 集合平滑渐变、颗粒纹理、动态背景、AI 背景与实时 Shader 工具，已经从渐变下载站升级为轻量视觉素材引擎。",
+        image: "./assets/vol31-grainient.png",
+        alt: "Grainient v2 渐变颗粒与 Shader 素材界面",
+        url: "https://grainient.supply/",
+      },
+      {
+        category: "10 / 随便看看",
+        meta: "KFC × WORKBUDDY",
+        title: "KFC 大神卡开始送 WorkBuddy 积分",
+        description:
+          "肯德基大神卡会员权益中出现 WorkBuddy 1000 积分兑换券。AI 编程工具开始进入餐饮品牌会员体系，跨界得突然，却也很符合“疯狂星期四”的气质。",
+        image: "./assets/vol31-kfc-workbuddy.png",
+        alt: "肯德基大神卡 WorkBuddy 积分兑换权益",
+        url: "https://www.workbuddy.ai/",
+      },
+    ],
+  },
   30: {
     issue: "ISSUE 030",
     range: "07.20—07.26",
@@ -839,7 +984,7 @@ const requestedIssue = new URLSearchParams(window.location.search).get("issue");
 const initialIssue =
   requestedIssue && issues[requestedIssue]
     ? requestedIssue
-    : select?.value || "30";
+    : select?.value || "31";
 if (select) {
   select.value = initialIssue;
 }
@@ -1018,7 +1163,12 @@ function renderLead(lead) {
     <article class="story story--lead">
       <a href="${lead.url}" class="story__link" ${externalLinkAttributes} ${getStoryPreviewAttribute(lead)}>
         <div class="story__media story__media--lead">
-          <img src="${lead.image}" alt="${lead.alt}" />
+          <img
+            src="${lead.image}"
+            alt="${lead.alt}"
+            decoding="async"
+            fetchpriority="high"
+          />
         </div>
         <div class="story__content">
           <p class="story__eyebrow">
@@ -1038,7 +1188,12 @@ function renderStory(story) {
   const typeClass = story.type ? ` story--${story.type}` : "";
   const media = `
     <div class="story__media">
-      <img src="${story.image}" alt="${story.alt}" />
+      <img
+        src="${story.image}"
+        alt="${story.alt}"
+        loading="lazy"
+        decoding="async"
+      />
     </div>
   `;
   const content = `
@@ -1079,6 +1234,8 @@ function renderQuote(text, source) {
 
 function renderIndex(issue) {
   const topics = [...new Set(issue.briefing.map((item) => item.tag))].join(" · ");
+  const featuredCount = String(issue.stories.length + 1).padStart(2, "0");
+  const briefingCount = String(issue.briefing.length).padStart(2, "0");
 
   return `
     <article class="story story--index">
@@ -1086,11 +1243,11 @@ function renderIndex(issue) {
       <h3>本期内容索引</h3>
       <div class="weekly-index">
         <div>
-          <strong>06</strong>
+          <strong>${featuredCount}</strong>
           <span>篇精选内容</span>
         </div>
         <div>
-          <strong>04</strong>
+          <strong>${briefingCount}</strong>
           <span>条短讯速览</span>
         </div>
         <div class="weekly-index__topics">
@@ -1100,6 +1257,29 @@ function renderIndex(issue) {
       </div>
     </article>
   `;
+}
+
+function markStoryGridEdges() {
+  let occupiedColumns = 0;
+
+  storyGrid.querySelectorAll(":scope > .story").forEach((card) => {
+    card.classList.remove("story--row-end");
+    const span = card.classList.contains("story--feature")
+      ? 3
+      : card.classList.contains("story--wide")
+        ? 2
+        : 1;
+
+    if (occupiedColumns + span > 3) {
+      occupiedColumns = 0;
+    }
+    occupiedColumns += span;
+
+    if (occupiedColumns === 3) {
+      card.classList.add("story--row-end");
+      occupiedColumns = 0;
+    }
+  });
 }
 
 function renderSourceCard(issue, value) {
@@ -1429,16 +1609,17 @@ function renderIssue(value, announce = false) {
   headline.innerHTML = issue.headline;
   note.textContent = issue.note;
   leadLayout.innerHTML = `${renderLead(issue.lead)}${renderBriefing(issue.briefing)}`;
+  const openingStories = issue.stories.slice(0, 3).map(renderStory);
+  const remainingStories = issue.stories.slice(3).map(renderStory);
   storyGrid.innerHTML = [
-    renderStory(issue.stories[0]),
-    renderStory(issue.stories[1]),
-    renderStory(issue.stories[2]),
+    ...openingStories,
     renderQuote(issue.quote, issue.source),
     renderIndex(issue),
-    renderStory(issue.stories[3]),
+    remainingStories[0] || "",
     renderSourceCard(issue, value),
-    renderStory(issue.stories[4]),
+    ...remainingStories.slice(1),
   ].join("");
+  markStoryGridEdges();
   status.textContent = `${announce ? "已切换至" : "当前展示"} Vol.${value} · 2026.${issue.range}`;
   document.title = `三号设计周刊 · Vol.${value}`;
   renderReaction(value);

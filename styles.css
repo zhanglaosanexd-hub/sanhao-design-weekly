@@ -386,9 +386,7 @@ img {
   border-bottom: var(--line);
 }
 
-.story-grid > .story:nth-child(2),
-.story-grid > .story:nth-child(5),
-.story-grid > .story:nth-child(7) {
+.story-grid > .story.story--row-end {
   border-right: 0;
 }
 
@@ -1353,7 +1351,8 @@ body.story-preview-open {
 
   .story-grid > .story:nth-child(2),
   .story-grid > .story:nth-child(5),
-  .story-grid > .story:nth-child(7) {
+  .story-grid > .story:nth-child(7),
+  .story-grid > .story.story--row-end {
     border-right: var(--line);
   }
 
@@ -1425,6 +1424,11 @@ body.story-preview-open {
     padding: 16px 18px 32px;
   }
 
+  .reaction-effects {
+    right: -18px;
+    left: -18px;
+  }
+
   .masthead__kicker span:last-child,
   .issue-bar time {
     display: none;
@@ -1466,7 +1470,8 @@ body.story-preview-open {
   .story-grid > .story,
   .story-grid > .story:nth-child(2),
   .story-grid > .story:nth-child(5),
-  .story-grid > .story:nth-child(7) {
+  .story-grid > .story:nth-child(7),
+  .story-grid > .story.story--row-end {
     grid-column: auto;
     border-right: 0;
   }
