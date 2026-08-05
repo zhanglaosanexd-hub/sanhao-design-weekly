@@ -15,8 +15,8 @@ const issues = {
       title: "OpenAI 研究：设计师正在大量承担跨岗位任务",
       description:
         "OpenAI 分析超过 80 万条工作相关消息后发现，设计岗位中 75% 的职业特定消息涉及其他岗位工作。设计师正在更多地写代码、做分析和处理营销任务，岗位边界也随之变得模糊。",
-      image: "./assets/vol31-openai-work.png",
-      alt: "OpenAI 关于 AI 扩展工作边界的研究图表",
+      image: "./assets/vol31-openai-boundaries-cover.png",
+      alt: "黄绿色抽象图形组成的 OpenAI 工作边界研究封面",
       url: "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work/",
     },
     briefing: [
