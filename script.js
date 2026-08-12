@@ -1,4 +1,160 @@
 const issues = {
+  32: {
+    issue: "ISSUE 032",
+    range: "08.03—08.09",
+    date: "2026 年 8 月 12 日 / 星期三",
+    datetime: "2026-08-12",
+    likes: 32,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source:
+      "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/hglg8g9ztgac5cxm?singleDoc",
+    lead: {
+      category: "01 / 业界动态",
+      meta: "MCP × CODE CONNECT",
+      title: "Figma MCP × Code Connect：Agent 开始真正理解设计系统",
+      description:
+        "Figma 公布 Code Connect 在 MCP 工作流中的实际效果。Agent 接入组件对应关系和生产代码上下文后，可以减少 Token 消耗、缩短任务时间，并生成更贴近团队真实设计系统的代码。",
+      image: "./assets/vol32-code-connect.png",
+      alt: "Figma MCP 与 Code Connect 设计系统工作流示意图",
+      url: "https://www.figma.com/blog/the-benefits-of-code-connect-in-mcp/",
+    },
+    briefing: [
+      {
+        title: "Figma Agent 开放范围继续扩大",
+        tag: "业界动态",
+        url: "https://www.figma.com/blog/the-figma-agent-is-here/",
+      },
+      {
+        title: "Figma 开始给 AI Credits 加个人额度",
+        tag: "AI 资讯",
+        url: "https://www.figma.com/release-notes/?title=ai-credit-user-limits",
+      },
+      {
+        title: "Appllama：研究高收入 iOS App 的案例库",
+        tag: "产品推荐",
+        url: "https://appllama.io/",
+      },
+      {
+        title: "Awesome Design Skills 收录 67 套设计风格",
+        tag: "设计素材",
+        url: "https://github.com/bergside/awesome-design-skills",
+      },
+      {
+        title: "ChatGPT 长文本自动转换成附件",
+        tag: "设计细节",
+        url: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      },
+    ],
+    quote:
+      "岗位边界正在变得模糊，设计师自己的审美、表达和判断反而更重要了。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 业界动态",
+        meta: "ADOBE FOR CHATGPT",
+        title: "Adobe 把 70+ 专业创作工具带进 ChatGPT",
+        description:
+          "Adobe for ChatGPT 将 Photoshop、Illustrator、Firefly、Premiere、Express、Lightroom、InDesign、Acrobat 与 Stock 等能力整合进对话窗口，复杂编辑还可以继续回到 Adobe 应用处理。",
+        image: "./assets/vol32-adobe-chatgpt.png",
+        alt: "Adobe for ChatGPT 专业创作工具运行界面",
+        url: "https://blog.adobe.com/en/publish/2026/08/06/introducing-adobe-chatgpt-create-edit-get-work-done-all-in-chatgpt",
+      },
+      {
+        category: "03 / 业界动态",
+        meta: "FIGMA AGENT BETA",
+        title: "Figma Agent 开放范围继续扩大",
+        description:
+          "Figma Agent 仍处于公开 Beta，但越来越多用户已经拿到权限。到 7 月底、8 月初，Figma 超过一半的大客户每周都在使用 Agent，它正在快速进入真实团队工作流。",
+        image: "./assets/vol32-figma-agent.png",
+        alt: "Figma Agent 生成并编辑产品界面的演示画面",
+        url: "https://www.figma.com/blog/the-figma-agent-is-here/",
+      },
+      {
+        category: "04 / AI 资讯",
+        meta: "AI CREDIT LIMITS",
+        title: "Figma 开始给 AI Credits 加个人额度",
+        description:
+          "Figma 新增 AI Credits 管理能力，管理员可以给团队成员设置个人额度上限，用户用完后再申请提升。AI 在设计团队里开始正式进入资源管理阶段。",
+        image: "./assets/vol32-ai-credits.png",
+        alt: "Figma AI Credits 个人额度管理界面",
+        url: "https://www.figma.com/release-notes/?title=ai-credit-user-limits",
+      },
+      {
+        type: "wide",
+        category: "05 / 产品推荐",
+        meta: "APP UX RESEARCH",
+        title: "Appllama：研究高收入 iOS App 的 UI / UX 案例库",
+        description:
+          "Appllama 收录 700+ 个高收入 iOS App 和 30,000+ 张真实界面，可以查看完整 onboarding、付费墙、首页与应用内流程，并结合收入、下载量、颜色和字体做竞品研究。",
+        image: "./assets/vol32-appllama.png",
+        alt: "Appllama iOS App 界面与商业数据案例库",
+        url: "https://appllama.io/",
+      },
+      {
+        category: "06 / 设计素材",
+        meta: "VISUAL ARCHIVE",
+        title: "老三整理了一份早期可视化设计素材合集",
+        description:
+          "一批 2021—2023 年间积累的大屏、数据展示和视觉探索素材已经整理到 Figma Community，适合做可视化项目或寻找旧素材灵感时直接复制使用。",
+        image: "./assets/vol32-visual-assets.png",
+        alt: "早期大屏与数据可视化设计素材合集",
+        url: "https://www.figma.com/community/file/1666393685132654259",
+      },
+      {
+        type: "wide",
+        category: "07 / 设计素材",
+        meta: "DESIGN SKILLS",
+        title: "Awesome Design Skills：67 套可以直接喂给 Agent 的设计风格",
+        description:
+          "仓库收录 Minimal、Bento、Glassmorphism、Brutalism、Editorial、Material、Retro 和 Shadcn 等 67 套 Design Skill，用结构化规则描述字体、颜色、间距、组件与文案语气。",
+        image: "./assets/vol32-design-skills.png",
+        alt: "Awesome Design Skills 设计风格技能库封面",
+        url: "https://github.com/bergside/awesome-design-skills",
+      },
+      {
+        category: "08 / 设计细节",
+        meta: "PROGRESSIVE COMPLEXITY",
+        title: "ChatGPT 长文本不再塞满输入框，而是自动变成附件",
+        description:
+          "在 ChatGPT 中粘贴超过 10,000 字符的长文本时，内容会自动转换成附件，需要时仍可切回文本形式。这是让用户只表达意图、由产品选择承载容器的渐进式复杂度设计。",
+        image: "./assets/vol32-chatgpt-paste.png",
+        alt: "ChatGPT 将长文本自动转换成附件的界面提示",
+        url: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      },
+      {
+        category: "09 / 随便看看",
+        meta: "ECHO-OS",
+        title: "ECHO-OS：把个人作品集做成一套 Windows XP",
+        description:
+          "Echo Wang 把个人主页做成 Windows XP 风格桌面系统，开始菜单、窗口、Media Player、CRT 效果与小游戏都被放进网页。这个由 Echo 与 Claude Code 完成的网站，让个人审美直接变成可探索的交互体验。",
+        image: "./assets/vol32-echo-os.png",
+        alt: "Windows XP 风格的 ECHO-OS 个人作品集网站",
+        url: "https://echoecho.space/",
+      },
+      {
+        category: "10 / 随便看看",
+        meta: "MAC OS 9 PORTFOLIO",
+        title: "Charlie Dean：一个像老电脑系统一样的个人世界",
+        description:
+          "Charlie Dean 用 SvelteKit 把个人网站做成 Mac OS 9 风格桌面，窗口、文件夹、图标和音效共同构成浏览体验。它鼓励访客到处点击，而不是按项目卡片顺序阅读。",
+        image: "./assets/vol32-charlie-dean.png",
+        alt: "Mac OS 9 风格的 Charlie Dean 个人网站",
+        url: "https://charliedean.com/portfolio",
+      },
+      {
+        type: "feature",
+        category: "11 / 随便看看",
+        meta: "CODEX MILESTONE",
+        title: "Codex 不再公布百万用户里程碑，“领鸡蛋”的时代可能结束了",
+        description:
+          "Codex 团队确认用户数早已超过 1100 万，但从 1000 万起不再公开里程碑。此前社区期待随百万用户节点出现的额度 Reset，可能也要从固定节目中退场。",
+        image: "./assets/vol32-codex-milestone.png",
+        alt: "Codex 用户里程碑相关社交媒体对话截图",
+        url: "https://x.com/thsottiaux/status/2084739990471458869",
+      },
+    ],
+  },
   31: {
     issue: "ISSUE 031",
     range: "07.27—08.02",
@@ -984,7 +1140,7 @@ const requestedIssue = new URLSearchParams(window.location.search).get("issue");
 const initialIssue =
   requestedIssue && issues[requestedIssue]
     ? requestedIssue
-    : select?.value || "31";
+    : select?.value || "32";
 if (select) {
   select.value = initialIssue;
 }

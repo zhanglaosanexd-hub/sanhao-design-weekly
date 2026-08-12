@@ -9,7 +9,7 @@
     <link>https://sanhao-design-weekly.pages.dev/</link>
     <description>每周整理设计、品牌、工具与 AI 领域的观察、案例和灵感。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 04 Aug 2026 12:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 14:34:49 +0800</lastBuildDate>
     <generator>Sanhao Design Weekly</generator>
     <ttl>1440</ttl>
     <atom:link
@@ -24,6 +24,39 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>三号设计周刊 Vol.32</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=32</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=32</guid>
+      <pubDate>Wed, 12 Aug 2026 14:34:49 +0800</pubDate>
+      <description><![CDATA[
+        本期关注 Figma MCP 与 Code Connect、Adobe for ChatGPT、Figma Agent、
+        AI Credits、Appllama、Design Skills 与系统式个人作品集。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>当 Agent 真正进入 Figma，设计师的工作方式也变了。</p>
+        <ul>
+          <li>Figma MCP × Code Connect：Agent 开始真正理解设计系统</li>
+          <li>Adobe 把 70+ 专业创作工具带进 ChatGPT</li>
+          <li>Figma Agent 开放范围继续扩大</li>
+          <li>Figma 开始给 AI Credits 加个人额度</li>
+          <li>Appllama：研究高收入 iOS App 的 UI / UX 案例库</li>
+          <li>老三整理了一份早期可视化设计素材合集</li>
+          <li>Awesome Design Skills：67 套可以直接喂给 Agent 的设计风格</li>
+          <li>ChatGPT 长文本不再塞满输入框，而是自动变成附件</li>
+          <li>ECHO-OS：把个人作品集做成一套 Windows XP</li>
+          <li>Charlie Dean：一个像老电脑系统一样的个人世界</li>
+          <li>Codex 不再公布百万用户里程碑</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/hglg8g9ztgac5cxm?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol32-code-connect.png"
+        length="1444475"
+        type="image/png"
+      />
+    </item>
 
     <item>
       <title>三号设计周刊 Vol.31</title>
