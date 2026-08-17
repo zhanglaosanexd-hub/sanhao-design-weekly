@@ -9,7 +9,7 @@
     <link>https://sanhao-design-weekly.pages.dev/</link>
     <description>每周整理设计、品牌、工具与 AI 领域的观察、案例和灵感。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 12 Aug 2026 14:34:49 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 16:10:02 +0800</lastBuildDate>
     <generator>Sanhao Design Weekly</generator>
     <ttl>1440</ttl>
     <atom:link
@@ -24,6 +24,42 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>三号设计周刊 Vol.33</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=33</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=33</guid>
+      <pubDate>Mon, 17 Aug 2026 16:10:02 +0800</pubDate>
+      <description><![CDATA[
+        本期关注 Figma Agent Skills、Instagram Wordmark、Liquid Glass、
+        Figma Make 实验、DeepSeek Harness、产品动效与 AI 原生设计组件。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>设计经验也能被安装了，Figma 正在重做设计师的工作流。</p>
+        <ul>
+          <li>Figma Agent Skills 的 Community 生态开始成型</li>
+          <li>Instagram 时隔近 10 年更新 Wordmark</li>
+          <li>iOS 27 Beta 5 又改了一轮 Liquid Glass 图标</li>
+          <li>Figma 用 100 人实验验证：AI 让设计任务平均快 20%</li>
+          <li>DeepSeek 发布 Harness，Agent 基础设施又往前走了一步</li>
+          <li>OpenMotion：截图 + Prompt 直接生成产品动效视频</li>
+          <li>Remix：直接在已上线产品上画 Figma</li>
+          <li>Kitbitz：2000+ 免费手绘素材，CC0 可商用</li>
+          <li>GetIllustrations 更新 75 张 SaaS 插画</li>
+          <li>Beautiful UI：专门给 AI 原生产品设计的组件库</li>
+          <li>让 AI 回答像人的边想边写</li>
+          <li>老三把《牛来》做成了一套可安装的视觉 Skill</li>
+          <li>Manus 限时免费，两个 Agent 暂时都不消耗积分</li>
+          <li>Codex 疑似内测 8 美元付费重置</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/hwtbpgzf8tws430k?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol33-figma-skills.png"
+        length="685148"
+        type="image/png"
+      />
+    </item>
 
     <item>
       <title>三号设计周刊 Vol.32</title>

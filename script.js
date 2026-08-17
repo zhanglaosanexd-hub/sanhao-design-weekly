@@ -1,4 +1,193 @@
 const issues = {
+  33: {
+    issue: "ISSUE 033",
+    range: "08.10—08.16",
+    date: "2026 年 8 月 17 日 / 星期一",
+    datetime: "2026-08-17",
+    likes: 33,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source:
+      "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/hwtbpgzf8tws430k?singleDoc",
+    lead: {
+      category: "01 / 业界动态",
+      meta: "AGENT SKILLS",
+      title: "Figma Agent Skills 的 Community 生态开始成型",
+      description:
+        "Figma 把 Agent Skills 正式接入 Community，目前已有 50+ 套设计工作流 Skill，覆盖研究、设计系统、交付、动效和组件检查。设计师还能根据当前文件创建 Skill，再发布给其他人复用。",
+      image: "./assets/vol33-figma-skills.png",
+      alt: "Figma Community 中的 Agent Skills 工作流示例",
+      url: "https://www.figma.com/blog/try-these-10-skills-and-show-off-your-own/",
+    },
+    briefing: [
+      {
+        title: "Figma 用 100 人实验验证：AI 让设计任务平均快 20%",
+        tag: "AI 资讯",
+        url: "https://www.figma.com/blog/measuring-time-savings-from-figma-make/",
+      },
+      {
+        title: "Instagram 时隔近 10 年更新 Wordmark",
+        tag: "品牌动态",
+        url: "https://www.theverge.com/tech/979583/this-is-instagrams-new-logo",
+      },
+      {
+        title: "OpenMotion：截图 + Prompt 直接生成产品动效视频",
+        tag: "产品推荐",
+        url: "https://openmotion.design/",
+      },
+      {
+        title: "Beautiful UI：专门给 AI 原生产品设计的组件库",
+        tag: "设计素材",
+        url: "https://www.beautifului.dev/",
+      },
+      {
+        title: "Manus 限时免费，两个 Agent 暂时都不消耗积分",
+        tag: "AI 工具",
+        url: "https://manus.im/invitation/IVRFSDBXKAMJUD?utm_source=invitation&utm_medium=social&utm_campaign=copy_link",
+      },
+    ],
+    quote:
+      "设计经验开始从隐性的个人判断，变成可以安装、复用和共同迭代的工作流。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 业界动态",
+        meta: "INSTAGRAM WORDMARK",
+        title: "Instagram 时隔近 10 年更新 Wordmark",
+        description:
+          "Instagram 更新了使用近十年的文字 Logo，把手写体和印刷体混合在一起，希望更干净、更现代，同时保留手工感。上线后的主要争议却是可读性，不少人第一眼把它读成了 Instagzam。",
+        image: "./assets/vol33-instagram-wordmark.png",
+        alt: "Instagram 新旧 Wordmark 视觉对比",
+        url: "https://www.theverge.com/tech/979583/this-is-instagrams-new-logo",
+      },
+      {
+        category: "03 / 业界动态",
+        meta: "LIQUID GLASS",
+        title: "iOS 27 Beta 5 又改了一轮 Liquid Glass 图标",
+        description:
+          "Apple 在 iOS 27 Beta 5 中继续调整 Safari、Siri、Settings 和 App Store 等系统图标，透明度、细节与视觉层次都有新的变化。",
+        image: "./assets/vol33-ios-liquid-glass.png",
+        alt: "iOS 27 Beta 5 Liquid Glass 系统图标",
+        url: "https://www.tomsguide.com/phones/iphones/ios-27-beta-5-adds-new-app-icons-more-siri-voices-improved-search-and-more-everything-thats-changed",
+      },
+      {
+        category: "04 / AI 资讯",
+        meta: "FIGMA MAKE STUDY",
+        title: "Figma 用 100 人实验验证：AI 让设计任务平均快 20%",
+        description:
+          "Figma 对 100 名参与者进行随机对照实验。使用 Figma Make 后，设计工作平均快 20%、主观难度降低 16%；PM 的任务速度提高 23%，主观难度降低 37%。",
+        image: "./assets/vol33-figma-make-study.png",
+        alt: "Figma Make 随机对照实验结果图表",
+        url: "https://www.figma.com/blog/measuring-time-savings-from-figma-make/",
+      },
+      {
+        type: "wide",
+        category: "05 / AI 资讯",
+        meta: "AGENT HARNESS",
+        title: "DeepSeek 发布 Harness，Agent 基础设施又往前走了一步",
+        description:
+          "DeepSeek Harness 开发者预览版采用一切皆插件的思路，模型、工具、Skills、沙箱、存储和 UI 都能自由组合替换。概念值得关注，但对设计师的明确落地场景仍需要继续观察。",
+        image: "./assets/vol33-deepseek-harness.png",
+        alt: "DeepSeek Harness 开发者预览界面",
+        url: "https://www.deepseek.com/harness/",
+      },
+      {
+        category: "06 / 产品推荐",
+        meta: "PRODUCT MOTION",
+        title: "OpenMotion：截图 + Prompt 直接生成产品动效视频",
+        description:
+          "OpenMotion 能把产品截图、Logo 和品牌素材生成产品介绍视频，生成后的 Scene、Layer、Timing、Easing、颜色、镜头与声音仍可继续编辑，适合功能发布和官网动效 Demo。",
+        image: "./assets/vol33-openmotion.png",
+        alt: "OpenMotion 产品动效视频编辑界面",
+        url: "https://openmotion.design/",
+      },
+      {
+        type: "wide",
+        category: "07 / 产品推荐",
+        meta: "LIVE PRODUCT EDITING",
+        title: "Remix：直接在已上线产品上画 Figma",
+        description:
+          "Remix 基于正在运行的真实产品创建安全副本，再通过 Prompt 修改 UI。团队成员可以分别制作 Variant、合并方案，并在确定后直接创建 GitHub PR，完整保留每一步修改记录。",
+        image: "./assets/vol33-remix.png",
+        alt: "Remix 在真实产品上创建和合并 UI 方案",
+        url: "https://remix.one/product-hunt",
+      },
+      {
+        type: "wide",
+        category: "08 / 设计素材",
+        meta: "CC0 ILLUSTRATIONS",
+        title: "Kitbitz：2000+ 免费手绘素材，CC0 可商用",
+        description:
+          "Kitbitz 收录 2000+ 个手绘素材和 13 套主题包，支持下载 SVG、PNG 与完整 Figma Community 库。素材采用 CC0，可自由修改和商用，不要求署名。",
+        image: "./assets/vol33-kitbitz.png",
+        alt: "Kitbitz 手绘插画素材库界面",
+        url: "https://kitbitz.art/",
+      },
+      {
+        category: "09 / 设计素材",
+        meta: "SAAS ILLUSTRATIONS",
+        title: "GetIllustrations 更新 75 张 SaaS 插画",
+        description:
+          "GetIllustrations 新增一套包含 75 张图的 SaaS Illustrations。全站已有 17 万+ 插画和图标，并支持 Figma 插件、SVG 调色、API 与 MCP。",
+        image: "./assets/vol33-getillustrations.png",
+        alt: "GetIllustrations SaaS 插画包预览",
+        url: "https://getillustrations.com/",
+      },
+      {
+        category: "10 / 设计素材",
+        meta: "AI-NATIVE UI",
+        title: "Beautiful UI：专门给 AI 原生产品设计的组件库",
+        description:
+          "Beautiful UI 聚焦 Prompt 输入、生成状态、Thinking、Agent 执行过程、结果展示、引用和反馈等 AI 产品场景，提前整理了一套不同于传统 Design System 的交互语言。",
+        image: "./assets/vol33-beautiful-ui.png",
+        alt: "Beautiful UI 的 AI 原生产品组件示例",
+        url: "https://www.beautifului.dev/",
+      },
+      {
+        type: "wide",
+        category: "11 / 设计细节",
+        meta: "THINKING IN MOTION",
+        title: "让 AI 回答像人的边想边写",
+        description:
+          "回答生成时逐步出现手写标记、圈选、划线与图表补充，让流式文字变成边思考、边整理、边修正的过程。用户等待结果时，也能感受到信息正在被组织。",
+        image: "./assets/vol33-inspo-handwriting.png",
+        alt: "AI 回答中逐步出现手写标记和图表的交互效果",
+        url: "https://inspo-design.pages.dev/",
+      },
+      {
+        type: "wide",
+        category: "12 / 随便看看",
+        meta: "NIULAI VISION SKILL",
+        title: "老三把《牛来》做成了一套可安装的视觉 Skill",
+        description:
+          "LaoSan NiuLai Vision Skill 可以把人物、动物、产品或场景转成粗粝、低成本 CGI 与乡野舞台感的画面，同时尽量保留主体、姿态、构图和关键识别特征。",
+        image: "./assets/vol33-niulai-skill.png",
+        alt: "实拍吉娃娃与牛来视觉风格生成结果对比",
+        url: "https://github.com/zhanglaosanexd-hub/LaoSan-NiuLaiVision-Skill",
+      },
+      {
+        category: "13 / 随便看看",
+        meta: "MANUS FREE WEEK",
+        title: "Manus 限时免费，两个 Agent 暂时都不消耗积分",
+        description:
+          "截至 8 月 25 日，Manus 1.6 和 Manus 1.6 Lite 活动期间使用 Agent 不消耗积分，但每日免费用量仍有限额，高峰期任务可能需要排队。",
+        image: "./assets/vol33-manus-free.png",
+        alt: "Manus 1.6 限时免费活动页面",
+        url: "https://manus.im/invitation/IVRFSDBXKAMJUD?utm_source=invitation&utm_medium=social&utm_campaign=copy_link",
+      },
+      {
+        type: "feature",
+        category: "14 / 随便看看",
+        meta: "CODEX RESET TEST",
+        title: "Codex 疑似内测 8 美元付费重置",
+        description:
+          "网上出现的截图显示，Codex 用量耗尽后可能出现 Pay $8 to reset 按钮。OpenAI 目前只确认了 Credits 付费续用机制，尚未公开说明这项 8 美元重置，因此暂按小范围测试看待。",
+        image: "./assets/vol33-codex-reset.png",
+        alt: "Codex 用量耗尽后的付费重置按钮截图",
+        url: "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/hwtbpgzf8tws430k?singleDoc",
+      },
+    ],
+  },
   32: {
     issue: "ISSUE 032",
     range: "08.03—08.09",
@@ -1140,7 +1329,7 @@ const requestedIssue = new URLSearchParams(window.location.search).get("issue");
 const initialIssue =
   requestedIssue && issues[requestedIssue]
     ? requestedIssue
-    : select?.value || "32";
+    : select?.value || "33";
 if (select) {
   select.value = initialIssue;
 }
