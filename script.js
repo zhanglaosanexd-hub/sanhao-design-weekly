@@ -1,4 +1,193 @@
 const issues = {
+  34: {
+    issue: "ISSUE 034",
+    range: "08.17—08.23",
+    date: "2026 年 8 月 24 日 / 星期一",
+    datetime: "2026-08-24",
+    likes: 34,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source:
+      "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/dtq3kva2g4grote2?singleDoc",
+    lead: {
+      category: "01 / 业界动态",
+      meta: "WECHAT AI EDITING",
+      title: "微信 v8.0.76：AI 修图进入聊天，语音条也重新设计了",
+      description:
+        "微信 v8.0.76 把 AI 修图带进聊天场景，同时重新设计了语音条。AI 开始进入高频沟通入口，而一处看似细小的视觉变化也迅速引发了用户讨论。",
+      image: "./assets/vol34-wechat-ai-edit.png",
+      alt: "微信 v8.0.76 AI 修图与新版语音条界面",
+      url: "https://mp.weixin.qq.com/s/6CB88U9LEct3AK26dSPq1A",
+    },
+    briefing: [
+      {
+        title: "Claude Code /design：先出设计方案，再进入实现",
+        tag: "AI 资讯",
+        url: "https://x.com/nateparrott/status/2089470636796059754?s=20",
+      },
+      {
+        title: "Figma 开始把 AI Skill 纳入团队管理",
+        tag: "业界动态",
+        url: "https://www.figma.com/release-notes/?title=recommend-resources-you-want-users-to-discover-and-use",
+      },
+      {
+        title: "Balsa UI：专门让人和 Agent 共用的设计系统",
+        tag: "产品推荐",
+        url: "https://balsa-ui.com/",
+      },
+      {
+        title: "UI SFX：936 个 UI 音效",
+        tag: "设计素材",
+        url: "https://uisfx.com/",
+      },
+      {
+        title: "Figma：Auto Layout 的间距终于和 CSS 对齐",
+        tag: "设计细节",
+        url: "https://www.figma.com/release-notes/?title=responsive-spacing",
+      },
+    ],
+    quote:
+      "不追完所有新闻资讯，只记录那些我认为，可能真的会改变设计师工作方式的变化。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 业界动态",
+        meta: "RECOMMENDED RESOURCES",
+        title: "Figma 开始把 AI Skill 纳入团队管理",
+        description:
+          "Figma 新增 Recommended Resources，管理员可以向团队推荐 Skills、模板、组件库和 Make Kits。AI 工作方式开始从个人探索走向团队统一管理与复用。",
+        image: "./assets/vol34-figma-resources.png",
+        alt: "Figma Recommended Resources 团队资源管理界面",
+        url: "https://www.figma.com/release-notes/?title=recommend-resources-you-want-users-to-discover-and-use",
+      },
+      {
+        category: "03 / 业界动态",
+        meta: "WINDOWS 11 MENU",
+        title: "Windows 11 重新整理文件管理器右键菜单",
+        description:
+          "微软正在让文件管理器右键菜单更快、更简单，也更容易自定义。高频操作被重新分组，第三方扩展的呈现方式也得到调整。",
+        image: "./assets/vol34-windows-menu.png",
+        alt: "Windows 11 文件管理器新版右键菜单",
+        url: "https://blogs.windows.com/windows-insider/2026/08/17/improving-file-explorer-context-menu-faster-simpler-and-more-customizable/",
+      },
+      {
+        category: "04 / AI 资讯",
+        meta: "CLAUDE CODE DESIGN",
+        title: "Claude Code /design：先出设计方案，再进入实现",
+        description:
+          "Claude Code 的 /design 早期预览会先生成可编辑的 UI Artboards，用户选择和调整方案后再进入实现。设计探索与代码执行之间多了一层可见、可修改的中间态。",
+        image: "./assets/vol34-claude-design.png",
+        alt: "Claude Code design 命令生成可编辑设计方案",
+        url: "https://x.com/nateparrott/status/2089470636796059754?s=20",
+      },
+      {
+        type: "wide",
+        category: "05 / AI 资讯",
+        meta: "ANTHROPIC DESIGN TEAM",
+        title: "Anthropic 的设计团队，现在几乎所有设计师都在写代码",
+        description:
+          "IDEO 采访 Anthropic 产品设计负责人后发现，这支约 30 人的团队里几乎所有设计师都在写代码。Agent 接手基础实现后，设计师更集中于判断、工作流、组件和最后一公里体验。",
+        image: "./assets/vol34-anthropic-design-team.png",
+        alt: "Anthropic 产品设计团队访谈页面",
+        url: "https://www.ideo.com/journal/crafting-the-last-mile-of-delight",
+      },
+      {
+        category: "06 / AI 资讯",
+        meta: "DESIGN CONTEXT",
+        title: "Figma：别再把时间都花在写 Prompt 上",
+        description:
+          "Figma 认为 Prompt 只是起点，生成质量更依赖真实设计上下文。参考图、组件、设计系统和画布中的持续调整，才是让 AI 结果真正可用的关键。",
+        image: "./assets/vol34-figma-design-context.png",
+        alt: "Figma AI 设计提示与真实设计上下文示例",
+        url: "https://www.figma.com/resource-library/ai-design-prompts/",
+      },
+      {
+        type: "wide",
+        category: "07 / 产品推荐",
+        meta: "HUMAN × AGENT UI",
+        title: "Balsa UI：专门让人和 Agent 共用的设计系统",
+        description:
+          "Balsa UI 面向人类与 Agent 共用的界面场景，提供组件、模式和交互约定。它试图让 Agent 不只生成页面，也能在可预测的设计规则里持续操作产品。",
+        image: "./assets/vol34-balsa-ui.png",
+        alt: "Balsa UI 人类与 Agent 共用设计系统页面",
+        url: "https://balsa-ui.com/",
+      },
+      {
+        type: "wide",
+        category: "08 / 设计素材",
+        meta: "UI SOUND LIBRARY",
+        title: "UI SFX：936 个 UI 音效",
+        description:
+          "UI SFX 收录 936 个适合按钮、通知、切换、成功与错误状态的界面音效，可按场景快速试听和下载，为产品交互补上一层听觉反馈。",
+        image: "./assets/vol34-ui-sfx.png",
+        alt: "UI SFX 界面音效素材库",
+        url: "https://uisfx.com/",
+      },
+      {
+        category: "09 / 设计素材",
+        meta: "COLOR SYSTEM",
+        title: "Rechroma：从一个颜色生成完整色彩系统",
+        description:
+          "Rechroma 可以从一个基础色生成完整的颜色阶梯、语义色和深浅模式方案，适合快速搭建品牌色板与产品设计系统。",
+        image: "./assets/vol34-rechroma.png",
+        alt: "Rechroma 自动生成的产品色彩系统",
+        url: "https://rechroma.com/",
+      },
+      {
+        category: "10 / 设计素材",
+        meta: "PIXEL ICONS",
+        title: "Pixelarticons：1036 个免费像素风图标",
+        description:
+          "Pixelarticons 提供 1036 个像素风图标，覆盖常见界面与品牌场景，可直接搜索、复制和下载，适合复古产品、游戏界面与实验视觉。",
+        image: "./assets/vol34-pixelarticons.png",
+        alt: "Pixelarticons 免费像素风图标库",
+        url: "https://pixelarticons.com/",
+      },
+      {
+        type: "wide",
+        category: "11 / 设计素材",
+        meta: "AI TO FIGMA",
+        title: "AI to Figma：把 AI 生成的界面直接写回 Figma",
+        description:
+          "AI to Figma 是一个开源项目，可以把 AI 生成的 UI 结构直接导入 Figma，继续进行图层编辑、组件整理和团队协作。",
+        image: "./assets/vol34-ai-to-figma.png",
+        alt: "AI to Figma 将生成界面写回 Figma 的工作流",
+        url: "https://github.com/Niall-Young/AItoFigma",
+      },
+      {
+        type: "wide",
+        category: "12 / 设计细节",
+        meta: "RESPONSIVE SPACING",
+        title: "Figma：Auto Layout 的间距终于和 CSS 对齐",
+        description:
+          "Figma 为 Auto Layout 增加更接近 CSS 的响应式间距控制，让设计稿中的布局规则更容易和前端实现对应，也减少固定数值带来的重复调整。",
+        image: "./assets/vol34-auto-layout-spacing.png",
+        alt: "Figma Auto Layout 响应式间距设置",
+        url: "https://www.figma.com/release-notes/?title=responsive-spacing",
+      },
+      {
+        category: "13 / 随便看看",
+        meta: "NIANNIAN STICKERS",
+        title: "念念打工记 1.0：我把自家橘猫做成了一套微信表情包",
+        description:
+          "老三把自家橘猫念念做成了一套打工主题微信表情包，从真实性格、日常动作到职场语境，整理成可以直接使用的角色表达。",
+        image: "./assets/vol34-niannian-stickers.png",
+        alt: "念念打工记橘猫微信表情包预览",
+        url: "https://w.url.cn/s/AWRSSeq",
+      },
+      {
+        type: "feature",
+        category: "14 / 随便看看",
+        meta: "PHYSICS WEBSITE",
+        title: "TILToooTILT：把整个网页当成一个有重量的房间",
+        description:
+          "网站里放了 18 个具有不同质量、摩擦力、漂移速度和稳定性的物体。倾斜页面后，它们会按照各自的重量产生不同运动反应，适合做互动网页和创意 Coding 的设计师体验。",
+        image: "./assets/vol34-tiltoootilt.png",
+        alt: "TILToooTILT 物理互动网页中的漂浮物体",
+        url: "https://tiltoootilt.tote.co.jp/",
+      },
+    ],
+  },
   33: {
     issue: "ISSUE 033",
     range: "08.10—08.16",
@@ -1329,7 +1518,7 @@ const requestedIssue = new URLSearchParams(window.location.search).get("issue");
 const initialIssue =
   requestedIssue && issues[requestedIssue]
     ? requestedIssue
-    : select?.value || "33";
+    : select?.value || "34";
 if (select) {
   select.value = initialIssue;
 }

@@ -9,7 +9,7 @@
     <link>https://sanhao-design-weekly.pages.dev/</link>
     <description>每周整理设计、品牌、工具与 AI 领域的观察、案例和灵感。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 17 Aug 2026 16:10:02 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 17:06:20 +0800</lastBuildDate>
     <generator>Sanhao Design Weekly</generator>
     <ttl>1440</ttl>
     <atom:link
@@ -24,6 +24,42 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>三号设计周刊 Vol.34</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=34</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=34</guid>
+      <pubDate>Mon, 24 Aug 2026 17:06:20 +0800</pubDate>
+      <description><![CDATA[
+        本期关注微信 AI 修图、Claude Code /design、Figma 团队资源管理、
+        Anthropic 设计团队、Balsa UI、设计素材与物理互动网页。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>微信开始 AI 修图，Claude 也开始做设计了。</p>
+        <ul>
+          <li>微信 v8.0.76：AI 修图进入聊天，语音条也重新设计了</li>
+          <li>Figma 开始把 AI Skill 纳入团队管理</li>
+          <li>Windows 11 重新整理文件管理器右键菜单</li>
+          <li>Claude Code /design：先出设计方案，再进入实现</li>
+          <li>Anthropic 的设计团队，现在几乎所有设计师都在写代码</li>
+          <li>Figma：别再把时间都花在写 Prompt 上</li>
+          <li>Balsa UI：专门让人和 Agent 共用的设计系统</li>
+          <li>UI SFX：936 个 UI 音效</li>
+          <li>Rechroma：从一个颜色生成完整色彩系统</li>
+          <li>Pixelarticons：1036 个免费像素风图标</li>
+          <li>AI to Figma：把 AI 生成的界面直接写回 Figma</li>
+          <li>Figma：Auto Layout 的间距终于和 CSS 对齐</li>
+          <li>念念打工记 1.0：我把自家橘猫做成了一套微信表情包</li>
+          <li>TILToooTILT：把整个网页当成一个有重量的房间</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/dtq3kva2g4grote2?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol34-wechat-ai-edit.png"
+        length="1592421"
+        type="image/png"
+      />
+    </item>
 
     <item>
       <title>三号设计周刊 Vol.33</title>
