@@ -1,4 +1,172 @@
 const issues = {
+  35: {
+    issue: "ISSUE 035",
+    range: "08.24—08.30",
+    date: "2026 年 9 月 1 日 / 星期二",
+    datetime: "2026-09-01",
+    likes: 35,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source:
+      "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/bdy63vibvbtos1wk?singleDoc",
+    lead: {
+      category: "01 / 业界动态",
+      meta: "CHATGPT SITES",
+      title: "ChatGPT 开始直接做「网站」了",
+      description:
+        "ChatGPT Sites 进入 Public Beta。用户可以在 ChatGPT Work 或桌面端 Work / Codex 中描述需求，加入文件、数据和链接，生成可修改、分享甚至公开发布的网站或轻量应用。",
+      image: "./assets/vol35-chatgpt-sites.png",
+      alt: "ChatGPT Sites 生成并编辑网站的工作界面",
+      url: "https://help.openai.com/en/articles/20001339-creating-and-managing-chatgpt-sites",
+    },
+    briefing: [
+      {
+        title: "Photoshop 开始支持「说一句 + 画两笔」让 AI 修图",
+        tag: "业界动态",
+        url: "https://blog.adobe.com/en/publish/2026/08/27/new-photoshop-innovations-bring-you-more-choice-control-at-every-stage-of-your-creative-process",
+      },
+      {
+        title: "Webflow 正式接进 ChatGPT 和 Codex",
+        tag: "AI 资讯",
+        url: "https://webflow.com/blog/webflow-is-now-available-in-codex-and-chatgpt",
+      },
+      {
+        title: "Sendra：Figma 画完邮件，直接导出能发的 HTML",
+        tag: "产品推荐",
+        url: "https://www.figma.com/community/plugin/1659319383372020095/sendra-figma-to-email-html-responsive-outlook-safe",
+      },
+      {
+        title: "GeekLego：给 AI 用的开源设计系统来了",
+        tag: "设计素材",
+        url: "https://geeklego.io/",
+      },
+      {
+        title: "AI Interface Museum：把 15 年 AI 界面放进一座线上博物馆",
+        tag: "设计观察",
+        url: "https://interfaces.kylejeong.com/",
+      },
+    ],
+    quote:
+      "设计师、Agent 和真实网站之间，可能会逐渐形成一条持续迭代的链路。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 业界动态",
+        meta: "PHOTOSHOP MARKUP",
+        title: "Photoshop 开始支持「说一句 + 画两笔」让 AI 修图",
+        description:
+          "Photoshop 新增 AI Assisted Editor、Prompt to Edit 和 Markup。除了自然语言修改图片，用户还可以画圈、箭头、涂色或草图，结合 Mask 精确告诉 AI 要修改的位置。",
+        image: "./assets/vol35-photoshop-markup.png",
+        alt: "Photoshop 使用草图标记和自然语言进行 AI 修图",
+        url: "https://blog.adobe.com/en/publish/2026/08/27/new-photoshop-innovations-bring-you-more-choice-control-at-every-stage-of-your-creative-process",
+      },
+      {
+        category: "03 / 业界动态",
+        meta: "DETACHED AGENT CHAT",
+        title: "Figma Agent 终于可以单独浮出来了",
+        description:
+          "Figma 桌面端现在可以把 Agent Chat 从主界面独立出来，拖到屏幕任意位置。即使切换文件、Tab 或其他工具，它也能持续可见，逐渐从软件入口变成长期待在工作台旁的角色。",
+        image: "./assets/vol35-figma-agent-window.png",
+        alt: "Figma Agent Chat 独立窗口悬浮在工作台旁",
+        url: "https://www.figma.com/release-notes/?title=open-the-agent-chat-panel-in-a-new-window",
+      },
+      {
+        category: "04 / AI 资讯",
+        meta: "WEBFLOW × AGENTS",
+        title: "Webflow 正式接进 ChatGPT 和 Codex",
+        description:
+          "连接 Workspace 后，Agent 可以读取 Webflow 项目的真实上下文，并协助完成 CMS 内容更新、SEO 优化、代码部署和网站管理，让设计、Agent 与线上网站形成持续迭代链路。",
+        image: "./assets/vol35-webflow-chatgpt-codex.png",
+        alt: "Webflow 连接 ChatGPT 和 Codex 的网站工作流",
+        url: "https://webflow.com/blog/webflow-is-now-available-in-codex-and-chatgpt",
+      },
+      {
+        type: "wide",
+        category: "05 / AI 资讯",
+        meta: "DESIGN × CODE SYNC",
+        title: "Figma 开始研究：怎样让设计和代码一直保持同步",
+        description:
+          "Figma 新一期 Workflow Lab 研究如何通过 MCP、Code Connect、FigJam 和 Coding Agent 传递设计上下文。当 Agent 能读取组件、Token 与设计系统规则时，首次生成结果才更接近 Production Ready。",
+        image: "./assets/vol35-design-code-sync.png",
+        alt: "Figma Workflow Lab 设计与代码同步工作流",
+        url: "https://www.figma.com/blog/workflow-lab-moving-between-design-and-code-with-agents/",
+      },
+      {
+        type: "wide",
+        category: "06 / 产品推荐",
+        meta: "FIGMA TO EMAIL",
+        title: "Sendra：Figma 画完邮件，直接导出能发的 HTML",
+        description:
+          "在 Figma 中完成 Email 设计并选中 Frame，就能生成响应式 HTML。Sendra 还支持 Mobile Stacking、Dark Mode、图片托管、测试邮件和主流邮件客户端适配。",
+        image: "./assets/vol35-sendra-email.png",
+        alt: "Sendra 将 Figma 邮件设计导出为响应式 HTML",
+        url: "https://www.figma.com/community/plugin/1659319383372020095/sendra-figma-to-email-html-responsive-outlook-safe",
+      },
+      {
+        category: "07 / 产品推荐",
+        meta: "DAILY DESIGN TAB",
+        title: "Design Hunt：把浏览器新标签页变成每日设计灵感墙",
+        description:
+          "每次打开新标签页都会出现一批人工筛选的产品设计、品牌、字体、动效与数字体验作品，支持图片、视频、设计师主页、深浅色模式和离线缓存。",
+        image: "./assets/vol35-design-hunt.png",
+        alt: "Design Hunt 浏览器新标签页设计灵感墙",
+        url: "https://designhunt.us/",
+      },
+      {
+        category: "08 / 设计素材",
+        meta: "AI-NATIVE SYSTEM",
+        title: "GeekLego：给 AI 用的开源设计系统来了",
+        description:
+          "GeekLego 是一套开源 AI-native Design System。除 Token、组件和文档外，它还加入专门给 Coding Agent 使用的规则与 Skill，让生成组件遵循既定颜色、间距和可访问性规范。",
+        image: "./assets/vol35-geeklego.png",
+        alt: "GeekLego AI 原生开源设计系统界面",
+        url: "https://geeklego.io/",
+      },
+      {
+        type: "wide",
+        category: "09 / 设计素材",
+        meta: "HTML SHADERS",
+        title: "Inspira UI：现在连 HTML 都可以直接套 Shader 了",
+        description:
+          "Inspira UI 新增 HTML in Canvas 效果，可将 ShaderToy 风格 Shader 应用到实时 HTML 内容。目前包含 Liquid、Chromatic、ASCII、Cloth、Blaze 和 Drag 等视觉效果。",
+        image: "./assets/vol35-inspira-ui-shader.png",
+        alt: "Inspira UI 为实时 HTML 内容应用 Shader 效果",
+        url: "https://inspira-ui.com/docs/en",
+      },
+      {
+        category: "10 / 设计细节",
+        meta: "UNFURLING INTERFACES",
+        title: "让浮层从它该来的地方长出来",
+        description:
+          "DuckDuckGo Design Engineer Karl Koch 在 On unfurling interfaces 中讨论 Menu、Toast 与卡片详情等局部界面应该如何从触发位置自然展开，让空间关系与交互来源保持连贯。",
+        image: "./assets/vol35-unfurling-interfaces.png",
+        alt: "On unfurling interfaces 界面展开动效文章封面",
+        url: "https://karlkoch.me/writing/on-unfurling-interfaces/",
+      },
+      {
+        type: "wide",
+        category: "11 / 随便看看",
+        meta: "AI INTERFACE HISTORY",
+        title: "AI Interface Museum：把 15 年 AI 界面放进一座线上博物馆",
+        description:
+          "这座线上博物馆收集了从 2011 年 Siri 到 ChatGPT、Cursor、Claude Artifacts、Computer Use、Operator 与 Codex App 等代表性 AI 界面，可沿时间线观察交互范式的变化。",
+        image: "./assets/vol35-ai-interface-museum.png",
+        alt: "AI Interface Museum 十五年人工智能界面时间线",
+        url: "https://interfaces.kylejeong.com/",
+      },
+      {
+        type: "feature",
+        category: "12 / 随便看看",
+        meta: "3D PORTFOLIO CITY",
+        title: "Persona Studio：把作品集直接做成了一座 3D 城市",
+        description:
+          "Persona Studio 把每个项目设计成城市中的一栋建筑，访问者通过探索城市进入对应项目。它在 8 月 29 日获得 CSS Winner Site of the Day，也让信息架构本身成为品牌表达。",
+        image: "./assets/vol35-persona-studio.png",
+        alt: "Persona Studio 三维城市作品集网站",
+        url: "https://persona-studio.com/",
+      },
+    ],
+  },
   34: {
     issue: "ISSUE 034",
     range: "08.17—08.23",
@@ -1518,7 +1686,7 @@ const requestedIssue = new URLSearchParams(window.location.search).get("issue");
 const initialIssue =
   requestedIssue && issues[requestedIssue]
     ? requestedIssue
-    : select?.value || "34";
+    : select?.value || "35";
 if (select) {
   select.value = initialIssue;
 }

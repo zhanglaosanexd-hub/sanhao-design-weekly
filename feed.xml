@@ -9,7 +9,7 @@
     <link>https://sanhao-design-weekly.pages.dev/</link>
     <description>每周整理设计、品牌、工具与 AI 领域的观察、案例和灵感。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 24 Aug 2026 17:06:20 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 17:26:48 +0800</lastBuildDate>
     <generator>Sanhao Design Weekly</generator>
     <ttl>1440</ttl>
     <atom:link
@@ -24,6 +24,40 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>三号设计周刊 Vol.35</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=35</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=35</guid>
+      <pubDate>Tue, 01 Sep 2026 17:26:48 +0800</pubDate>
+      <description><![CDATA[
+        本期关注 ChatGPT Sites、Photoshop AI 修图、Figma Agent 独立窗口、
+        Webflow Agent 工作流、AI 原生设计系统与互动作品集。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>ChatGPT 开始直接做网站，Photoshop 也学会看懂草图了。</p>
+        <ul>
+          <li>ChatGPT 开始直接做「网站」了</li>
+          <li>Photoshop 开始支持「说一句 + 画两笔」让 AI 修图</li>
+          <li>Figma Agent 终于可以单独浮出来了</li>
+          <li>Webflow 正式接进 ChatGPT 和 Codex</li>
+          <li>Figma 开始研究：怎样让设计和代码一直保持同步</li>
+          <li>Sendra：Figma 画完邮件，直接导出能发的 HTML</li>
+          <li>Design Hunt：把浏览器新标签页变成每日设计灵感墙</li>
+          <li>GeekLego：给 AI 用的开源设计系统来了</li>
+          <li>Inspira UI：现在连 HTML 都可以直接套 Shader 了</li>
+          <li>让浮层从它该来的地方长出来</li>
+          <li>AI Interface Museum：把 15 年 AI 界面放进一座线上博物馆</li>
+          <li>Persona Studio：把作品集直接做成了一座 3D 城市</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/bdy63vibvbtos1wk?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol35-chatgpt-sites.png"
+        length="212251"
+        type="image/png"
+      />
+    </item>
 
     <item>
       <title>三号设计周刊 Vol.34</title>
