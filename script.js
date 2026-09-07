@@ -1,4 +1,151 @@
 const issues = {
+  36: {
+    issue: "ISSUE 036",
+    range: "08.31—09.06",
+    date: "2026 年 9 月 7 日 / 星期一",
+    datetime: "2026-09-07",
+    likes: 36,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source:
+      "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/iifreikn94p0n60d?singleDoc",
+    lead: {
+      category: "01 / 业界动态",
+      meta: "GOOGLE PICS",
+      title: "Google Pics：Google 也正式做起了 AI 设计工具",
+      description:
+        "Google 推出原生集成在 Workspace 中的 AI 图片生成与编辑工具 Pics，面向营销素材、演示文稿、商品图片和社媒内容，也让 Google 有了一个更接近 Canva 与 Adobe Express 的轻量设计入口。",
+      image: "./assets/vol36-google-pics.png",
+      alt: "Google Pics AI 图片生成与编辑工具界面",
+      url: "https://workspace.google.com/products/pics/",
+    },
+    briefing: [
+      {
+        title: "Webflow 一口气更新：AI 生成的组件，现在可以直接在画布上改了",
+        tag: "业界动态",
+        url: "https://webflow.com/updates",
+      },
+      {
+        title: "GPT-6 Astra 正式发布",
+        tag: "AI 资讯",
+        url: "https://openai.com/products/release-notes/",
+      },
+      {
+        title: "IconVectors 2.0：一个 SVG 编辑器，塞进了 155 个 MCP 工具",
+        tag: "产品推荐",
+        url: "https://iconvectors.io/",
+      },
+      {
+        title: "Figma：终于可以统一管理颜色透明度了",
+        tag: "设计细节",
+        url: "https://www.figma.com/release-notes/?title=control-opacity-at-scale",
+      },
+      {
+        title: "有人把埃菲尔铁塔掰弯，当成了一个巨大弹弓",
+        tag: "互动实验",
+        url: "https://tympanus.net/Development/EiffelCatapult/",
+      },
+    ],
+    quote:
+      "AI 正在从一个生成入口，变成真正理解上下文、操作工具并持续完成任务的工作伙伴。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 业界动态",
+        meta: "VISUAL AI COMPONENTS",
+        title: "Webflow 一口气更新：AI 生成的组件，现在可以直接在画布上改了",
+        description:
+          "Webflow 的 AI Code Components 现在可以像普通元素一样在 Canvas 中直接调整样式；Agent 还能读取现有网站，自动整理品牌、设计系统、素材和 CMS 规则，并并排检查多个响应式尺寸。",
+        image: "./assets/vol36-webflow-ai-components.png",
+        alt: "Webflow AI 生成组件的可视化编辑界面",
+        url: "https://webflow.com/updates",
+      },
+      {
+        category: "03 / 业界动态",
+        meta: "ADOBE × SLACK",
+        title: "Adobe 把 70+ 个创意工具搬进了 Slack",
+        description:
+          "Adobe for Slack 让 Slackbot 可以调用 Firefly、Photoshop、Premiere、Acrobat、Illustrator、Lightroom 与 Adobe Express 等工具，根据对话上下文生成或继续修改图片、视频和 PDF。",
+        image: "./assets/vol36-adobe-slack.png",
+        alt: "Adobe 创意工具接入 Slack 的工作流界面",
+        url: "https://blog.adobe.com/en/publish/2026/09/02/introducing-adobe-for-slack",
+      },
+      {
+        category: "04 / AI 资讯",
+        meta: "GPT-6 ASTRA",
+        title: "GPT-6 Astra 正式发布",
+        description:
+          "GPT-6 Astra 重点强化 Coding、Research、Computer Use 和复杂多步骤任务，并更重视文档、表格与演示文稿等专业产出。Mid-turn steering 还允许用户在任务执行中途继续追加或修改要求。",
+        image: "./assets/vol36-gpt6-astra.png",
+        alt: "GPT-6 Astra 发布视觉",
+        url: "https://openai.com/products/release-notes/",
+      },
+      {
+        type: "wide",
+        category: "05 / 产品推荐",
+        meta: "NOTCH PUBLISHING",
+        title: "PostBox：把 MacBook 刘海变成设计作品的发布入口",
+        description:
+          "把导出的图片拖到 MacBook 刘海，就能写一次文案并同步发布到多个设计与社交平台；发送前还可以套用展示 Preset 或 Mockup。",
+        image: "./assets/vol36-postbox.png",
+        alt: "PostBox 通过 MacBook 刘海发布设计作品的界面",
+        url: "https://postbox.sh/",
+      },
+      {
+        category: "06 / 产品推荐",
+        meta: "SVG × MCP",
+        title: "IconVectors 2.0：一个 SVG 编辑器，塞进了 155 个 MCP 工具",
+        description:
+          "新版加入 Icon Explorer、SVG 批处理和颜色面板，并内置 155 个本地 MCP 工具。连接 Agent 后，它们可以读取当前 SVG、选区和文件夹，直接修改、预览与导出图标。",
+        image: "./assets/vol36-iconvectors.png",
+        alt: "IconVectors 2.0 SVG 编辑器与 MCP 工具界面",
+        url: "https://iconvectors.io/",
+      },
+      {
+        type: "wide",
+        category: "07 / 设计素材",
+        meta: "STAMP EDGES",
+        title: "Ravioli：一个只负责做邮票齿孔的小工具",
+        description:
+          "选择形状并调整尺寸、齿孔数量和圆角，就能导出透明 PNG 或 SVG，适合海报、贴纸、票券、复古视觉与拼贴设计。",
+        image: "./assets/vol36-ravioli.png",
+        alt: "Ravioli 邮票齿孔图形生成工具界面",
+        url: "https://raviolitool.vercel.app/",
+      },
+      {
+        type: "wide",
+        category: "08 / 设计素材",
+        meta: "REVIVED TYPEFACE",
+        title: "Eska：一套跨越 50 年重新复活的免费字体",
+        description:
+          "Eska 源自 Maria Eska 在 1975 年设计的 Rugby 字体。50 年后，它被重新数字化为尊重原稿的 Eska Original 和现代化的 Eska Neue，两个版本均可免费下载。",
+        image: "./assets/vol36-eska.png",
+        alt: "Eska Original 与 Eska Neue 字体展示",
+        url: "https://capitalics.wtf/en/font/eska",
+      },
+      {
+        category: "09 / 设计细节",
+        meta: "OPACITY VARIABLES",
+        title: "Figma：终于可以统一管理颜色透明度了",
+        description:
+          "Figma 现在允许使用 Number Variable 控制 Opacity。颜色仍然保留 Library Link，同时叠加透明度变量，Disabled、Overlay 与 Scrim 等状态可以统一维护。",
+        image: "./assets/vol36-figma-opacity.png",
+        alt: "Figma 使用数值变量统一控制颜色透明度",
+        url: "https://www.figma.com/release-notes/?title=control-opacity-at-scale",
+      },
+      {
+        type: "feature",
+        category: "10 / 随便看看",
+        meta: "EIFFEL CATAPULT",
+        title: "有人把埃菲尔铁塔掰弯，当成了一个巨大弹弓",
+        description:
+          "Yuri Artiukh 用 Three.js 做了一个可以拖拽弯曲埃菲尔铁塔的实验，并结合 Cesium ion 的真实世界 3D 数据，让用户从巴黎上空飞向 Three.js Conference 会场。",
+        image: "./assets/vol36-eiffel-catapult.png",
+        alt: "Three.js 埃菲尔铁塔弹弓互动实验",
+        url: "https://tympanus.net/Development/EiffelCatapult/",
+      },
+    ],
+  },
   35: {
     issue: "ISSUE 035",
     range: "08.24—08.30",
@@ -1686,7 +1833,7 @@ const requestedIssue = new URLSearchParams(window.location.search).get("issue");
 const initialIssue =
   requestedIssue && issues[requestedIssue]
     ? requestedIssue
-    : select?.value || "35";
+    : select?.value || "36";
 if (select) {
   select.value = initialIssue;
 }

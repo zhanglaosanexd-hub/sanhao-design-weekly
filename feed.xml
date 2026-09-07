@@ -9,7 +9,7 @@
     <link>https://sanhao-design-weekly.pages.dev/</link>
     <description>每周整理设计、品牌、工具与 AI 领域的观察、案例和灵感。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 01 Sep 2026 17:26:48 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 10:56:34 +0800</lastBuildDate>
     <generator>Sanhao Design Weekly</generator>
     <ttl>1440</ttl>
     <atom:link
@@ -24,6 +24,38 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>三号设计周刊 Vol.36</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=36</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=36</guid>
+      <pubDate>Mon, 07 Sep 2026 10:56:34 +0800</pubDate>
+      <description><![CDATA[
+        本期关注 Google Pics、GPT-6 Astra、Webflow AI 组件、Adobe for Slack、
+        SVG Agent 工具、设计素材、Figma 透明度变量与 Three.js 互动实验。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>GPT-6 正式发布，Google 也杀进设计工具了。</p>
+        <ul>
+          <li>Google Pics：Google 也正式做起了 AI 设计工具</li>
+          <li>Webflow 一口气更新：AI 生成的组件，现在可以直接在画布上改了</li>
+          <li>Adobe 把 70+ 个创意工具搬进了 Slack</li>
+          <li>GPT-6 Astra 正式发布</li>
+          <li>PostBox：把 MacBook 刘海变成设计作品的发布入口</li>
+          <li>IconVectors 2.0：一个 SVG 编辑器，塞进了 155 个 MCP 工具</li>
+          <li>Ravioli：一个只负责做邮票齿孔的小工具</li>
+          <li>Eska：一套跨越 50 年重新复活的免费字体</li>
+          <li>Figma：终于可以统一管理颜色透明度了</li>
+          <li>有人把埃菲尔铁塔掰弯，当成了一个巨大弹弓</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/iifreikn94p0n60d?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol36-google-pics.png"
+        length="2598890"
+        type="image/png"
+      />
+    </item>
 
     <item>
       <title>三号设计周刊 Vol.35</title>

@@ -12,6 +12,7 @@ const ISSUE_BASE_LIKES = {
   33: 33,
   34: 34,
   35: 35,
+  36: 36,
 };
 const BASE_LIKE_TOTAL = Object.values(ISSUE_BASE_LIKES).reduce(
   (total, count) => total + count,
