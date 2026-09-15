@@ -1,4 +1,140 @@
 const issues = {
+  37: {
+    issue: "ISSUE 037",
+    range: "09.07—09.13",
+    date: "2026 年 9 月 15 日 / 星期二",
+    datetime: "2026-09-15",
+    likes: 37,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source:
+      "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/zlc5e27s2ywi0c50?singleDoc",
+    lead: {
+      category: "01 / 业界动态",
+      meta: "IPHONE DUO",
+      title: "Apple 秋季发布会：iPhone Duo 来了，iOS 的设计适配也要重新开始",
+      description:
+        "Apple 推出首款折叠屏 iPhone——iPhone Duo：关闭时使用 5.4 英寸外屏，展开后变成 7.6 英寸内屏。以后做 iOS 产品，适配还要考虑内外屏、折叠状态、屏幕方向与握持方式之间的切换。",
+      image: "./assets/vol37-iphone-duo.png",
+      alt: "Apple 首款折叠屏 iPhone Duo 产品视觉",
+      url: "https://www.apple.com/newsroom/2026/09/apple-unveils-iphone-duo/",
+    },
+    briefing: [
+      {
+        title: "Adobe：AI 终于直接进入 Premiere 和 After Effects 的时间线",
+        tag: "业界动态",
+        url: "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/zlc5e27s2ywi0c50?singleDoc",
+      },
+      {
+        title: "ChatGPT Images 2.5 发布",
+        tag: "AI 资讯",
+        url: "https://openai.com/zh-Hans-CN/index/introducing-chatgpt-images-2-5/",
+      },
+      {
+        title: "Modeinspect：直接在真实代码上设计 UI",
+        tag: "产品推荐",
+        url: "https://modeinspect.com/",
+      },
+      {
+        title: "Kombai Gallery：20,000+ UI 案例",
+        tag: "设计素材",
+        url: "https://kombai.com/gallery/web/",
+      },
+      {
+        title: "DockFix：有人干脆把 macOS Dock 重做了一遍",
+        tag: "随便看看",
+        url: "https://www.dockfix.app/",
+      },
+    ],
+    quote:
+      "相比每年例行升级的芯片、摄像头或者参数，我觉得今年真正值得设计师关注的还是 iPhone Duo。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 业界动态",
+        meta: "DESIGN BRANCHES",
+        title: "Lovable Drafts：Vibe Coding 也开始有设计分支了",
+        description:
+          "修改项目时可以先创建独立 Draft，每个 Draft 都有自己的 Chat 和 Preview。多人可以同时探索不同布局、视觉、功能或文案，最后再决定是否合并到正式项目。",
+        image: "./assets/vol37-lovable-drafts.png",
+        alt: "Lovable Drafts 独立设计分支功能发布视觉",
+        url: "https://lovable.dev/es/blog/introducing-drafts",
+      },
+      {
+        category: "03 / AI 资讯",
+        meta: "IMAGES 2.5",
+        title: "ChatGPT Images 2.5 发布",
+        description:
+          "OpenAI 推出 ChatGPT Images 2.5，新版本重点提升图像细节、生成速度、编辑精度与多轮修改的一致性；网页端等待生图时还可以玩贪吃蛇。",
+        image: "./assets/vol37-chatgpt-images-2-5.png",
+        alt: "ChatGPT Images 2.5 发布视觉",
+        url: "https://openai.com/zh-Hans-CN/index/introducing-chatgpt-images-2-5/",
+      },
+      {
+        category: "04 / AI 资讯",
+        meta: "BRING YOUR OWN MODEL",
+        title: "Raycast 2.2：Bring Your Own Model",
+        description:
+          "Raycast v2.2 重新带回 Bring Your Own Model。现在可以连接 OpenAI-compatible API、自建 Ollama 本地模型与 OpenRouter，再把这些模型直接用于 Raycast AI。",
+        image: "./assets/vol37-raycast-byom.png",
+        alt: "Raycast 2.2 Bring Your Own Model 发布视觉",
+        url: "https://www.raycast.com/changelog/macos/2-2",
+      },
+      {
+        type: "wide",
+        category: "05 / 产品推荐",
+        meta: "DESIGN IN CODE",
+        title: "Modeinspect：直接在真实代码上设计 UI",
+        description:
+          "Modeinspect 是一个 AI-native UI 设计工具。设计师既能像使用传统设计工具一样调整界面，也能利用 AI 探索方案，最终把修改直接变成工程师可以 Review 的 PR。",
+        image: "./assets/vol37-modeinspect.png",
+        alt: "Modeinspect 在真实代码上设计 UI 的产品界面",
+        url: "https://modeinspect.com/",
+      },
+      {
+        type: "wide",
+        category: "06 / 产品推荐",
+        meta: "APP DEMO VIDEO",
+        title: "TapCraft：把普通 App 录屏自动做成产品演示视频",
+        description:
+          "上传竖屏录屏后，TapCraft 可以自动套设备框、加入点击 Ripple、根据点击区域推进镜头，并支持背景、音乐、旁白和点击音效，最终直接导出 9:16 视频。",
+        image: "./assets/vol37-tapcraft.png",
+        alt: "TapCraft 手机 App 产品演示视频制作界面",
+        url: "https://www.tapcraft.app/",
+      },
+      {
+        category: "07 / 设计素材",
+        meta: "3D PROMPTS",
+        title: "Tripo 3D Prompts：200+ GPT-6 Astra 3D 的提示词",
+        description:
+          "Tripo 整理了 200+ 个 GPT-6 Astra 3D 提示词案例，覆盖 Three.js、Blender、游戏、互动场景与 3D 动画等方向，适合收藏和继续实验。",
+        image: "./assets/vol37-tripo-prompts.png",
+        alt: "Tripo GPT-6 Astra 3D 提示词案例库",
+        url: "https://www.tripo3d.ai/zh/3d-prompts/models/gpt-6-astra",
+      },
+      {
+        category: "08 / 设计素材",
+        meta: "APP UI FLOWS",
+        title: "Appllama：把 App Store 头部产品拆成 49,000+ 个真实界面",
+        description:
+          "Appllama 已收录 1,140+ 个头部 iOS App 与 49,800+ 个界面。除了单独页面，还可以直接查看 Onboarding、Paywall、订阅与搜索等完整产品流程。",
+        image: "./assets/vol37-appllama.png",
+        alt: "Appllama iOS App 界面与产品流程灵感库",
+        url: "https://appllama.io/",
+      },
+      {
+        type: "wide",
+        category: "09 / 随便看看",
+        meta: "LIVE AUDIO VISUALS",
+        title: "Bloop：让 Mac 里的声音变成实时视觉",
+        description:
+          "Bloop 直接监听 Mac 的系统音频或麦克风，把音量、低频、中频、高频与 Beat 转换成实时变化的视觉动画，目前提供 8 种不同的视觉 Skin。",
+        image: "./assets/vol37-bloop.png",
+        alt: "Bloop 将 Mac 音频转换成实时视觉动画",
+        url: "https://bloooooop.com/",
+      },
+    ],
+  },
   36: {
     issue: "ISSUE 036",
     range: "08.31—09.06",
@@ -1833,7 +1969,7 @@ const requestedIssue = new URLSearchParams(window.location.search).get("issue");
 const initialIssue =
   requestedIssue && issues[requestedIssue]
     ? requestedIssue
-    : select?.value || "36";
+    : select?.value || "37";
 if (select) {
   select.value = initialIssue;
 }

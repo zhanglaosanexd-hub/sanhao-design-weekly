@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="application-version" content="0.5.10" />
+    <meta name="application-version" content="0.5.11" />
     <meta
       name="description"
       content="三号设计周刊网页原型，以报刊式编辑结构呈现一周设计观察。"
     />
-    <title>三号设计周刊 · Vol.36</title>
+    <title>三号设计周刊 · Vol.37</title>
     <link
       rel="alternate"
       type="application/rss+xml"
@@ -43,7 +43,7 @@
       type="font/ttf"
       crossorigin
     />
-    <link rel="stylesheet" href="./styles.css?v=0.5.10" />
+    <link rel="stylesheet" href="./styles.css?v=0.5.11" />
     <script>
       if ("fonts" in document && document.fonts.load) {
         Promise.race([
@@ -82,7 +82,8 @@
           <label class="issue-control">
             <span>2026</span>
             <select id="issue-select" aria-label="选择周刊期数">
-              <option value="36" selected>Vol.36（最新）</option>
+              <option value="37" selected>Vol.37（最新）</option>
+              <option value="36">Vol.36</option>
               <option value="35">Vol.35</option>
               <option value="34">Vol.34</option>
               <option value="33">Vol.33</option>
@@ -99,7 +100,7 @@
             </select>
           </label>
           <p>资讯 · 工具 · 阅读 · UX Bites</p>
-          <time data-date datetime="2026-09-07">2026 年 9 月 7 日 / 星期一</time>
+          <time data-date datetime="2026-09-15">2026 年 9 月 15 日 / 星期二</time>
         </div>
       </header>
 
@@ -107,8 +108,8 @@
         <p class="section-label">THIS WEEK'S EDIT</p>
         <div>
           <p class="edition-intro__meta">
-            <span data-issue>ISSUE 036</span>
-            <span data-range>08.31—09.06</span>
+            <span data-issue>ISSUE 037</span>
+            <span data-range>09.07—09.13</span>
           </p>
           <h1 id="edition-title" data-headline>
             碎片带来灵感，<br />整理形成认知，连接构成体系。
@@ -165,7 +166,7 @@
           <h2>每周三件事：观察、筛选、重新连接。</h2>
         </div>
         <p class="footer__status" id="issue-status" aria-live="polite">
-          当前展示 Vol.36 · 2026.08.31—09.06
+          当前展示 Vol.37 · 2026.09.07—09.13
         </p>
       </footer>
 
@@ -313,6 +314,6 @@
       </div>
     </dialog>
 
-    <script src="./script.js?v=0.5.10"></script>
+    <script src="./script.js?v=0.5.11"></script>
   </body>
 </html>

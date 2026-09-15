@@ -9,7 +9,7 @@
     <link>https://sanhao-design-weekly.pages.dev/</link>
     <description>每周整理设计、品牌、工具与 AI 领域的观察、案例和灵感。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 07 Sep 2026 10:56:34 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 10:34:15 +0800</lastBuildDate>
     <generator>Sanhao Design Weekly</generator>
     <ttl>1440</ttl>
     <atom:link
@@ -24,6 +24,40 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>三号设计周刊 Vol.37</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=37</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=37</guid>
+      <pubDate>Tue, 15 Sep 2026 10:34:14 +0800</pubDate>
+      <description><![CDATA[
+        本期关注 iPhone Duo 折叠屏适配、ChatGPT Images 2.5、Raycast BYOM、
+        Modeinspect、App 演示视频工具、3D 提示词与真实 UI 灵感库。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>折叠 iPhone 来了，设计师的适配也要重做了。</p>
+        <ul>
+          <li>Apple 秋季发布会：iPhone Duo 来了，iOS 的设计适配也要重新开始</li>
+          <li>Adobe：AI 终于直接进入 Premiere 和 After Effects 的时间线</li>
+          <li>Lovable Drafts：Vibe Coding 也开始有设计分支了</li>
+          <li>ChatGPT Images 2.5 发布</li>
+          <li>Raycast 2.2：Bring Your Own Model</li>
+          <li>Modeinspect：直接在真实代码上设计 UI</li>
+          <li>TapCraft：把普通 App 录屏自动做成产品演示视频</li>
+          <li>Tripo 3D Prompts：200+ GPT-6 Astra 3D 的提示词</li>
+          <li>Kombai Gallery：20,000+ UI 案例</li>
+          <li>Appllama：把 App Store 头部产品拆成 49,000+ 个真实界面</li>
+          <li>Bloop：让 Mac 里的声音变成实时视觉</li>
+          <li>DockFix：有人干脆把 macOS Dock 重做了一遍</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/zlc5e27s2ywi0c50?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol37-iphone-duo.png"
+        length="1474534"
+        type="image/png"
+      />
+    </item>
 
     <item>
       <title>三号设计周刊 Vol.36</title>
