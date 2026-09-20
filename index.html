@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="application-version" content="0.5.11" />
+    <meta name="application-version" content="0.5.12" />
     <meta
       name="description"
       content="三号设计周刊网页原型，以报刊式编辑结构呈现一周设计观察。"
@@ -43,7 +43,7 @@
       type="font/ttf"
       crossorigin
     />
-    <link rel="stylesheet" href="./styles.css?v=0.5.11" />
+    <link rel="stylesheet" href="./styles.css?v=0.5.12" />
     <script>
       if ("fonts" in document && document.fonts.load) {
         Promise.race([
@@ -135,13 +135,6 @@
       <footer class="footer">
         <div class="subscribe-form">
           <p class="subscribe-form__label">订阅下一期</p>
-          <button
-            class="subscribe-form__action"
-            type="button"
-            data-open-subscribe
-          >
-            填写邮箱订阅 ↗
-          </button>
           <a
             class="subscribe-form__rss"
             href="./feed.xml"
@@ -151,15 +144,6 @@
           >
             使用 RSS 订阅 ↗
           </a>
-          <p class="subscribe-form__privacy">
-            在当前页面完成提交。邮箱仅用于周刊更新通知。
-          </p>
-          <p
-            class="subscribe-form__message"
-            data-subscribe-message
-            role="status"
-            aria-live="polite"
-          ></p>
         </div>
         <div class="footer__statement">
           <p class="section-label">SANHAO DESIGN WEEKLY</p>
@@ -240,32 +224,6 @@
       </section>
     </main>
 
-    <dialog class="subscribe-dialog" aria-labelledby="subscribe-dialog-title">
-      <div class="subscribe-dialog__header">
-        <div>
-          <p class="section-label">SUBSCRIBE</p>
-          <h2 id="subscribe-dialog-title">订阅下一期</h2>
-        </div>
-        <button
-          class="subscribe-dialog__close"
-          type="button"
-          data-close-subscribe
-          aria-label="关闭订阅表单"
-        >
-          ×
-        </button>
-      </div>
-      <iframe
-        class="subscribe-dialog__frame"
-        data-subscribe-frame
-        title="三号设计周刊邮箱订阅表单"
-        loading="lazy"
-      ></iframe>
-      <p class="subscribe-dialog__hint">
-        提交后将自动记录订阅时间与“已订阅”状态。
-      </p>
-    </dialog>
-
     <dialog class="story-preview-dialog" aria-labelledby="story-preview-title">
       <div class="story-preview">
         <div
@@ -314,6 +272,6 @@
       </div>
     </dialog>
 
-    <script src="./script.js?v=0.5.11"></script>
+    <script src="./script.js?v=0.5.12"></script>
   </body>
 </html>
