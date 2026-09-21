@@ -9,7 +9,7 @@
     <link>https://sanhao-design-weekly.pages.dev/</link>
     <description>每周整理设计、品牌、工具与 AI 领域的观察、案例和灵感。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 15 Sep 2026 10:34:15 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 10:19:15 +0800</lastBuildDate>
     <generator>Sanhao Design Weekly</generator>
     <ttl>1440</ttl>
     <atom:link
@@ -24,6 +24,42 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>三号设计周刊 Vol.38</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=38</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=38</guid>
+      <pubDate>Mon, 21 Sep 2026 10:19:15 +0800</pubDate>
+      <description><![CDATA[
+        本期关注 Figma Weave、Canva ProSuite、Blender Gaussian Splats、Claude、
+        Gemini 3.8 Live、移动 Coding Agent、网页视觉 Prompt 与交互作品。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>Figma 把设计稿变成 AI 节点，Claude 也不只是聊天了。</p>
+        <ul>
+          <li>Figma Weave：设计稿开始真正进入 AI 工作流</li>
+          <li>Canva ProSuite：开始正面进入专业设计工具市场</li>
+          <li>Blender 5.3：原生支持 3D Gaussian Splats</li>
+          <li>Claude 把聊天、Cowork、Design、Docs 和 Slides 合到一起了</li>
+          <li>Claude Code Projects：一个项目里同时跑多个 Agent</li>
+          <li>Gemini 3.8 Live：实时语音开始加入更深的推理能力</li>
+          <li>Google Home 开放 MCP：AI Agent 开始真正操作现实设备</li>
+          <li>Kilo Mobile：手机也开始变成 Coding Agent 控制台</li>
+          <li>Launchie：把 macOS 消失的 Launchpad 做回来了</li>
+          <li>Slashy Assistant：开始主动帮你处理邮件</li>
+          <li>Art Direction Daily：134 个 AI 网页视觉 Prompt</li>
+          <li>Figma Weave Tools：生成式工作流也开始有自己的「插件市场」</li>
+          <li>iOS 27：Liquid Glass 从两个选项变成了一根滑杆</li>
+          <li>The 101 Plays Itself：把洛杉矶高速公路变成了一件乐器</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/ayt35nvf3z4tg5b1?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol38-figma-weave.png"
+        length="1346801"
+        type="image/png"
+      />
+    </item>
 
     <item>
       <title>三号设计周刊 Vol.37</title>

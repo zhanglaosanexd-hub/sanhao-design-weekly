@@ -1,4 +1,144 @@
 const issues = {
+  38: {
+    issue: "ISSUE 038",
+    range: "09.14—09.20",
+    date: "2026 年 9 月 21 日 / 星期一",
+    datetime: "2026-09-21",
+    likes: 38,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source:
+      "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/ayt35nvf3z4tg5b1?singleDoc",
+    lead: {
+      category: "01 / 业界动态",
+      meta: "FIGMA WEAVE",
+      title: "Figma Weave：设计稿开始真正进入 AI 工作流",
+      description:
+        "Figma Weave 现在可以直接接收 Figma Design Frame，并让设计师指定哪些文字和图片可由 AI 修改，同时锁住字体、布局与视觉样式。源设计更新后，工作流里的素材也能继续同步。",
+      image: "./assets/vol38-figma-weave.png",
+      alt: "Figma Design Frame 进入 Weave 生成式工作流",
+      url: "https://www.figma.com/release-notes/?title=figma-node-on-brand-content",
+    },
+    briefing: [
+      {
+        title: "Google Home 开放 MCP：AI Agent 开始真正操作现实设备",
+        tag: "AI 资讯",
+        url: "https://support.google.com/googlehome/blogs?hl=en",
+      },
+      {
+        title: "Launchie：把 macOS 消失的 Launchpad 做回来了",
+        tag: "产品推荐",
+        url: "https://www.launchie.app/",
+      },
+      {
+        title: "Slashy Assistant：开始主动帮你处理邮件",
+        tag: "产品推荐",
+        url: "https://www.slashy.com/",
+      },
+      {
+        title: "Figma Weave Tools：生成式工作流也开始有自己的「插件市场」",
+        tag: "设计素材",
+        url: "https://www.figma.com/blog/figma-weave/",
+      },
+    ],
+    quote:
+      "以后做多语言版本、Campaign 延展、批量视觉和视频，不一定再从一个空 Prompt 开始，而是直接从设计系统和现有设计稿开始。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 业界动态",
+        meta: "CANVA PROSUITE",
+        title: "Canva ProSuite：开始正面进入专业设计工具市场",
+        description:
+          "Canva 把 Affinity、Cavalry、Flourish 和 Leonardo 进一步整合进专业创作体系；Affinity 还可以通过 Claude Connector，把批处理和印前准备等重复操作直接转换成脚本。",
+        image: "./assets/vol38-canva-prosuite.png",
+        alt: "Canva ProSuite 专业创作工具发布视觉",
+        url: "https://www.canva.com/newsroom/news/canva-prosuite-launch/",
+      },
+      {
+        category: "03 / 业界动态",
+        meta: "3D GAUSSIAN SPLATS",
+        title: "Blender 5.3：原生支持 3D Gaussian Splats",
+        description:
+          "Blender 5.3 加入原生 3D Gaussian Splats 导入与渲染支持，可以直接读取 PLY、SPZ 文件，并通过 Workbench、EEVEE 和 Cycles 渲染照片或视频重建的真实 3D 空间。",
+        image: "./assets/vol38-blender-gaussian-splats.png",
+        alt: "Blender 5.3 渲染 3D Gaussian Splats 场景",
+        url: "https://developer.blender.org/docs/release_notes/5.3/rendering/",
+      },
+      {
+        category: "04 / AI 资讯",
+        meta: "CLAUDE WORKSPACE",
+        title: "Claude 把聊天、Cowork、Design、Docs 和 Slides 合到一起了",
+        description:
+          "Claude 开始把原本相对独立的能力整合进同一个界面，并新增 Docs 与 Slides：可以直接创建和编辑文档、演示文稿，再导出到 Word、Google Docs、PowerPoint 或 PDF。",
+        image: "./assets/vol38-claude-docs-slides.png",
+        alt: "Claude 整合聊天、文档与演示文稿能力",
+        url: "https://www.reuters.com/business/media-telecom/anthropic-fold-claude-ai-features-into-one-interface-launches-document-tools-2026-09-16/",
+      },
+      {
+        category: "05 / AI 资讯",
+        meta: "MULTI-AGENT PROJECTS",
+        title: "Claude Code Projects：一个项目里同时跑多个 Agent",
+        description:
+          "Projects 可以把一个大目标自动拆成多个线程，让不同 Claude Code 云端 Session 在独立 Git 分支上并行执行，再由协调 Agent 管理进度、共享上下文并汇总结果。",
+        image: "./assets/vol38-claude-code-projects.png",
+        alt: "Claude Code Projects 多 Agent 协作界面",
+        url: "https://venturebeat.com/orchestration/anthropic-launches-claude-code-projects-an-always-on-conversation-that-remembers-and-delegates-your-long-running-dev-work/",
+      },
+      {
+        category: "06 / AI 资讯",
+        meta: "LIVE REASONING",
+        title: "Gemini 3.8 Live：实时语音开始加入更深的推理能力",
+        description:
+          "Gemini 3.8 Live 重点改善实时对话、视觉理解与响应效率，Extended Thinking 则面向复杂、多步骤推理任务。随着延迟继续降低，语音正在成为 Agent 的重要输入界面。",
+        image: "./assets/vol38-gemini-live.png",
+        alt: "Gemini 3.8 Live 与 Extended Thinking 发布视觉",
+        url: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+      },
+      {
+        type: "wide",
+        category: "07 / 产品推荐",
+        meta: "MOBILE CODING AGENT",
+        title: "Kilo Mobile：手机也开始变成 Coding Agent 控制台",
+        description:
+          "Kilo Code 把完整 Agent 工作流搬到 iOS 和 Android。用户可以在手机上启动 Cloud Agent、继续电脑上的 CLI 或 VS Code Session、查看进度、追加指令并 Review PR。",
+        image: "./assets/vol38-kilo-mobile.png",
+        alt: "Kilo Mobile 手机端 Coding Agent 控制台",
+        url: "https://blog.kilo.ai/p/kilo-mobile-update-run-your-engineering",
+      },
+      {
+        category: "08 / 设计素材",
+        meta: "VISUAL PROMPTS",
+        title: "Art Direction Daily：134 个 AI 网页视觉 Prompt",
+        description:
+          "Art Direction Daily 每天用一种不同的 Art Direction 重新设计网页，并公开对应设计 Prompt。目前已整理 134 个案例，覆盖 Editorial、产品页、Agent 工作台、暗色界面与设计系统。",
+        image: "./assets/vol38-art-direction-daily.png",
+        alt: "Art Direction Daily 网页视觉 Prompt 案例库",
+        url: "https://www.artdirectiondaily.com/prompts.html",
+      },
+      {
+        type: "wide",
+        category: "09 / 设计细节",
+        meta: "LIQUID GLASS",
+        title: "iOS 27：Liquid Glass 从两个选项变成了一根滑杆",
+        description:
+          "Apple 不再只让用户在固定效果之间选择，而是增加连续滑杆，让透明度可以在「非常透明」到「更明显的色调」之间自由调整，系统也会实时显示效果。",
+        image: "./assets/vol38-ios27-liquid-glass.png",
+        alt: "iOS 27 使用滑杆调整 Liquid Glass 透明度",
+        url: "https://support.apple.com/guide/iphone/whats-new-in-ios-27-iphfed2c4091/27/ios/27",
+      },
+      {
+        category: "10 / 随便看看",
+        meta: "TRAFFIC THEREMIN",
+        title: "The 101 Plays Itself：把洛杉矶高速公路变成了一件乐器",
+        description:
+          "网站接入洛杉矶 US-101 高速公路的实时交通画面，每当车辆经过指定位置就会触发一个音符，把实时数据、视觉和声音组合成一件完整的互动作品。",
+        image: "./assets/vol38-101-plays-itself.png",
+        alt: "The 101 Plays Itself 实时交通音乐互动网页",
+        url: "https://jayjudah.com/101/#theremin,glass",
+      },
+    ],
+  },
   37: {
     issue: "ISSUE 037",
     range: "09.07—09.13",
@@ -1961,7 +2101,7 @@ const requestedIssue = new URLSearchParams(window.location.search).get("issue");
 const initialIssue =
   requestedIssue && issues[requestedIssue]
     ? requestedIssue
-    : select?.value || "37";
+    : select?.value || "38";
 if (select) {
   select.value = initialIssue;
 }
