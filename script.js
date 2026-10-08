@@ -1,4 +1,144 @@
 const issues = {
+  39: {
+    issue: "ISSUE 039",
+    range: "09.25—10.07",
+    date: "2026 年 10 月 8 日 / 星期四",
+    datetime: "2026-10-08",
+    likes: 39,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source:
+      "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/dr44de9qrxi0wng1?singleDoc",
+    lead: {
+      category: "01 / AI 资讯",
+      meta: "INTELLIGENT UI",
+      title: "GPT-6 带来 Intelligent UI，AI 开始直接生成交互界面",
+      description:
+        "GPT-6 Intelligent UI 会根据任务自动组合图表、按钮、表单和交互式图解，甚至即时创建计算器、小游戏与其他可操作工具。界面正从固定产品结构转向由用户实时意图驱动的动态体验。",
+      image: "./assets/vol39-gpt6-intelligent-ui.png",
+      alt: "GPT-6 Intelligent UI 根据任务生成交互式界面",
+      url: "https://openai.com/index/gpt-6-for-everyone/",
+    },
+    briefing: [
+      {
+        title: "Smashing Magazine：2026 年十月免费桌面壁纸合集",
+        tag: "设计素材",
+        url: "https://www.smashingmagazine.com/2026/09/desktop-wallpaper-calendars-october-2026/",
+      },
+      {
+        title: "New Wave Gradient：一个可交互的流体渐变背景组件",
+        tag: "设计素材",
+        url: "https://www.framer.com/marketplace/components/new-wave-gradient/",
+      },
+      {
+        title: "Figma Auto Layout 支持垂直换列，响应式布局更进一步",
+        tag: "设计细节",
+        url: "https://www.figma.com/release-notes/?title=vertical-wrap-available-in-auto-layout",
+      },
+      {
+        title: "Figma Riffs：不完整的设计实验，也值得被分享",
+        tag: "随便看看",
+        url: "https://www.figma.com/release-notes/?title=post-riffs-to-figma-community",
+      },
+    ],
+    quote:
+      "界面正在从固定的产品结构，逐渐向任务驱动的动态体验发展。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 业界动态",
+        meta: "FIGMA AGENT GA",
+        title: "Figma Agent 正式结束 Beta，AI 开始参与设计系统维护",
+        description:
+          "Figma Agent 新增设计规范文件、跨文件搜索、团队实时协作和自定义 Skills。设计师可以用 Markdown 提供组件规范与反模式约束，让 AI 在团队已有设计语言之上参与设计和维护。",
+        image: "./assets/vol39-figma-agent.png",
+        alt: "Figma Agent 读取设计规范并参与设计系统维护",
+        url: "https://www.figma.com/release-notes/?title=the-figma-agent-is-generally-available",
+      },
+      {
+        category: "03 / 业界动态",
+        meta: "MOTION SYSTEM",
+        title: "Figma Motion 大更新：支持 Lottie 导出、文字动画和音频",
+        description:
+          "Figma Motion 新增自定义动画样式、音频时间轴、逐字符与逐词动画，以及 Lottie 和 dotLottie 导出。动画样式还能发布到团队资源库，让动效像颜色、字体和组件一样被复用。",
+        image: "./assets/vol39-figma-motion.png",
+        alt: "Figma Motion 动画样式、音频和 Lottie 更新",
+        url: "https://www.figma.com/release-notes/?title=motion-adds-styles-audio-animations-lottie",
+      },
+      {
+        category: "04 / 业界动态",
+        meta: "FOLDABLE ADAPTATION",
+        title: "iPhone Duo 开放应用适配，折叠屏又给设计师出了新题",
+        description:
+          "Apple 开放 iPhone Duo 应用适配与提交。设计师除了增加屏幕尺寸，还要处理展开与折叠状态下的信息层级、内容连续性、设备姿态与操作习惯。",
+        image: "./assets/vol39-iphone-duo-adaptation.png",
+        alt: "iPhone Duo 折叠与展开状态的应用适配",
+        url: "https://developer.apple.com/news/?id=kkphp5qo",
+      },
+      {
+        category: "05 / AI 资讯",
+        meta: "DEVDAY 2026",
+        title: "OpenAI DevDay 2026：20 多项更新，AI Agent 开始承担长期工作",
+        description:
+          "OpenAI 在 DevDay 2026 发布超过 20 项更新，包括 GPT-6.1 Sol、Codex 云端工作流、Dots、Agents API 和 ChatGPT 插件扩展，持续执行任务与多 Agent 协作成为重点。",
+        image: "./assets/vol39-openai-devday.png",
+        alt: "OpenAI DevDay 2026 多项产品与 Agent 更新",
+        url: "https://openai.com/index/devday-2026-recap/",
+      },
+      {
+        category: "06 / AI 资讯",
+        meta: "CLAUDE 5.5",
+        title: "Claude Sonnet 5.5、Haiku 5.5 接连发布，AI 模型开始拼效率",
+        description:
+          "Anthropic 接连推出 Claude Sonnet 5.5 与 Haiku 5.5。前者强调更高速度和更低成本，后者侧重高频、低成本与快速响应，模型竞争进一步转向实际工作效率。",
+        image: "./assets/vol39-claude-5-5.png",
+        alt: "Claude Sonnet 5.5 与 Haiku 5.5 发布视觉",
+        url: "https://www.anthropic.com/claude-sonnet-5-5",
+      },
+      {
+        type: "wide",
+        category: "07 / 产品推荐",
+        meta: "OKLCH COLOR SYSTEM",
+        title: "Rechroma：一个适合设计系统的专业配色工具",
+        description:
+          "Rechroma 基于 Oklab 和 OKLCH，可以从图片或单色生成色板、探索配色组合、建立 UI 颜色阶梯并检查对比度；付费版还能把色板同步为 Figma Variables。",
+        image: "./assets/vol39-rechroma.png",
+        alt: "Rechroma 基于 OKLCH 的专业配色与色阶工具",
+        url: "https://rechroma.com/",
+      },
+      {
+        category: "08 / 产品推荐",
+        meta: "ADAPTIVE MEDIA",
+        title: "ThemeMedia：让图片和视频自动适配深浅色模式",
+        description:
+          "ThemeMedia 是一个免费 Framer 组件，可以为 Light 和 Dark 主题分别配置图片或视频，并自动切换；同时支持淡入过渡、懒加载、视频封面和不同媒体显示方式。",
+        image: "./assets/vol39-thememedia.png",
+        alt: "ThemeMedia 让图片与视频适配深浅色主题",
+        url: "https://www.framer.com/marketplace/components/thememedia/",
+      },
+      {
+        type: "wide",
+        category: "09 / 设计细节",
+        meta: "NAMING SYSTEMS",
+        title: "设计系统里，组件和变量到底应该怎么命名？",
+        description:
+          "这份指南整理了颜色、图层、UI 组件与 Design Tokens 的命名思路。随着 AI Agent 开始读取设计文件和组件库，清晰一致的命名也会影响 AI 理解上下文的准确性。",
+        image: "./assets/vol39-design-system-naming.png",
+        alt: "设计系统组件、变量与 Design Tokens 命名指南",
+        url: "https://www.smashingmagazine.com/2026/10/how-name-things/",
+      },
+      {
+        category: "10 / 随便看看",
+        meta: "INTERACTIVE ORDERING",
+        title: "StreetWok：一个连点餐都做得很有趣的网站",
+        description:
+          "StreetWok 用霓虹视觉、滚动动画、动态菜单和订单小票营造街头面馆氛围。用户还能自己选择面条、汤底与配料，看着食材一步步加入碗中。",
+        image: "./assets/vol39-streetwok.png",
+        alt: "StreetWok 霓虹风格互动点餐网站",
+        url: "https://www.framer.com/marketplace/templates/streetwok/",
+      },
+    ],
+  },
   38: {
     issue: "ISSUE 038",
     range: "09.14—09.20",
@@ -2101,7 +2241,7 @@ const requestedIssue = new URLSearchParams(window.location.search).get("issue");
 const initialIssue =
   requestedIssue && issues[requestedIssue]
     ? requestedIssue
-    : select?.value || "38";
+    : select?.value || "39";
 if (select) {
   select.value = initialIssue;
 }

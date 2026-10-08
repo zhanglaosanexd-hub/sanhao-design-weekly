@@ -9,7 +9,7 @@
     <link>https://sanhao-design-weekly.pages.dev/</link>
     <description>每周整理设计、品牌、工具与 AI 领域的观察、案例和灵感。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 21 Sep 2026 10:19:15 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 10:10:14 +0800</lastBuildDate>
     <generator>Sanhao Design Weekly</generator>
     <ttl>1440</ttl>
     <atom:link
@@ -24,6 +24,42 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>三号设计周刊 Vol.39</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=39</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=39</guid>
+      <pubDate>Thu, 08 Oct 2026 10:10:14 +0800</pubDate>
+      <description><![CDATA[
+        本期关注 GPT-6 Intelligent UI、Figma Agent 与 Motion、iPhone Duo 适配、
+        OpenAI DevDay、Claude 5.5、设计系统工具与交互网站。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>放了个假回来，AI 已经开始自己搭界面了。</p>
+        <ul>
+          <li>GPT-6 带来 Intelligent UI，AI 开始直接生成交互界面</li>
+          <li>Figma Agent 正式结束 Beta，AI 开始参与设计系统维护</li>
+          <li>Figma Motion 大更新：支持 Lottie 导出、文字动画和音频</li>
+          <li>iPhone Duo 开放应用适配，折叠屏又给设计师出了新题</li>
+          <li>OpenAI DevDay 2026：20 多项更新，AI Agent 开始承担长期工作</li>
+          <li>Claude Sonnet 5.5、Haiku 5.5 接连发布，AI 模型开始拼效率</li>
+          <li>Rechroma：一个适合设计系统的专业配色工具</li>
+          <li>ThemeMedia：让图片和视频自动适配深浅色模式</li>
+          <li>Smashing Magazine：2026 年十月免费桌面壁纸合集</li>
+          <li>New Wave Gradient：一个可交互的流体渐变背景组件</li>
+          <li>设计系统里，组件和变量到底应该怎么命名？</li>
+          <li>Figma Auto Layout 支持垂直换列，响应式布局更进一步</li>
+          <li>StreetWok：一个连点餐都做得很有趣的网站</li>
+          <li>Figma Riffs：不完整的设计实验，也值得被分享</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/dr44de9qrxi0wng1?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol39-gpt6-intelligent-ui.png"
+        length="1355034"
+        type="image/png"
+      />
+    </item>
 
     <item>
       <title>三号设计周刊 Vol.38</title>
