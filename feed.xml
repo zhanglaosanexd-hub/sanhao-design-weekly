@@ -9,7 +9,7 @@
     <link>https://sanhao-design-weekly.pages.dev/</link>
     <description>每周整理设计、品牌、工具与 AI 领域的观察、案例和灵感。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 08 Oct 2026 10:10:14 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 10:25:30 +0800</lastBuildDate>
     <generator>Sanhao Design Weekly</generator>
     <ttl>1440</ttl>
     <atom:link
@@ -24,6 +24,43 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>三号设计周刊 Vol.40</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=40</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=40</guid>
+      <pubDate>Mon, 12 Oct 2026 10:25:30 +0800</pubDate>
+      <description><![CDATA[
+        本期关注 Claude Dashboards 与 Motion、Figma 团队 AI 实践、Gemini Agent、
+        Google Workspace、无限画布、Agent 视频编辑与设计工作台。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>AI 不只会聊天了，设计师的工作台也变了。</p>
+        <ul>
+          <li>Claude 连仪表盘和动画都能做了</li>
+          <li>Figma：分享了 4 个 AI 在团队中的使用方案和案例</li>
+          <li>Google Maps 显示实时油价，帮用户少做一次选择</li>
+          <li>Chrome 开始支持 JPEG XL，网页图片有了新选择</li>
+          <li>豆包工作有了无限画布，AI 生成内容终于不用在聊天记录里翻了</li>
+          <li>Google 推出 Gemini Agent，开始让 AI 真正帮你干活</li>
+          <li>Claude 进入 Google 文档、表格和幻灯片，不用再来回复粘贴了</li>
+          <li>OpenVids：用聊天指挥 AI 剪视频</li>
+          <li>Modeinspect：设计稿和代码，终于可以在一块画布里工作了</li>
+          <li>Thanor：专门解决 AI 网站太有 AI 味的问题</li>
+          <li>Michelangelus：微软把米开朗基罗的艺术风格做成了一套字体</li>
+          <li>SHIUI：用纸、墨和朱红做了一整套 UI 组件</li>
+          <li>NN/g：AI 越用越深入，整理上下文反而成了新的负担</li>
+          <li>新 Siri 最大的优势，可能根本不是 AI 有多聪明</li>
+          <li>有人用 Claude + Rust，试着重新做一套「Adobe 全家桶」</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/hy5ekytthf7amihs?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol40-claude-dashboards-motion.png"
+        length="437289"
+        type="image/png"
+      />
+    </item>
 
     <item>
       <title>三号设计周刊 Vol.39</title>

@@ -1,4 +1,149 @@
 const issues = {
+  40: {
+    issue: "ISSUE 040",
+    range: "10.08—10.11",
+    date: "2026 年 10 月 12 日 / 星期一",
+    datetime: "2026-10-12",
+    likes: 40,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source:
+      "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/hy5ekytthf7amihs?singleDoc",
+    lead: {
+      category: "01 / AI 资讯",
+      meta: "DASHBOARDS & MOTION",
+      title: "Claude 连仪表盘和动画都能做了",
+      description:
+        "Claude 推出了 Dashboards 和 Motion 两项新功能：前者可以连接数据源，生成持续更新的数据仪表盘；后者能将文字、图表和图片制作成可编辑动画，并导出 MP4。相比单纯生成结果，更值得关注的是内容还能继续修改、检查和交付。",
+      image: "./assets/vol40-claude-dashboards-motion.png",
+      alt: "Claude Dashboards 和 Motion 功能界面",
+      url: "https://claude.com/resources/articles/dashboards-and-motion",
+    },
+    briefing: [
+      {
+        title: "Michelangelus：微软把米开朗基罗的艺术风格做成了一套字体",
+        tag: "设计素材",
+        url: "https://www.microsoft.com/en-us/download/details.aspx?id=108856",
+      },
+      {
+        title: "SHIUI：用纸、墨和朱红做了一整套 UI 组件",
+        tag: "设计素材",
+        url: "https://shi-ui.vercel.app/",
+      },
+      {
+        title: "NN/g：AI 越用越深入，整理上下文反而成了新的负担",
+        tag: "设计细节",
+        url: "https://www.nngroup.com/articles/context-libraries/",
+      },
+      {
+        title: "新 Siri 最大的优势，可能根本不是 AI 有多聪明",
+        tag: "设计细节",
+        url: "https://www.nngroup.com/articles/ai-assistant-context/",
+      },
+      {
+        title: "有人用 Claude + Rust，试着重新做一套「Adobe 全家桶」",
+        tag: "随便看看",
+        url: "https://getartcraft.com/apps",
+      },
+    ],
+    quote:
+      "相比单纯生成一张图，更值得关注的是结果可以继续修改、检查和交付。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 业界动态",
+        meta: "TEAM AI RITUALS",
+        title: "Figma：分享了 4 个 AI 在团队中的使用方案和案例",
+        description:
+          "Figma 分享了四种推动团队使用 AI 的方法，案例来自 Figma、Sephora、Mercari 和 Atlassian，包括内部交流、分享实践经验，以及让设计和开发共同探索新工作流。关注点也从个人效率进一步转向团队协作。",
+        image: "./assets/vol40-figma-ai-rituals.png",
+        alt: "Figma 团队推动 AI 协作的四种实践",
+        url: "https://www.figma.com/blog/4-team-rituals-that-drive-ai-adoption/",
+      },
+      {
+        category: "03 / 业界动态",
+        meta: "FUEL PRICES",
+        title: "Google Maps 显示实时油价，帮用户少做一次选择",
+        description:
+          "Google Maps 和 Waze 在英国接入加油站价格信息，用户搜索附近加油站时就能直接比较油价，不必再切换应用。没有增加复杂功能，只是把用户做决定时真正需要的信息提前展示出来。",
+        image: "./assets/vol40-google-maps-fuel-prices.png",
+        alt: "Google Maps 和 Waze 显示附近加油站实时油价",
+        url: "https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/google-maps-waze-fuel-prices-uk/",
+      },
+      {
+        category: "04 / 业界动态",
+        meta: "JPEG XL",
+        title: "Chrome 开始支持 JPEG XL，网页图片有了新选择",
+        description:
+          "Google 宣布 Chrome 155 将支持 JPEG XL 图片解码。相比传统 JPEG，这种格式可提升约 30%—50% 的压缩效率，同时支持 HDR 和无损压缩；实际应用仍需要考虑浏览器兼容性。",
+        image: "./assets/vol40-chrome-jpeg-xl.png",
+        alt: "Chrome 宣布支持 JPEG XL 图片格式",
+        url: "https://developer.chrome.com/blog/jpeg-xl-in-chrome",
+      },
+      {
+        category: "05 / AI 资讯",
+        meta: "INFINITE CANVAS",
+        title: "豆包工作有了无限画布，AI 生成内容终于不用在聊天记录里翻了",
+        description:
+          "豆包工作更新任务模式，新增无限画布，并接入 Seedream 5.0 Flash 图片模型。图片、方案和创作成果可以集中放在画布中，还能继续调整文字、配色和布局。",
+        image: "./assets/vol40-doubao-infinite-canvas.png",
+        alt: "豆包工作无限画布与图片创作功能",
+        url: "https://www.ithome.com/1/011/068.htm",
+      },
+      {
+        category: "06 / AI 资讯",
+        meta: "GEMINI AGENT",
+        title: "Google 推出 Gemini Agent，开始让 AI 真正帮你干活",
+        description:
+          "Google 在 Gemini at Work 2026 上推出面向工作的 Gemini Agent，可以结合企业数据和应用完成信息查询、内容创作、任务处理甚至代码编写。设计 AI 产品时，也要进一步考虑执行进度、权限确认、异常处理与人工接管。",
+        image: "./assets/vol40-gemini-agent.png",
+        alt: "Google Gemini Agent 工作任务界面",
+        url: "https://blog.google/intl/zh-tw/products/cloud/google-cloud-gemini/",
+      },
+      {
+        type: "wide",
+        category: "07 / AI 资讯",
+        meta: "GOOGLE WORKSPACE",
+        title: "Claude 进入 Google 文档、表格和幻灯片，不用再来回复制粘贴了",
+        description:
+          "Claude for Google Workspace 已进入公开测试，可以直接在 Docs、Sheets 和 Slides 侧边栏中修改文档、处理表格或制作演示文稿。AI 会先提出修改建议，等用户批准后再写入文件。",
+        image: "./assets/vol40-claude-google-workspace.png",
+        alt: "Claude 在 Google Docs 侧边栏中修改文档",
+        url: "https://claude.com/resources/articles/claude-now-works-in-google-docs-sheets-and-slides",
+      },
+      {
+        category: "08 / 产品推荐",
+        meta: "AGENT VIDEO EDITING",
+        title: "OpenVids：用聊天指挥 AI 剪视频",
+        description:
+          "OpenVids 是一款支持 macOS 和 Windows 的开源 Agent 视频编辑器，可以通过自然语言完成粗剪、字幕、动效和音频处理，最终修改仍会落到可手动编辑的时间线上。",
+        image: "./assets/vol40-openvids.png",
+        alt: "OpenVids Agent 视频编辑器时间线界面",
+        url: "https://openvids.ai/",
+      },
+      {
+        type: "wide",
+        category: "09 / 产品推荐",
+        meta: "CODE & CANVAS",
+        title: "Modeinspect：设计稿和代码，终于可以在一块画布里工作了",
+        description:
+          "Modeinspect 将真实代码与可视化设计结合，可以把产品现有组件、设计变量和页面引入画布，通过可视化操作或 AI 修改界面，再将结果转成代码。",
+        image: "./assets/vol40-modeinspect.png",
+        alt: "Modeinspect 将真实代码与可视化设计放入同一画布",
+        url: "https://modeinspect.com/",
+      },
+      {
+        category: "10 / 产品推荐",
+        meta: "DESIGN DIRECTIONS",
+        title: "Thanor：专门解决 AI 网站太有 AI 味的问题",
+        description:
+          "Thanor 收录了一系列网站设计方向，每套都包含配色、字体层级、动效和页面结构等信息，可以直接作为提示词交给 Claude、Cursor 等工具使用，更像是一套预先交给 AI 的视觉设计规范。",
+        image: "./assets/vol40-thanor.png",
+        alt: "Thanor 网站设计方向与视觉规范案例",
+        url: "https://thanor.ai/",
+      },
+    ],
+  },
   39: {
     issue: "ISSUE 039",
     range: "09.25—10.07",
@@ -2241,7 +2386,7 @@ const requestedIssue = new URLSearchParams(window.location.search).get("issue");
 const initialIssue =
   requestedIssue && issues[requestedIssue]
     ? requestedIssue
-    : select?.value || "39";
+    : select?.value || "40";
 if (select) {
   select.value = initialIssue;
 }
