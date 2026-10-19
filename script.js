@@ -1,4 +1,159 @@
 const issues = {
+  41: {
+    issue: "ISSUE 041",
+    range: "10.12—10.18",
+    date: "2026 年 10 月 19 日 / 星期一",
+    datetime: "2026-10-19",
+    likes: 41,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source:
+      "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/bi6kmxp936yt5bdl?singleDoc",
+    lead: {
+      category: "01 / 业界动态",
+      meta: "APPLE HOMEVIEW",
+      title: "Apple HomeView：一块知道你是谁、站在哪里的屏幕",
+      description:
+        "苹果发布 7 英寸智能家庭设备 HomeView，支持人脸识别、个性化界面与 Siri AI。它会根据用户距离调整信息密度：站远一点看重点，靠近后展示更多细节，为空间交互与多用户设备设计提供参考。首发销售地区不包含中国大陆。",
+      image: "./assets/vol41-apple-homeview.png",
+      alt: "Apple HomeView 智能家庭屏幕与个性化界面",
+      url: "https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/",
+    },
+    briefing: [
+      {
+        title: "ChatGPT 带来的流量突然下降 47%？原来是统计方式出了问题",
+        tag: "AI 资讯",
+        description:
+          "Webflow 发现，10 月 8—15 日期间相关客户网站的 ChatGPT 来源流量平均下降约 47%，主要原因是引用链接暂时移除了 UTM 参数，部分流量因此被归入直接访问。10 月 15 日参数已恢复。指标变化时，也要检查数据采集机制。",
+        url: "https://webflow.com/blog/chatgpt-traffic-drop-october-2026",
+      },
+      {
+        title: "Framer Gallery：设计灵感库重新整理了",
+        tag: "产品推荐",
+        description:
+          "Framer 在 10 月 15 日更新 Gallery，扩充网站分类，支持按视觉氛围筛选作品，并调整展示排序机制。寻找网站灵感时，也可以从视觉风格出发。",
+        url: "https://www.framer.com/updates/community/",
+      },
+      {
+        title: "Canva × Mattel：230 款可免费使用的品牌模板",
+        tag: "设计素材",
+        description:
+          "Canva 联合 Mattel 上线 230 款可编辑模板，包含 Barbie、Hot Wheels、Pingu 等经典品牌，覆盖海报、邀请函、社交媒体图片和壁纸，也展示了成熟 IP 如何让普通用户参与创作。",
+        url: "https://www.canva.com/newsroom/news/mattel-collection/",
+      },
+      {
+        title: "GSAP Typography：文字滚动时留下层层残影",
+        tag: "设计素材",
+        description:
+          "Codrops 分享了通过 Canvas 与 GSAP 实现的文字动画：页面滚动时，文字产生连续的轮廓残影。文章包含实现过程，适合研究品牌官网、活动页面和作品集的字体动效。",
+        url: "https://tympanus.net/codrops/2026/10/13/scroll-driven-ghost-trails/",
+      },
+      {
+        title: "Noho：好的交互设计，有时候应该少做一点",
+        tag: "设计细节",
+        description:
+          "Codrops 分享 Noho 网站的交互设计案例：团队根据产品特征决定哪里需要动态反馈、哪里应该保持安静。合适的动效应当服务于内容，而不是抢走内容的注意力。",
+        url: "https://tympanus.net/codrops/2026/10/15/noho-redesign/",
+      },
+    ],
+    quote:
+      "有时候，多一点技术不一定代表更好的体验。设计师的判断，可能比以前更重要了。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 业界动态",
+        meta: "BUILD BY DESIGN",
+        title: "Figma 这次更新，把设计、文档和代码真正连起来了",
+        description:
+          "Figma 在 10 月 15 日的 Config India 发布 Code Layers、Specs，以及与 Payload 打通的内容管理和数据能力，将真实代码、Markdown 文档与设计画布连接起来。部分功能仍处于测试阶段。",
+        image: "./assets/vol41-figma-build-by-design.png",
+        alt: "Figma Code Layers、Specs 与内容管理新功能",
+        url: "https://www.figma.com/blog/build-by-design/",
+      },
+      {
+        category: "03 / 业界动态",
+        meta: "MODERN PHOTOSHOP UI",
+        title: "Photoshop 界面现代化：老软件终于开始认真整理自己了",
+        description:
+          "Adobe 在 Photoshop Beta 中推出新界面，调整工具栏、图标、间距、选中状态与部分面板，并改善隐藏工具的发现方式。如何在不打断老用户习惯的前提下改善体验，也为复杂 B 端产品改版提供参考。",
+        image: "./assets/vol41-photoshop-modern-ui.png",
+        alt: "Photoshop Beta 更新后的工具栏、图标与面板",
+        url: "https://community.adobe.com/announcements-698/a-more-modern-photoshop-ui-is-now-in-beta-1651498",
+      },
+      {
+        category: "04 / 业界动态",
+        meta: "CINEMA 4D 2027",
+        title: "Cinema 4D 2027：大规模场景和液体效果更容易制作了",
+        description:
+          "Maxon 的秋季更新为 Cinema 4D 2027 加入程序化散布系统和 Liquid FX，支持更高效地构建植被、复杂场景，以及水花、泡沫和喷雾等效果，减少品牌视觉和动态设计中的重复搭建工作。",
+        image: "./assets/vol41-cinema4d-2027.png",
+        alt: "Cinema 4D 2027 程序化场景与 Liquid FX 效果",
+        url: "https://www.maxon.net/zh/cinema-4d/new",
+      },
+      {
+        category: "05 / AI 资讯",
+        meta: "ATTIE INTERACTIVE",
+        title: "Bluesky 的 Attie：普通用户也能创建小游戏和互动网页",
+        description:
+          "Bluesky 扩展实验性 AI 产品 Attie，让用户创建网站、小游戏、投票和测验，并基于 AT Protocol 生态分享。内容平台开始让用户直接创造可以参与的互动体验。",
+        image: "./assets/vol41-bluesky-attie.png",
+        alt: "Bluesky Attie 创建网站与互动小游戏",
+        url: "https://techcrunch.com/2026/10/15/bluesky-expands-its-ai-powered-attie-app-to-let-anyone-build-websites-games-and-more/",
+      },
+      {
+        category: "06 / 产品推荐",
+        meta: "VISUAL UI EDITING",
+        title: "Skisso：直接在网页上改 UI，再把修改交给 AI",
+        description:
+          "Skisso 是一款免费的 Chrome 扩展，可以选中真实网页元素进行视觉调整，再将修改以代码差异或 MCP 方式交给开发者和 AI Agent，让按钮大小、间距等界面修改表达得更精确。",
+        image: "./assets/vol41-skisso.png",
+        alt: "Skisso 在真实网页上进行可视化 UI 调整",
+        url: "https://skisso.app/",
+      },
+      {
+        type: "wide",
+        category: "07 / 产品推荐",
+        meta: "LOCAL IMAGE TOOLS",
+        title: "TinyImage：在 Figma 里本地抠图、放大图片",
+        description:
+          "TinyImage 新增背景移除与 2 倍、4 倍图片放大功能，处理过程可以在本地完成，无需将图片上传到外部服务，适合经常在 Figma 中处理图片素材的设计师。",
+        image: "./assets/vol41-tinyimage.png",
+        alt: "TinyImage 在 Figma 内本地移除背景与放大图片",
+        url: "https://www.hypermatic.com/tinyimage/",
+      },
+      {
+        category: "08 / 设计细节",
+        meta: "SYNTHETIC USERS",
+        title: "NN/g：AI 模拟的用户，为什么还是不够真实？",
+        description:
+          "NN/g 比较了 120 位 AI 模拟受访者与 604 位真人的调查结果：总体结论相似，但 AI 回答的多样性明显不足。AI 能帮助形成研究假设，却可能忽略少数用户的真实表达。",
+        image: "./assets/vol41-synthetic-users.png",
+        alt: "NN/g 对比 AI 模拟受访者与真人调查结果",
+        url: "https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/",
+      },
+      {
+        type: "wide",
+        category: "09 / 随便看看",
+        meta: "FORMULA E IDENTITY",
+        title: "Formula E：电动方程式的新视觉，连字体都像在加速",
+        description:
+          "Mox 为 Formula E 新赛季打造更具速度感的品牌系统，包含倾斜标志、鲜明配色，以及通过字形变化表达速度的定制字体，让速度成为整个视觉系统的一部分。",
+        image: "./assets/vol41-formula-e.png",
+        alt: "Formula E 新赛季品牌视觉与动态定制字体",
+        url: "https://www.itsnicethat.com/articles/mox-formula-e-graphic-design-project-011026",
+      },
+      {
+        category: "10 / 随便看看",
+        meta: "BROWSER CINEMA",
+        title: "Chasing the Moment：直接在浏览器里看一部互动短片",
+        description:
+          "这个用 Three.js 和 GLSL 制作的浏览器短片，通过奔跑的人物、延伸的城市和屏幕破碎效果创造沉浸式叙事。文章分享了实现思路，探索网页作为电影与互动艺术载体的可能性。",
+        image: "./assets/vol41-chasing-the-moment.jpeg",
+        alt: "Chasing the Moment 浏览器互动短片的城市场景",
+        url: "https://tympanus.net/codrops/2026/10/12/chasing-the-moment/",
+      },
+    ],
+  },
   40: {
     issue: "ISSUE 040",
     range: "10.08—10.11",
@@ -2386,7 +2541,7 @@ const requestedIssue = new URLSearchParams(window.location.search).get("issue");
 const initialIssue =
   requestedIssue && issues[requestedIssue]
     ? requestedIssue
-    : select?.value || "40";
+    : select?.value || "41";
 if (select) {
   select.value = initialIssue;
 }

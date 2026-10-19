@@ -9,7 +9,7 @@
     <link>https://sanhao-design-weekly.pages.dev/</link>
     <description>每周整理设计、品牌、工具与 AI 领域的观察、案例和灵感。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 12 Oct 2026 10:25:30 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 10:11:22 +0800</lastBuildDate>
     <generator>Sanhao Design Weekly</generator>
     <ttl>1440</ttl>
     <atom:link
@@ -24,6 +24,43 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>三号设计周刊 Vol.41</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=41</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=41</guid>
+      <pubDate>Mon, 19 Oct 2026 10:11:22 +0800</pubDate>
+      <description><![CDATA[
+        本期关注 Apple HomeView、Figma Code Layers 与 Specs、Photoshop 界面更新、
+        Cinema 4D、实用设计工具、用户研究、Formula E 品牌视觉与浏览器互动短片。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>一块会认人的屏幕，和一批真正好玩的设计工具。</p>
+        <ul>
+          <li>Apple HomeView：一块知道你是谁、站在哪里的屏幕</li>
+          <li>Figma 这次更新，把设计、文档和代码真正连起来了</li>
+          <li>Photoshop 界面现代化：老软件终于开始认真整理自己了</li>
+          <li>Cinema 4D 2027：大规模场景和液体效果更容易制作了</li>
+          <li>Bluesky 的 Attie：普通用户也能创建小游戏和互动网页</li>
+          <li>ChatGPT 带来的流量突然下降 47%？原来是统计方式出了问题</li>
+          <li>Skisso：直接在网页上改 UI，再把修改交给 AI</li>
+          <li>TinyImage：在 Figma 里本地抠图、放大图片</li>
+          <li>Framer Gallery：设计灵感库重新整理了</li>
+          <li>Canva × Mattel：230 款可免费使用的品牌模板</li>
+          <li>GSAP Typography：文字滚动时留下层层残影</li>
+          <li>NN/g：AI 模拟的用户，为什么还是不够真实？</li>
+          <li>Noho：好的交互设计，有时候应该少做一点</li>
+          <li>Formula E：电动方程式的新视觉，连字体都像在加速</li>
+          <li>Chasing the Moment：直接在浏览器里看一部互动短片</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/bi6kmxp936yt5bdl?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol41-apple-homeview.png"
+        length="3932182"
+        type="image/png"
+      />
+    </item>
 
     <item>
       <title>三号设计周刊 Vol.40</title>
