@@ -1,4 +1,150 @@
 const issues = {
+  42: {
+    issue: "ISSUE 042",
+    range: "10.19—10.25",
+    date: "2026 年 10 月 26 日 / 星期一",
+    datetime: "2026-10-26",
+    likes: 42,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source:
+      "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/imovm994u8tv9szx?singleDoc",
+    lead: {
+      category: "01 / 业界动态",
+      meta: "FRAMER MCP",
+      title: "Framer MCP AI Agent 现在可以直接修改网站了",
+      description:
+        "Framer 正式推出 MCP，支持连接 Claude、Codex、Cursor 等 AI 工具，让 Agent 直接操作设计画布、管理 CMS 内容，甚至发布网站。AI 开始真正参与网站的设计、修改和持续维护。",
+      image: "./assets/vol42-framer-mcp.png",
+      alt: "Framer MCP 连接 AI Agent 操作设计画布与网站内容",
+      url: "https://www.framer.com/mcp/",
+    },
+    briefing: [
+      {
+        title: "Anthropic：Agent Skills 正式走向开放标准",
+        tag: "AI 资讯",
+        description:
+          "Anthropic 宣布将 Agent Skills 捐赠给 Linux Foundation 旗下的 Agentic AI Foundation。目前已有超过 70 个 Agent 平台集成该标准，包括 ChatGPT、Cursor 和 GitHub Copilot。",
+        url: "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+      },
+      {
+        title: "OpenAI Decisions API：让 AI 更快做出下一步判断",
+        tag: "AI 资讯",
+        description:
+          "OpenAI 正式推出 Decisions API，专门处理分类、评分和路径选择等需要快速判断的任务。官方称速度最高可达通过 Responses API 调用同款模型的 10 倍。",
+        url: "https://openai.com/index/decisions-api/",
+      },
+      {
+        title: "ChatGPT：现在可以给重要对话上锁了",
+        tag: "AI 资讯",
+        description:
+          "ChatGPT 开始逐步推出 Locked Chats，可以通过 PIN 码或设备身份验证保护指定对话，并将其从常规聊天历史和搜索中隐藏。",
+        url: "https://help.openai.com/en/articles/20001411-using-locked-chats-in-chatgpt",
+      },
+      {
+        title: "Juan Mora Romero：一座可以无限拖动的设计实验室",
+        tag: "随便看看",
+        description:
+          "Juan Mora Romero 的个人作品集，把整个网站变成了一个自由探索的实验空间。",
+        url: "https://tympanus.net/codrops/2026/10/22/juan-mora-romero-portfolio/",
+      },
+      {
+        title: "Carmen Ansio：动效不该只是界面上的装饰",
+        tag: "随便看看",
+        description:
+          "Stripe 设计工程师 Carmen Ansio 分享了设计系统、Lottie 交互动效与创意编码实践，从 Sail 设计系统到通过状态机实现的动效，持续探索设计与代码之间的边界。",
+        url: "https://tympanus.net/codrops/2026/10/24/carmen-ansio/",
+      },
+    ],
+    quote:
+      "即使工作变快了，设计师对 AI 的感受也未必更好。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 业界动态",
+        meta: "NEW DEVICE FRAMES",
+        title: "Figma：iPhone Duo 和 iPhone 18 设计画板上线",
+        description:
+          "Figma 新增 iPhone Duo 和 iPhone 18 的 Frame 预设，覆盖界面设计、原型设置、Figma Make 预览以及 Code Layers。新设备也带来了不同屏幕形态下的布局适配与交互体验问题。",
+        image: "./assets/vol42-figma-iphone-frames.png",
+        alt: "Figma iPhone Duo 与 iPhone 18 设备画板预设",
+        url: "https://www.figma.com/release-notes/",
+      },
+      {
+        category: "03 / 产品体验",
+        meta: "AI IN UX SURVEY",
+        title: "AI 提高了效率，却没让设计师更满意",
+        description:
+          "NN/g 调查了 521 名 UX 从业者，发现 AI 已广泛进入日常工作，但大家的态度并没有那么积极：54% 的受访者担心输出质量，50% 关注数据隐私与安全问题。",
+        image: "./assets/vol42-ai-ux-survey.png",
+        alt: "NN/g 关于 UX 从业者使用 AI 的调查结果",
+        url: "https://www.nngroup.com/articles/ai-in-ux-survey-26/",
+      },
+      {
+        category: "04 / 产品体验",
+        meta: "ACCORDION ICONS",
+        title: "折叠菜单的图标，到底用哪个更合适？",
+        description:
+          "Smashing Magazine 分享了关于 Accordion 折叠菜单的交互研究。相比加号、箭头等符号，Caret（三角指示符）更容易让用户理解内容将在当前位置展开。",
+        image: "./assets/vol42-accordion-icons.png",
+        alt: "Accordion 折叠菜单中加号、箭头与三角指示符的比较",
+        url: "https://www.smashingmagazine.com/2026/10/accordion-icons-which-work-best/",
+      },
+      {
+        type: "wide",
+        category: "05 / 设计素材与工具",
+        meta: "ACCESSIBILITY PLUGINS",
+        title: "18 款 Figma 无障碍插件实测，哪些真正值得安装？",
+        description:
+          "Ben Walsh 实测并比较了 18 款 Figma 对比度检查插件，涵盖 WCAG、APCA、批量检查、组件兼容性与价格，并给出 Stark、Perception、Contrast 等不同场景下的推荐。",
+        image: "./assets/vol42-figma-accessibility-plugins.png",
+        alt: "18 款 Figma 无障碍与对比度检查插件对比",
+        url: "https://www.benjaminwalsh.co.uk/best-figma-plugins-for-accessibility-testing",
+      },
+      {
+        category: "06 / 设计素材与工具",
+        meta: "WEBGL & DOM",
+        title: "Atelier UI：让 WebGL 与网页元素一起动起来",
+        description:
+          "Atelier UI 是一套将 WebGL 与 DOM 结合的 React UI 组件方案，让文字、图片、3D 场景与页面滚动保持同步。Codrops 提供了完整教程与示例，适合研究创意网页和沉浸式交互。",
+        image: "./assets/vol42-atelier-ui.png",
+        alt: "Atelier UI 将 WebGL 场景与 DOM 页面元素同步呈现",
+        url: "https://tympanus.net/codrops/2026/10/21/atelier-ui-webgl-dom/",
+      },
+      {
+        type: "wide",
+        category: "07 / 设计素材与工具",
+        meta: "CSS RANDOM()",
+        title: "CSS random()：让网页设计多一点不规则的趣味",
+        description:
+          "CSS 新的 random() 函数可以在样式中生成随机数值，实现轻微错位的字体、随机旋转的卡片与不同节奏的动态效果。文章提供多个 CodePen 案例，实际使用仍需注意浏览器兼容性。",
+        image: "./assets/vol42-css-random.png",
+        alt: "CSS random() 带来的随机文字排布与卡片效果",
+        url: "https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
+      },
+      {
+        type: "wide",
+        category: "08 / 设计素材与工具",
+        meta: "MOTION ICONS",
+        title: "Its Hover：一套会动的开源图标库",
+        description:
+          "Its Hover 收录 180 多款基于 React 和 Motion 的动态 SVG 图标，涵盖导航、社交、操作和状态反馈。图标代码与动效均可修改，也支持通过 shadcn CLI 安装。",
+        image: "./assets/vol42-its-hover.png",
+        alt: "Its Hover 开源动态 SVG 图标库",
+        url: "https://itshover.com/icons",
+      },
+      {
+        category: "09 / 随便看看",
+        meta: "SOUND & INTERACTION",
+        title: "Maria Vasilyeva：把个人网站做成一首歌",
+        description:
+          "Maria Vasilyeva 的作品集将音乐融入网站结构，让页面布局、文字动画、过渡效果与声音构成完整体验。不同项目拥有各自的声音氛围，让声音成为视觉和交互设计的一部分。",
+        image: "./assets/vol42-maria-vasilyeva.png",
+        alt: "Maria Vasilyeva 将音乐、视觉与交互融合的个人作品集",
+        url: "https://www.mariavasilyeva.com/",
+      },
+    ],
+  },
   41: {
     issue: "ISSUE 041",
     range: "10.12—10.18",
@@ -2541,7 +2687,7 @@ const requestedIssue = new URLSearchParams(window.location.search).get("issue");
 const initialIssue =
   requestedIssue && issues[requestedIssue]
     ? requestedIssue
-    : select?.value || "41";
+    : select?.value || "42";
 if (select) {
   select.value = initialIssue;
 }

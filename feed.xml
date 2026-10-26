@@ -9,7 +9,7 @@
     <link>https://sanhao-design-weekly.pages.dev/</link>
     <description>每周整理设计、品牌、工具与 AI 领域的观察、案例和灵感。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 19 Oct 2026 10:11:22 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 11:06:46 +0800</lastBuildDate>
     <generator>Sanhao Design Weekly</generator>
     <ttl>1440</ttl>
     <atom:link
@@ -24,6 +24,42 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>三号设计周刊 Vol.42</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=42</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=42</guid>
+      <pubDate>Mon, 26 Oct 2026 11:06:46 +0800</pubDate>
+      <description><![CDATA[
+        本期关注 Framer MCP、Figma 新设备画板、AI 与 UX 调查、折叠菜单图标、
+        无障碍插件、创意网页工具、动态 SVG 图标与声音交互作品集。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>设计工具越来越聪明，设计师却有了新的烦恼。</p>
+        <ul>
+          <li>Framer MCP AI Agent 现在可以直接修改网站了</li>
+          <li>Figma：iPhone Duo 和 iPhone 18 设计画板上线</li>
+          <li>Anthropic：Agent Skills 正式走向开放标准</li>
+          <li>OpenAI Decisions API：让 AI 更快做出下一步判断</li>
+          <li>ChatGPT：现在可以给重要对话上锁了</li>
+          <li>AI 提高了效率，却没让设计师更满意</li>
+          <li>折叠菜单的图标，到底用哪个更合适？</li>
+          <li>18 款 Figma 无障碍插件实测，哪些真正值得安装？</li>
+          <li>Atelier UI：让 WebGL 与网页元素一起动起来</li>
+          <li>CSS random()：让网页设计多一点不规则的趣味</li>
+          <li>Its Hover：一套会动的开源图标库</li>
+          <li>Maria Vasilyeva：把个人网站做成一首歌</li>
+          <li>Juan Mora Romero：一座可以无限拖动的设计实验室</li>
+          <li>Carmen Ansio：动效不该只是界面上的装饰</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/imovm994u8tv9szx?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol42-framer-mcp.png"
+        length="571581"
+        type="image/png"
+      />
+    </item>
 
     <item>
       <title>三号设计周刊 Vol.41</title>
