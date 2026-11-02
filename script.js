@@ -1,4 +1,159 @@
 const issues = {
+  43: {
+    issue: "ISSUE 043",
+    range: "10.26—11.01",
+    date: "2026 年 11 月 2 日 / 星期一",
+    datetime: "2026-11-02",
+    likes: 43,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source:
+      "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/tfr3kxwoi89ngz8v?singleDoc",
+    lead: {
+      category: "01 / 本期特别推荐",
+      meta: "APP RECAP ARCHIVE",
+      title: "历年 App 年度报告，我都整理到这里了",
+      description:
+        "老三把历年收集的 App 年度报告整理到了设计灵感网站，方便回看其中的视觉风格、数据呈现和交互体验。网站也收录了设计灵感与 UX Bites，找灵感时可以翻一翻，后续还会继续补充。",
+      image: "./assets/vol43-app-recap.png",
+      alt: "Inspo.design 收录的历年 App 年度报告与设计案例",
+      url: "https://inspo-design.pages.dev/?tab=app-recap",
+    },
+    briefing: [
+      {
+        title: "Figma 正在训练真正懂设计的 AI 模型",
+        tag: "设计与行业观察",
+        description:
+          "Figma 分享了针对设计编辑任务的模型训练研究，希望 AI 能理解已有设计，在不破坏其他元素的情况下完成组件、布局和样式调整。更准确地修改已有设计，也许才是设计师日常真正需要的能力。",
+        url: "https://www.figma.com/blog/training-a-figma-fluent-editing-model/",
+      },
+      {
+        title: "AI 越会做产品，UX 反而越重要？",
+        tag: "设计与行业观察",
+        description:
+          "NN/g 讨论 AI 原生软件开发流程中，用户研究、需求判断与体验验证应该放在什么位置。能快速做出产品，不代表解决了真实问题，设计师的价值也不只是把界面做出来。",
+        url: "https://www.nngroup.com/articles/ux-agentic-software-factories/",
+      },
+      {
+        title: "Sketmi：打几个字，就能画出流程图",
+        tag: "有趣又实用的小工具",
+        description:
+          "Sketmi 是一个轻量的在线流程图工具，输入简单的文本关系就能实时生成图表，支持手绘与简洁两种风格，也能导出 PNG、SVG，适合梳理产品流程、功能关系或临时想法。",
+        url: "https://sketmi.com/",
+      },
+      {
+        title: "Adobe：用九枚徽章记录设计师的成长",
+        tag: "设计灵感与创意案例",
+        description:
+          "Adobe 邀请 David Oku 以包豪斯设计为灵感，创作九款不同年限的纪念徽章。几何图形、鲜明配色与数字设计元素被重新组合，让会员年限标识成为值得收藏的视觉作品。",
+        url: "https://blog.adobe.com/en/publish/2026/10/28/a-bauhaus-inspired-journey-through-your-years-with-adobe-2026-anniversary-pins",
+      },
+      {
+        title: "Bar Rêve：一家充满梦境感的酒吧视觉设计",
+        tag: "设计灵感与创意案例",
+        description:
+          "DutchScot 为布鲁克林酒吧 Bar Rêve 打造全新视觉识别，通过手绘动物、书法字体与富有象征意味的图形，营造介于现实与梦境之间的氛围。",
+        url: "https://www.itsnicethat.com/articles/dutchscots-bar-reve-graphic-design-project-271026",
+      },
+    ],
+    quote:
+      "好的设计，不一定非得是最新的。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / AI 与设计新方式",
+        meta: "REUSABLE AI WORKFLOWS",
+        title: "Figma Weave：让 AI 创作流程可以重复使用",
+        description:
+          "Figma Weave 将 AI 图像、视频等生成与编辑能力放进节点式工作流，支持分支探索和流程调整，还能把成熟工作流封装成可复用工具。",
+        image: "./assets/vol43-figma-weave.png",
+        alt: "Figma Weave 节点式 AI 创作与可复用工作流",
+        url: "https://www.figma.com/blog/the-tldr-on-figma-weave/",
+      },
+      {
+        category: "03 / AI 与设计新方式",
+        meta: "LIVE APP CANVAS",
+        title: "Wonder：直接在真实应用上修改设计",
+        description:
+          "Wonder 更新设计与代码协作画布，可以把正在运行的应用放进画布，直接调整元素、文字和布局，再由 Codex 或 Claude Code 将修改应用到代码中。",
+        image: "./assets/vol43-wonder.png",
+        alt: "Wonder 在设计画布中修改正在运行的真实应用",
+        url: "https://wonder.design/",
+      },
+      {
+        category: "04 / AI 与设计新方式",
+        meta: "GOOGLE DRIVE CONTEXT",
+        title: "Figma Agent 现在也能连接 Google Drive 了",
+        description:
+          "Figma 在 10 月 30 日开放 Google Drive 连接能力，Agent 和 Make 可以引用云端文档、研究资料与素材，也能创建 Drive 文件，让已有项目资料成为 AI 理解上下文的一部分。",
+        image: "./assets/vol43-figma-google-drive.png",
+        alt: "Figma Agent 与 Make 连接 Google Drive 项目资料",
+        url: "https://www.figma.com/release-notes/?title=connect-google-drive-to-the-figma-agent-available-on-all-plans",
+      },
+      {
+        category: "05 / 产品体验与品牌设计",
+        meta: "EXPERIENCE DESIGN",
+        title: "从 UX 到 Experience Design，设计的对象正在改变",
+        description:
+          "NN/g 讨论了 AI Agent 代表用户操作产品后的体验变化：设计不仅要考虑人如何使用界面，也要考虑 AI 如何理解和完成任务，而最终仍要服务于人的目标。",
+        image: "./assets/vol43-experience-design.png",
+        alt: "NN/g 对 UX 与 Experience Design 设计对象变化的讨论",
+        url: "https://www.nngroup.com/articles/ux-vs-experience-design/",
+      },
+      {
+        category: "06 / 产品体验与品牌设计",
+        meta: "SOUND INTO VISUALS",
+        title: "Apple Music：让音乐真正成为视觉的一部分",
+        description:
+          "TBWA\\Media Arts Lab 尝试用真实声音驱动液体变化，再通过摄影记录波纹、光线和折射效果，为 Apple Music 建立新的品牌视觉语言，让数字品牌拥有来自物理现象的独特质感。",
+        image: "./assets/vol43-apple-music.png",
+        alt: "Apple Music 由声音驱动液体波纹形成的品牌视觉",
+        url: "https://www.itsnicethat.com/features/apple-music-rebrand-graphic-design-spotlight-281026",
+      },
+      {
+        type: "wide",
+        category: "07 / 有趣又实用的小工具",
+        meta: "DESIGN TO DESIGN.MD",
+        title: "Design Extractor：把网站变成设计规范",
+        description:
+          "输入网站地址，即可提取颜色、字体、布局与组件等信息，整理成 AI 编程工具可以参考的 DESIGN.md，帮助 Codex、Cursor 等工具遵循现有品牌风格。自动提取的结果仍需自行核对。",
+        image: "./assets/vol43-design-extractor.png",
+        alt: "Design Extractor 从网站提取设计信息并生成 DESIGN.md",
+        url: "https://www.design-extractor.com/",
+      },
+      {
+        category: "08 / 有趣又实用的小工具",
+        meta: "ONLINE DESIGN STUDIO",
+        title: "ProDesigner：一个装满设计小工具的网站",
+        description:
+          "ProDesigner 收录半色调、图像矢量化、无缝图案、配色和印刷分色等工具。新开放的 Studio 测试版还支持在浏览器中制作海报、宣传单、Zine 与演示文稿。",
+        image: "./assets/vol43-prodesigner.png",
+        alt: "ProDesigner 在线视觉工具与 Studio 设计工作台",
+        url: "https://www.prodesigner.app/",
+      },
+      {
+        type: "wide",
+        category: "09 / 设计灵感与创意案例",
+        meta: "MUSEUM TYPE SYSTEM",
+        title: "A2 Type：为一座美术馆设计专属字体",
+        description:
+          "A2 Type 为路易斯安那现代艺术博物馆打造四套字体与 80 个专属图形符号，从建筑、历史档案和既有视觉语言中寻找灵感，让字体成为品牌识别的一部分。",
+        image: "./assets/vol43-a2-type-louisiana.png",
+        alt: "A2 Type 为路易斯安那现代艺术博物馆设计的字体系统",
+        url: "https://www.itsnicethat.com/articles/a2-type-louisiana-museum-of-modern-art-graphic-design-project-281026",
+      },
+      {
+        category: "10 / 设计灵感与创意案例",
+        meta: "LETTERS & WAX SEALS",
+        title: "Aplomb：把信件和蜡封变成香水包装",
+        description:
+          "Studio Lotta Nieminen 将邮票、压凹纹理、信纸和蜡封融入 Aplomb 香水包装，并把蜡封造型放到瓶盖上，让私人书信的手作温度与奢侈品的精致感相结合。",
+        image: "./assets/vol43-aplomb.png",
+        alt: "Aplomb 以私人书信与蜡封为灵感的香水包装",
+        url: "https://www.itsnicethat.com/articles/studio-lotta-nieminen-aplomb-branding-project-291026",
+      },
+    ],
+  },
   42: {
     issue: "ISSUE 042",
     range: "10.19—10.25",
@@ -2687,7 +2842,7 @@ const requestedIssue = new URLSearchParams(window.location.search).get("issue");
 const initialIssue =
   requestedIssue && issues[requestedIssue]
     ? requestedIssue
-    : select?.value || "42";
+    : select?.value || "43";
 if (select) {
   select.value = initialIssue;
 }

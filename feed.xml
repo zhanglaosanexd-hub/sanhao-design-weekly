@@ -9,7 +9,7 @@
     <link>https://sanhao-design-weekly.pages.dev/</link>
     <description>每周整理设计、品牌、工具与 AI 领域的观察、案例和灵感。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 26 Oct 2026 11:06:46 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 15:11:13 +0800</lastBuildDate>
     <generator>Sanhao Design Weekly</generator>
     <ttl>1440</ttl>
     <atom:link
@@ -24,6 +24,43 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>三号设计周刊 Vol.43</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=43</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=43</guid>
+      <pubDate>Mon, 02 Nov 2026 15:11:13 +0800</pubDate>
+      <description><![CDATA[
+        本期特别推荐历年 App 年度报告整理，并关注 Figma AI 工作流、产品体验、
+        Apple Music 品牌视觉、实用设计工具、字体系统与包装案例。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>有些好设计，值得再翻出来看看。</p>
+        <ul>
+          <li>历年 App 年度报告，我都整理到这里了</li>
+          <li>Figma 正在训练真正懂设计的 AI 模型</li>
+          <li>AI 越会做产品，UX 反而越重要？</li>
+          <li>Figma Weave：让 AI 创作流程可以重复使用</li>
+          <li>Wonder：直接在真实应用上修改设计</li>
+          <li>Figma Agent 现在也能连接 Google Drive 了</li>
+          <li>从 UX 到 Experience Design，设计的对象正在改变</li>
+          <li>Apple Music：让音乐真正成为视觉的一部分</li>
+          <li>Design Extractor：把网站变成设计规范</li>
+          <li>ProDesigner：一个装满设计小工具的网站</li>
+          <li>Sketmi：打几个字，就能画出流程图</li>
+          <li>A2 Type：为一座美术馆设计专属字体</li>
+          <li>Aplomb：把信件和蜡封变成香水包装</li>
+          <li>Adobe：用九枚徽章记录设计师的成长</li>
+          <li>Bar Rêve：一家充满梦境感的酒吧视觉设计</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/tfr3kxwoi89ngz8v?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol43-app-recap.png"
+        length="3976945"
+        type="image/png"
+      />
+    </item>
 
     <item>
       <title>三号设计周刊 Vol.42</title>
