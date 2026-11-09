@@ -9,7 +9,7 @@
     <link>https://sanhao-design-weekly.pages.dev/</link>
     <description>每周整理设计、品牌、工具与 AI 领域的观察、案例和灵感。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 02 Nov 2026 15:11:13 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 15:17:23 +0800</lastBuildDate>
     <generator>Sanhao Design Weekly</generator>
     <ttl>1440</ttl>
     <atom:link
@@ -24,6 +24,43 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>三号设计周刊 Vol.44</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=44</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=44</guid>
+      <pubDate>Mon, 09 Nov 2026 15:17:23 +0800</pubDate>
+      <description><![CDATA[
+        本期从 Scott Partridge 的几何鸟类插画出发，关注节日广告、AI 设计工具、
+        创意编程、聊天无障碍与数字作品的长期保存。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>创作越来越容易，设计的独特性从何而来？</p>
+        <ul>
+          <li>Scott Partridge：用几何图形描绘世界上的鸟类</li>
+          <li>蒙特勒爵士音乐节：两位艺术家合作的一场视觉狂欢</li>
+          <li>英国航空：把雨天的水坑，变成一组旅行广告</li>
+          <li>Levi's：一秒动画，要拍四个小时的圣诞广告</li>
+          <li>Figma：AI 生成的图标，终于更像真正能用的设计素材了</li>
+          <li>GitHub Replica：让 AI 按照你的设计系统制作原型</li>
+          <li>Gemini：随手画张草图，就能变成可交互的应用</li>
+          <li>Affinity 登陆 iPad，还是免费的</li>
+          <li>Quixel Megascans：海量 3D 扫描资源，重新免费开放</li>
+          <li>Google 藏了一个设计师专属彩蛋</li>
+          <li>BLUME CAFE：一个专门收集 AI 创意编程作品的网站</li>
+          <li>DesignEng Index：专门追踪 AI 设计工具变化的网站</li>
+          <li>AI 在生成的海报中最喜欢使用的字体？</li>
+          <li>当所有产品都在做 AI 聊天框，无障碍体验该怎么办？</li>
+          <li>二十年后，我们今天做的设计文件还能打开吗？</li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/okouwoilhyaxnbpi?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol44-scott-partridge-ave.png"
+        length="235828"
+        type="image/png"
+      />
+    </item>
 
     <item>
       <title>三号设计周刊 Vol.43</title>

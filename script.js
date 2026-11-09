@@ -1,4 +1,142 @@
 const issues = {
+  44: {
+    issue: "ISSUE 044",
+    range: "11.02—11.08",
+    date: "2026 年 11 月 9 日 / 星期一",
+    datetime: "2026-11-09",
+    likes: 44,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source: "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/okouwoilhyaxnbpi?singleDoc",
+    lead: {
+      category: "01 / 设计灵感与品牌创意",
+      meta: "AVIAN VECTOR ENCYCLOPEDIA",
+      title: "Scott Partridge：用几何图形描绘世界上的鸟类",
+      description: "Scott Partridge 在长期项目 AVE 中，用统一的矢量插画语言描绘现代鸟类。他把鸟的身体简化成几何形状，通过色块、线条与纹理表现不同物种的羽毛、体态和色彩。",
+      image: "./assets/vol44-scott-partridge-ave.png",
+      alt: "Scott Partridge 的 AVE 几何鸟类矢量插画",
+      url: "https://jevaart.com/artworkave.htm?_wv=1"
+    },
+    briefing: [
+      {
+        title: "英国航空：把雨天的水坑，变成一组旅行广告",
+        tag: "设计灵感与品牌创意",
+        description: "Uncommon 为英国航空创作的 Puddles 系列户外广告，用雨天的水坑倒影、灰蒙蒙的街景和飞过的飞机，衬托一句简单的文案：总有一个地方，阳光正好。",
+        url: "https://www.famouscampaigns.com/2026/11/british-airways-turns-puddles-into-ads-for-winter-sun/"
+      },
+      {
+        title: "Quixel Megascans：海量 3D 扫描资源，重新免费开放",
+        tag: "有趣网站与设计资源",
+        description: "Quixel 宣布重新开放 Megascans 免费获取，涵盖真实世界的 3D 扫描模型、地表材质、植物和环境资产。使用前需要留意具体授权条款。",
+        url: "https://quixel.com/news/update-megascans-are-going-free-again"
+      },
+      {
+        title: "Google 藏了一个设计师专属彩蛋",
+        tag: "有趣网站与设计资源",
+        description: "在 Google 搜索 Design Fails，可能会看到一个小彩蛋：搜索结果的字体变成了 Comic Sans。",
+        url: "https://www.google.com/search?q=design+fails"
+      },
+      {
+        title: "DesignEng Index：专门追踪 AI 设计工具变化的网站",
+        tag: "有趣网站与设计资源",
+        description: "DesignEng Index 追踪 AI 设计与设计转代码工具的功能、更新日志、价格和产品对比，并用 Graveyard 栏目记录已停止运营的产品。",
+        url: "https://designengindex.com/"
+      },
+      {
+        title: "二十年后，我们今天做的设计文件还能打开吗？",
+        tag: "产品体验与设计思考",
+        description: "存储设备会损坏，在线服务可能关闭，格式和软件也会过时。文章建议做多副本备份、定期检查文件，并将重要作品导出为更通用的格式。",
+        url: "https://www.creativebloq.com/news/will-your-digital-work-still-exist-in-2046-heres-why-the-answer-might-be-no"
+      }
+    ],
+    quote: "观察、判断和表达变得更加重要了。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 设计灵感与品牌创意",
+        meta: "MONTREUX JAZZ 2027",
+        title: "蒙特勒爵士音乐节：两位艺术家合作的一场视觉狂欢",
+        description: "Malika Favre 与 Kumkum Fernando 联合创作了 2027 年蒙特勒爵士音乐节官方海报。他们以鲜明的色彩、花卉和几何图案融合复古未来主义、南亚文化元素与 60 年代嬉皮士美学。",
+        image: "./assets/vol44-montreux-jazz.png",
+        alt: "2027 蒙特勒爵士音乐节海报视觉",
+        url: "https://www.montreuxjazzfestival.com/en/news/malika-favre-et-kumkum-fernando-signent-laffiche-du-61e-montreux-jazz-festival/"
+      },
+      {
+        category: "03 / 设计灵感与品牌创意",
+        meta: "HANDMADE STOP MOTION",
+        title: "Levi's：一秒动画，要拍四个小时的圣诞广告",
+        description: "Levi’s 的节日广告《Let's Get Fuzzy》用定格动画讲述毛茸茸的怪物 Gus 被大家接纳的故事。角色、服装和微缩场景均由手工制作；据品牌介绍，平均每秒动画要拍约四个小时。",
+        image: "./assets/vol44-levis-stop-motion.png",
+        alt: "Levi’s 节日定格动画《Let's Get Fuzzy》",
+        url: "https://www.youtube.com/watch?v=JLt9A07POhY"
+      },
+      {
+        category: "04 / AI 与设计工具",
+        meta: "EDITABLE AI VECTORS",
+        title: "Figma：AI 生成的图标，终于更像真正能用的设计素材了",
+        description: "Figma 改进了 AI Agent 的矢量插画与图标生成能力，支持更合理的图层分组、可调整的描边和参考图风格延续。生成的矢量图形也可以用于 Figma Motion。",
+        image: "./assets/vol44-figma-ai-vectors.png",
+        alt: "Figma AI Agent 矢量图形生成案例",
+        url: "https://www.figma.com/release-notes/?title=improvements-agent-generated-vector"
+      },
+      {
+        category: "05 / AI 与设计工具",
+        meta: "DESIGN SYSTEM PROTOTYPING",
+        title: "GitHub Replica：让 AI 按照你的设计系统制作原型",
+        description: "GitHub Design 开源了 AI 原型工具 Replica。它利用团队已有的组件、设计模式和文档，按照真实的设计系统生成可交互原型。",
+        image: "./assets/vol44-github-replica.png",
+        alt: "GitHub Replica 原型工具",
+        url: "https://github.com/github/replica"
+      },
+      {
+        category: "06 / AI 与设计工具",
+        meta: "SKETCH TO APP",
+        title: "Gemini：随手画张草图，就能变成可交互的应用",
+        description: "Google 展示了如何把手绘 App 界面拍照上传到 Gemini，在 Canvas 里生成可预览、可交互的应用，并继续调整配色、字体和功能。",
+        image: "./assets/vol44-gemini-sketch-app.png",
+        alt: "Gemini Canvas 将手绘草图转成交互应用",
+        url: "https://blog.google/innovation-and-ai/products/gemini-app/turn-drawings-into-apps-gemini/"
+      },
+      {
+        type: "wide",
+        category: "07 / AI 与设计工具",
+        meta: "AFFINITY FOR IPAD",
+        title: "Affinity 登陆 iPad，还是免费的",
+        description: "Affinity 的新版 iPad 应用将矢量设计、图片编辑、排版与手绘整合到一起，并适配触控和 Apple Pencil。登录 Canva 账号即可免费使用核心工具，部分 AI 功能需付费。",
+        image: "./assets/vol44-affinity-ipad.png",
+        alt: "Affinity iPad 版设计工具界面",
+        url: "https://www.affinity.studio/ipad-app"
+      },
+      {
+        category: "08 / 有趣网站与设计资源",
+        meta: "CREATIVE CODING",
+        title: "BLUME CAFE：一个专门收集 AI 创意编程作品的网站",
+        description: "BLUME CAFE 收录了创作者用 AI 辅助编程完成的 Three.js、WebGPU、动画、可视化与小游戏作品。不少作品可在线体验，部分附有作者介绍、技术信息或源代码。",
+        image: "./assets/vol44-blume-cafe.png",
+        alt: "BLUME CAFE 创意编程作品网站",
+        url: "https://www.blume.cafe/"
+      },
+      {
+        type: "wide",
+        category: "09 / 产品体验与设计思考",
+        meta: "AI POSTER TYPOGRAPHY",
+        title: "AI 在生成的海报中最喜欢使用的字体？",
+        description: "Creative Bloq 观察到，不少 AI 生成的海报出现了相似的字体风格：粗犷笔刷、不规则边缘、略向上倾斜的排版，视觉冲击力很强。",
+        image: "./assets/vol44-ai-poster-type.png",
+        alt: "Creative Bloq 讨论的 AI 海报字体风格",
+        url: "https://www.creativebloq.com/news/is-this-the-most-controversial-font-since-comic-sans"
+      },
+      {
+        category: "10 / 产品体验与设计思考",
+        meta: "ACCESSIBLE AI CHAT",
+        title: "当所有产品都在做 AI 聊天框，无障碍体验该怎么办？",
+        description: "Eric Bailey 在 Smashing Magazine 讨论了 AI 聊天界面的无障碍设计，关注如何让使用屏幕阅读器和键盘导航等辅助技术的人更顺畅地使用对话式产品。",
+        image: "./assets/vol44-accessible-ai-chat.png",
+        alt: "Smashing Magazine 的 AI 聊天无障碍设计案例",
+        url: "https://www.smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible/"
+      }
+    ]
+  },
   43: {
     issue: "ISSUE 043",
     range: "10.26—11.01",
@@ -2842,7 +2980,7 @@ const requestedIssue = new URLSearchParams(window.location.search).get("issue");
 const initialIssue =
   requestedIssue && issues[requestedIssue]
     ? requestedIssue
-    : select?.value || "43";
+    : select?.value || "44";
 if (select) {
   select.value = initialIssue;
 }
