@@ -1,4 +1,171 @@
 const issues = {
+  45: {
+    issue: "ISSUE 045",
+    range: "11.09—11.15",
+    date: "2026 年 11 月 16 日 / 星期一",
+    datetime: "2026-11-16",
+    likes: 45,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source: "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/echzrvux9uog1aog?singleDoc",
+    lead: {
+      category: "01 / 设计工具与创作工作流",
+      meta: "3D TRANSFORM",
+      title: "Figma：3D Transform 让二维画布有了更多空间感",
+      description: "Figma 的 3D Transform 公测支持沿 X、Y、Z 轴旋转对象、调整透视与空间层次，还能结合 Motion 制作动画。设计结果可以在 Dev Mode 中获取对应 CSS，或通过 MCP 进入代码工作流。",
+      image: "./assets/vol45-figma-3d-transform.png",
+      alt: "Figma：3D Transform 让二维画布有了更多空间感",
+      url: "https://www.figma.com/blog/how-3d-transforms-and-figmas-agent-brought-a-launch-video-to-life/"
+    },
+    briefing: [
+      {
+        title: "NN/g：AI 时代，用户研究需要进入产品迭代循环",
+        tag: "产品体验与用户研究",
+        description: "NN/g 提出 Research-in-the-Loop，讨论如何让用户研究适应 AI 加速的软件开发周期。研究需要更紧密地参与需求定义、数据采集，以及发布后的效果评估。",
+        url: "https://www.nngroup.com/articles/research-in-the-loop/"
+      },
+      {
+        title: "Smashing Magazine：你的产品真的需要增加 AI 吗？",
+        tag: "产品体验与用户研究",
+        description: "Victor Yocco 提出四个评估问题：AI 是否减少了用户的总工作量？是否优于现有方式？用户能否发现错误？长期使用后是否仍能判断错误？操作变快，也可能把负担转移到结果检查与修正。",
+        url: "https://shop.smashingmagazine.com/2026/11/should-you-add-ai-audit-product-teams/"
+      },
+      {
+        title: "Caixa：一家巴西银行的品牌焕新",
+        tag: "品牌视觉与创意灵感",
+        description: "Tátil 为巴西银行 Caixa 更新品牌视觉，保留代表性的 X 形符号，以蓝橙配色、现代字标与延展图形，让品牌更加年轻、亲近。",
+        url: "https://www.creativebloq.com/news/this-banks-vibrant-new-logo-design-ticks-all-the-boxes"
+      },
+      {
+        title: "加尔各答国际电影节：一个很有想法的 Logo",
+        tag: "品牌视觉与创意灵感",
+        description: "电影人 Sandip Ray 为加尔各答国际电影节设计新标识，将厚重黑色字母与带胶片齿孔的橙色几何切割结合，把电影媒介的形态融入字母结构。",
+        url: "https://www.creativebloq.com/news/this-film-festival-logo-proves-originality-isnt-dead-in-graphic-design"
+      },
+      {
+        title: "Figma：AI 可以参与创作，但哪些过程应该留给自己？",
+        tag: "值得思考",
+        description: "Figma Weave 联合创始人兼首席创意官 Itay Schiff 讨论 AI 对创作过程的影响：并非所有可以自动化的工作，都应该被自动化。",
+        url: "https://www.figma.com/blog/ai-role-in-the-creative-process/"
+      }
+    ],
+    quote: "设计师可以将更多精力放在理解问题、探索方向和完善体验上。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 设计工具与创作工作流",
+        meta: "PHYSICS-BASED MOTION",
+        title: "Figma Motion：更自然的弹簧动画与 Lottie 预览",
+        description: "Figma Motion 新增物理弹簧参数、动画样式预览与 Lottie 导出预览。设计师可以调整质量、刚度和阻尼，并把参数保存到设计系统中复用。",
+        image: "./assets/vol45-figma-motion.png",
+        alt: "Figma Motion：更自然的弹簧动画与 Lottie 预览",
+        url: "https://www.figma.com/release-notes/?title=new-figma-motion-updates-physics-based-springs-style-and-lottie-export-previews"
+      },
+      {
+        category: "03 / 设计工具与创作工作流",
+        meta: "ADOBE MAX 2026",
+        title: "Adobe MAX 2026：Creative Agent 开始深入专业创作流程",
+        description: "Adobe MAX 2026 扩展 Creative Agent，让 AI Assistant 进入 Premiere、Illustrator、InDesign 与 After Effects 等工具。原生项目文件的本地 MCP 集成预计于 2027 年初进入私人测试。",
+        image: "./assets/vol45-adobe-creative-agent.png",
+        alt: "Adobe MAX 2026：Creative Agent 开始深入专业创作流程",
+        url: "https://news.adobe.com/news/2026/11/adobe-transforms-creative-cloud-tools"
+      },
+      {
+        category: "04 / 设计工具与创作工作流",
+        meta: "FIREFLY DESIGN & GRAPH",
+        title: "Adobe Firefly：从图像生成工具走向完整创意工作台",
+        description: "Firefly Design 测试版尝试把位图、矢量、动态内容、3D 与印刷设计整合到同一画布。Firefly Graph 则支持组合不同模型和工具，建立可重复执行的生成与编辑流程。",
+        image: "./assets/vol45-firefly-design.png",
+        alt: "Adobe Firefly：从图像生成工具走向完整创意工作台",
+        url: "https://news.adobe.com/news/2026/11/adobe-firefly-expands"
+      },
+      {
+        category: "05 / 设计工具与创作工作流",
+        meta: "GENERATIVE SHADERS",
+        title: "Framer：让 AI 直接生成图片和 Shader 效果",
+        description: "Framer 上线图像与 Shader 生成功能。设计师可以让 Agent 生成图片、纹理和插画，或用文字描述半色调、CRT、铅笔质感以及跟随鼠标的交互特效。",
+        image: "./assets/vol45-framer-shaders.png",
+        alt: "Framer：让 AI 直接生成图片和 Shader 效果",
+        url: "https://www.framer.com/updates"
+      },
+      {
+        category: "06 / 设计工具与创作工作流",
+        meta: "AGENT-DRIVEN INTERFACES",
+        title: "Google A2UI 1.0：AI 交互正在走出聊天框",
+        description: "Google 发布生成式界面开放协议 A2UI 的首个稳定版本。AI Agent 可以描述表单、图表和选择器，再由应用使用自己的组件渲染，让交互更贴合商品比较、订单确认等任务。",
+        image: "./assets/vol45-google-a2ui.png",
+        alt: "Google A2UI 1.0：AI 交互正在走出聊天框",
+        url: "https://developers.googleblog.com/a2ui-10-build-delightful-fast-reliable-agentic-experiences/"
+      },
+      {
+        type: "wide",
+        category: "07 / 产品体验与用户研究",
+        meta: "SCREEN-RESTRAINED DESIGN",
+        title: "Yoto：一款儿童产品，为什么选择克制屏幕设计？",
+        description: "Yoto 与 Heirloom 重新设计儿童音频播放器，改善续航、存储、音质与握持体验，同时保留实体旋钮、卡片和像素界面。即使屏幕分辨率提高，团队仍刻意避免增加容易吸引儿童持续观看的动画。",
+        image: "./assets/vol45-yoto-player.png",
+        alt: "Yoto：一款儿童产品，为什么选择克制屏幕设计？",
+        url: "https://www.creativebloq.com/inspiration/how-do-you-redesign-a-cult-kids-product-i-asked-yotos-new-designers"
+      },
+      {
+        category: "08 / 品牌视觉与创意灵感",
+        meta: "BRAND MOTION SYSTEM",
+        title: "Etsy：品牌不只有视觉识别，还需要运动语言",
+        description: "Vucko 为 Etsy 构建新的品牌动态语言，以愉悦、简洁和工艺感为原则，让动效在产品界面、市场营销和其他品牌触点之间保持统一。",
+        image: "./assets/vol45-etsy-motion.png",
+        alt: "Etsy：品牌不只有视觉识别，还需要运动语言",
+        url: "https://www.itsnicethat.com/articles/vucko-etsy-motion-graphic-design-sponsored-content-121126"
+      },
+      {
+        type: "wide",
+        category: "09 / 品牌视觉与创意灵感",
+        meta: "CHESS REIMAGINED",
+        title: "Nymzo：重新设计属于年轻人的国际象棋",
+        description: "由 Otherward 两位设计师创立的 Nymzo，希望打破传统棋具正式、保守的印象。Stanton Series 02 从棋子结构、材质、重量和配色出发，重新思考国际象棋的设计。",
+        image: "./assets/vol45-nymzo-chess.png",
+        alt: "Nymzo：重新设计属于年轻人的国际象棋",
+        url: "https://www.itsnicethat.com/articles/nymzo-product-design-project-101126"
+      },
+      {
+        category: "10 / 品牌视觉与创意灵感",
+        meta: "BRAZILIAN BRAND CRAFT",
+        title: "Biabum Studio：充满复古质感的巴西品牌设计",
+        description: "巴西 Biabum Studio 将插画、手写字体、复古色彩与手工纹理融入包装、餐饮品牌和视觉识别，让作品带有鲜明的地域文化与生活气息。",
+        image: "./assets/vol45-biabum-studio.png",
+        alt: "Biabum Studio：充满复古质感的巴西品牌设计",
+        url: "https://www.itsnicethat.com/articles/biabum-graphic-design-illustration-discover-111126"
+      }
+    ],
+    recruitment: [
+      {
+        title: "【滴滴】｜资深 / 专家视觉 UI 设计师",
+        category: "三哥直聘",
+        meta: "北京 / 国际化金融",
+        summary: "滴滴国际化金融设计团队招聘资深 / 专家视觉 UI 设计师。负责视觉创意、UI、视觉规范与设计系统建设。投递需附简历和作品集。",
+        description: "工作地点：北京\n\n招聘方向：国际化金融产品设计\n\n滴滴国际化金融设计团队招聘资深或专家级视觉 UI 设计师。负责核心业务场景的视觉创意与 UI 设计、品牌表达、视觉规范及设计系统建设。\n\n与产品、交互、研发及市场团队协作，推动创意到交付，兼顾多语言、多终端和不同市场文化差异。\n\n岗位要求：\n• 扎实的视觉与 UI 设计能力，在版式、字体、色彩、图形及品牌表达方面有成熟审美。\n• 有复杂产品或核心业务模块设计经验，能够独立完成高质量方案。\n• 熟练使用 Figma 等工具，具备组件化与设计系统建设能力。\n• 良好的沟通和项目推动能力，平衡业务目标、用户体验与实现成本。\n• 海外产品、金融科技或多语言产品经验优先。\n• 动效、插画、3D 或 AI 辅助创意实践经验优先。\n\n简历 + 作品集投递：xiesonglun@didiglobal.com",
+        url: "mailto:xiesonglun@didiglobal.com",
+        sourceLabel: "滴滴国际化金融设计团队"
+      },
+      {
+        title: "【LibTV】｜寻找热爱 AI 的设计师",
+        category: "三哥直聘",
+        meta: "AI 创意工具 / 视觉设计",
+        summary: "LibTV 招募热爱 AI、具备良好设计品味的设计师，使用 LibTV、Lovart 等工具开展高频探索，将创意转化为作品。",
+        description: "招聘方向：AI 创意工具 / 视觉设计\n\nLibTV 希望找到真正热爱 AI、具备良好设计品味（Taste），愿意不断探索新工具和新创作方式的设计师。\n\n可使用 LibTV、Lovart 等 AI 创意工具，参与高频探索与类似黑客松的工作方式，把创意快速转化为实际作品。\n\n如果对 AI 设计、视觉创作与新一代创意工具感兴趣，并拥有不错的审美和作品，欢迎投递。\n\n作品投递：chenqinghong@liblib.ai",
+        url: "mailto:chenqinghong@liblib.ai",
+        sourceLabel: "LibTV"
+      },
+      {
+        title: "【设计合作】UI / 动效设计师｜付费合作机会",
+        category: "三哥直聘",
+        meta: "UI 动效 / 付费合作",
+        summary: "寻找有 UI 动效实战经验的设计师，提供 Icon、App 开屏动画与界面交互动效的实操指导。付费合作，具体价格私聊老三协助建联。",
+        description: "合作方向：Icon 动效 / 开屏动画 / 界面交互动效\n\n寻找具有 UI 动效实战经验的设计师，提供日常工作中的动效实操指导。\n\n主要场景：\n• Icon 图标动效设计与制作。\n• App 开屏动画设计。\n• 界面交互动效及相关实操指导。\n\n希望具备实际项目经验，提供具体、可落地的制作方法与技术指导。\n\n合作方式：付费合作，具体价格私聊。\n\n有相关经验的设计师可以私信老三，由老三协助建联。请通过语雀原刊联系。",
+        url: "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/echzrvux9uog1aog?singleDoc",
+        sourceLabel: "三号设计周刊 · 老三"
+      }
+    ]
+  },
   44: {
     issue: "ISSUE 044",
     range: "11.02—11.08",
@@ -2957,6 +3124,7 @@ const headline = document.querySelector("[data-headline]");
 const note = document.querySelector("[data-note]");
 const leadLayout = document.querySelector("#lead-layout");
 const storyGrid = document.querySelector("#story-grid");
+const recruitmentPanel = document.querySelector("#recruitment-panel");
 const status = document.querySelector("#issue-status");
 const storyPreviewDialog = document.querySelector(".story-preview-dialog");
 const storyPreviewClose = document.querySelector("[data-preview-close]");
@@ -2980,7 +3148,7 @@ const requestedIssue = new URLSearchParams(window.location.search).get("issue");
 const initialIssue =
   requestedIssue && issues[requestedIssue]
     ? requestedIssue
-    : select?.value || "44";
+    : select?.value || "45";
 if (select) {
   select.value = initialIssue;
 }
@@ -3094,6 +3262,10 @@ function renderStoryPreviewMedia(payload) {
 function openStoryPreview(payload) {
   if (!storyPreviewDialog) return;
 
+  storyPreviewDialog.classList.toggle(
+    "story-preview-dialog--recruitment",
+    payload.category === "三哥直聘",
+  );
   renderStoryPreviewMedia(payload);
   setStoryPreviewText(storyPreviewCategory, payload.category);
   setStoryPreviewText(storyPreviewTitle, payload.title);
@@ -3662,6 +3834,30 @@ async function updateReaction(celebration = "small") {
   }
 }
 
+function renderRecruitment(issue) {
+  if (!recruitmentPanel) return;
+  const jobs = issue.recruitment || [];
+  recruitmentPanel.hidden = jobs.length === 0;
+  recruitmentPanel.innerHTML = jobs.length
+    ? `
+      <p class="section-label">DESIGN OPPORTUNITIES</p>
+      <h2 id="recruitment-title">三哥直聘</h2>
+      <p class="recruitment-panel__intro">招聘与合作信息，感兴趣的同学可以直接联系招聘方，或通过原刊私信老三协助建联。</p>
+      <div class="recruitment-grid">
+        ${jobs.map((job) => `
+          <article class="recruitment-card">
+            <p class="section-label">${job.meta}</p>
+            <h3>${job.title}</h3>
+            <p>${job.summary}</p>
+            <a href="${job.url}" ${externalLinkAttributes} ${getStoryPreviewAttribute(job)}>查看详情与联系信息 ↗</a>
+          </article>
+        `).join("")}
+      </div>
+      <p class="recruitment-panel__notice">招聘及合作需求来自投稿或转发，具体要求、招聘状态及合作细节请以相关负责人回复为准。</p>
+    `
+    : "";
+}
+
 function renderIssue(value, announce = false) {
   const issue = issues[value];
   currentIssue = value;
@@ -3684,6 +3880,7 @@ function renderIssue(value, announce = false) {
     ...remainingStories.slice(1),
   ].join("");
   markStoryGridEdges();
+  renderRecruitment(issue);
   status.textContent = `${announce ? "已切换至" : "当前展示"} Vol.${value} · 2026.${issue.range}`;
   document.title = `三号设计周刊 · Vol.${value}`;
   renderReaction(value);

@@ -759,6 +759,7 @@ body.story-preview-open {
 }
 
 .story-preview__description {
+  white-space: pre-line;
   margin: 4px 0 0;
   color: var(--muted);
   font-family: "Songti SC", "STSong", serif;
@@ -1521,6 +1522,93 @@ body.story-preview-open {
 @media (hover: none) {
   .story__media img {
     filter: grayscale(0.15) contrast(0.98);
+  }
+}
+
+.recruitment-panel {
+  margin-top: 64px;
+  padding-top: 28px;
+  border-top: 4px double var(--ink);
+}
+
+.story-preview-dialog--recruitment {
+  width: min(760px, calc(100vw - 32px));
+}
+
+.story-preview-dialog--recruitment .story-preview {
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 0;
+  max-height: calc(100vh - 48px);
+  overflow: auto;
+}
+
+.story-preview-dialog--recruitment .story-preview__media {
+  display: none;
+}
+
+.story-preview-dialog--recruitment .story-preview__panel {
+  overflow: visible;
+}
+
+.recruitment-panel[hidden] {
+  display: none;
+}
+
+.recruitment-panel h2 {
+  margin: 12px 0;
+  font-family: "Songti SC", "STSong", serif;
+  font-size: clamp(32px, 4vw, 44px);
+}
+
+.recruitment-panel__intro,
+.recruitment-panel__notice {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.recruitment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 24px 0;
+  border-top: var(--line);
+  border-left: var(--line);
+}
+
+.recruitment-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px;
+  border-right: var(--line);
+  border-bottom: var(--line);
+}
+
+.recruitment-card h3 {
+  margin: 0;
+  font-family: "Songti SC", "STSong", serif;
+  font-size: 28px;
+  line-height: 1.25;
+}
+
+.recruitment-card > p:not(.section-label) {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.recruitment-card a {
+  margin-top: auto;
+  color: var(--accent);
+  font-weight: 700;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+  .recruitment-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
