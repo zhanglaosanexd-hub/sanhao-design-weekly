@@ -1,4 +1,142 @@
 const issues = {
+  46: {
+    issue: "ISSUE 046",
+    range: "11.16—11.22",
+    date: "2026 年 11 月 23 日 / 星期一",
+    datetime: "2026-11-23",
+    likes: 46,
+    headline: "碎片带来灵感，<br />整理形成认知，连接构成体系。",
+    note: "本刊记录每周体验设计中的发现与思考，为后续知识库建设和设计研究积累素材。",
+    source: "https://www.yuque.com/zhanglaosan-bz7nq/blot0b/nuk1vgfa5t3fqwmm?singleDoc",
+    lead: {
+      category: "01 / 设计动态与工具更新",
+      meta: "SPECS & FIGMA AGENT",
+      title: "Figma Specs：从设计需求到实施计划",
+      description: "Figma 展示了结合 Specs 与 Figma Agent 的新工作流程，可以将需求文档、界面设计、交互流程和技术要求集中在同一画布中，再由 Agent 整理实施计划，减少设计与开发之间的信息断层。",
+      image: "./assets/vol46-figma-specs.png",
+      alt: "Figma Specs：从设计需求到实施计划",
+      url: "https://www.figma.com/blog/workflow-lab-specs-and-the-figma-agent/"
+    },
+    briefing: [
+      {
+        title: "Canva：现在可以关闭生成式 AI 了",
+        tag: "设计动态与工具更新",
+        description: "Canva 新增了 AI 功能控制选项，允许用户隐藏部分生成式 AI 工具，并减少 AI 生成素材的推荐。在越来越多工具不断加入 AI 的时候，允许用户自主选择，也是一种值得关注的产品体验设计。",
+        url: "https://www.canva.com/newsroom/news/ai-controls-canva/"
+      },
+      {
+        title: "NN/g：AI 生成设计，更需要整理好的研究结论",
+        tag: "设计动态与工具更新",
+        description: "Nielsen Norman Group 最新研究发现，向 AI 提供经过整理的用户研究结论，比直接提供原始评论更有利于生成符合要求的设计方案。实验中，两种方式的平均评分标准满足率分别为 77.9% 和 69.5%，也再次体现了研究分析的重要性。",
+        url: "https://www.nngroup.com/articles/raw-data-vs-synthesized-data/"
+      },
+      {
+        title: "Google Noto Emoji：免费的 Emoji 表情素材库",
+        tag: "设计资源与本周分享",
+        description: "Google Fonts 提供的 Noto Emoji 在线素材库，收录了接近 4,000 个 Emoji，涵盖表情、动物、人物和各类符号。网站支持搜索和分类浏览，提供 2D、3D 风格及多种下载格式，很适合日常设计配图、演示文稿和产品界面使用。",
+        url: "https://googlefonts.github.io/noto-emoji-files/"
+      },
+      {
+        title: "Figma 教育版被锁？紧急转移设计文件指南",
+        tag: "设计资源与本周分享",
+        description: "最近不少小伙伴遇到了 Figma 教育版团队或项目文件被锁定的问题。我整理了一份图文教程，介绍如何尝试将设计文件转移到 Free 团队的 Drafts 中，并做好本地备份。也提醒大家定期留存重要设计资产。",
+        url: "https://mp.weixin.qq.com/s/EDzdPwDuxYes2YSXePmh0Q"
+      },
+      {
+        title: "老三的本周思考：我们越来越会安排生活，却很难去感受和体验生活",
+        tag: "设计资源与本周分享",
+        description: "这周还写了一篇关于生活的文章。我们越来越习惯安排好每一天，工作、旅行、休息都希望充实而有意义，却可能慢慢忽略了生活本身。偶尔也应该允许自己拥有一些普通、平静、没有特别安排的日子。",
+        url: "https://mp.weixin.qq.com/s/arPdKjXxH9bJcmPBckozPA"
+      }
+    ],
+    quote: "偶尔也应该允许自己拥有一些普通、平静、没有特别安排的日子。",
+    stories: [
+      {
+        type: "wide",
+        category: "02 / 设计动态与工具更新",
+        meta: "VISUAL CODE EDITING",
+        title: "Onlook：在真实代码上直接进行视觉设计",
+        description: "Onlook 推出了全新的开源桌面版本，可以直接打开本地网页项目，在可视化画布中调整布局、组件和样式，并结合 AI Coding Agent 进行开发，让设计与代码在同一个环境中完成。",
+        image: "./assets/vol46-onlook.png",
+        alt: "Onlook：在真实代码上直接进行视觉设计",
+        url: "https://www.onlook.com/"
+      },
+      {
+        category: "03 / 设计动态与工具更新",
+        meta: "COMPONENT VARIANTS",
+        title: "Sketch 2026.4：组件变体正式上线",
+        description: "Sketch 发布 Ghent 版本，新增组件变体 Variants、Sections 等功能，支持通过状态、主题和尺寸组织组件，同时将 Symbols 正式更名为 Components，进一步完善设计系统的管理体验。",
+        image: "./assets/vol46-sketch-variants.png",
+        alt: "Sketch 2026.4：组件变体正式上线",
+        url: "https://www.sketch.com/changelog/ghent/"
+      },
+      {
+        category: "04 / 设计动态与工具更新",
+        meta: "CONTINUOUS IMPROVEMENT",
+        title: "Google Stitch Loop：让 AI 参与产品持续优化",
+        description: "Google Labs 推出了 Stitch Loop，尝试通过 AI Agent 结合代码仓库与产品数据，识别性能、无障碍等问题，并生成供开发者审核的改进方案，让 AI 不只参与产品构建，也参与上线后的持续迭代。目前开放候补申请。",
+        image: "./assets/vol46-stitch-loop.png",
+        alt: "Google Stitch Loop：让 AI 参与产品持续优化",
+        url: "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/"
+      },
+      {
+        category: "05 / 有趣的网站与产品体验",
+        meta: "INTERACTION LIBRARY",
+        title: "Interaction Library：藏在虚拟书架里的交互灵感",
+        description: "韩国交互设计师 Jungik Lee 将自己制作的交互实验整理成了一座虚拟书架。用户可以像翻阅书籍一样探索不同作品，比传统的网格作品集多了一份趣味，也让交互设计本身成为作品展示的一部分。",
+        image: "./assets/vol46-interaction-library.png",
+        alt: "Interaction Library：藏在虚拟书架里的交互灵感",
+        url: "https://library.jjangik.kr/"
+      },
+      {
+        category: "06 / 有趣的网站与产品体验",
+        meta: "INTERACTIVE TRAVEL GUIDE",
+        title: "环球小径：把出国攻略做成一套交互式工具",
+        description: "最近发现的一个中文网站「环球小径」，目前已开启公测。它将数字游民、海外工作、签证、留学等信息集中整理，支持按国家和个人条件筛选，并提供材料清单、申请步骤与费用参考。黑金配色搭配地球路线的视觉设计也很有辨识度。",
+        image: "./assets/vol46-global-lane.png",
+        alt: "环球小径：把出国攻略做成一套交互式工具",
+        url: "https://globallane.surge.sh/#explore"
+      },
+      {
+        type: "wide",
+        category: "07 / 有趣的网站与产品体验",
+        meta: "SCREEN-FREE PHONE",
+        title: "Tin Can：一款没有屏幕的儿童电话",
+        description: "Tin Can 是一款专为儿童设计的无屏幕电话，采用复古座机造型，通过 Wi-Fi 实现通话，并允许家长管理联系人。在智能设备不断增加功能的今天，它选择用更简单的方式满足孩子与家人、朋友保持联系的需求。",
+        image: "./assets/vol46-tin-can.png",
+        alt: "Tin Can：一款没有屏幕的儿童电话",
+        url: "https://tincan.kids/products/tin-can"
+      },
+      {
+        category: "08 / 品牌、视觉与创意案例",
+        meta: "GROWING BRAND IDENTITY",
+        title: "PHS：一套会生长的植物品牌识别",
+        description: "设计工作室 Smith & Diction 为宾夕法尼亚园艺协会打造了全新的品牌视觉系统，将植物、花卉与自然形态融入字母标志，并延伸至动态视觉、插画和各种品牌应用，让整套视觉识别拥有不断生长的可能性。",
+        image: "./assets/vol46-phs-identity.png",
+        alt: "PHS：一套会生长的植物品牌识别",
+        url: "https://smith-diction.com/work"
+      },
+      {
+        type: "wide",
+        category: "09 / 品牌、视觉与创意案例",
+        meta: "A REAL COOKIE LOGO",
+        title: "&Walsh：把真正的饼干做成品牌 Logo",
+        description: "设计工作室 &Walsh 为 Insomnia Cookies 更新了品牌视觉，将原本的月亮饼干图形换成真实拍摄的巧克力曲奇，保留品牌原有记忆的同时，通过更直观的食物质感强化辨识度，整套包装与视觉语言也更加鲜明。",
+        image: "./assets/vol46-insomnia-cookies.png",
+        alt: "&Walsh：把真正的饼干做成品牌 Logo",
+        url: "https://andwalsh.com/work/all/insomnia-cookies/"
+      },
+      {
+        category: "10 / 品牌、视觉与创意案例",
+        meta: "BOTANICAL CYANOTYPE",
+        title: "Everleaf：用真实植物与阳光创作包装视觉",
+        description: "创意工作室 LOVE. 为无酒精开胃酒品牌 Everleaf 重新设计了包装，通过真实植物与蓝晒工艺制作图案，并结合玻璃浮雕和材质细节呈现自然气息。相比纯数字化的视觉表达，多了一份真实而独特的工艺质感。",
+        image: "./assets/vol46-everleaf.png",
+        alt: "Everleaf：用真实植物与阳光创作包装视觉",
+        url: "https://www.lovecreative.com/work/everleaf-casestudy"
+      }
+    ]
+  },
   45: {
     issue: "ISSUE 045",
     range: "11.09—11.15",
@@ -3148,7 +3286,7 @@ const requestedIssue = new URLSearchParams(window.location.search).get("issue");
 const initialIssue =
   requestedIssue && issues[requestedIssue]
     ? requestedIssue
-    : select?.value || "45";
+    : select?.value || "46";
 if (select) {
   select.value = initialIssue;
 }

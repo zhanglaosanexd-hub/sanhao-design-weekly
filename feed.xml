@@ -9,7 +9,7 @@
     <link>https://sanhao-design-weekly.pages.dev/</link>
     <description>每周整理设计、品牌、工具与 AI 领域的观察、案例和灵感。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 16 Nov 2026 10:13:48 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 08:09:12 +0800</lastBuildDate>
     <generator>Sanhao Design Weekly</generator>
     <ttl>1440</ttl>
     <atom:link
@@ -24,6 +24,43 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>三号设计周刊 Vol.46</title>
+      <link>https://sanhao-design-weekly.pages.dev/?issue=46</link>
+      <guid isPermaLink="true">https://sanhao-design-weekly.pages.dev/?issue=46</guid>
+      <pubDate>Mon, 23 Nov 2026 08:09:12 +0800</pubDate>
+      <description><![CDATA[
+        本期整理 15 条设计、AI、产品体验与创意资源，关注 Figma Specs、Onlook、
+        Sketch 组件变体、Stitch Loop、有趣网站、品牌案例和老三的两篇文章。
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p>这周发现的好设计、好工具与有趣网站。</p>
+        <ul>
+          <li><a href="https://www.figma.com/blog/workflow-lab-specs-and-the-figma-agent/">Figma Specs：从设计需求到实施计划</a></li>
+          <li><a href="https://www.onlook.com/">Onlook：在真实代码上直接进行视觉设计</a></li>
+          <li><a href="https://www.sketch.com/changelog/ghent/">Sketch 2026.4：组件变体正式上线</a></li>
+          <li><a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/">Google Stitch Loop：让 AI 参与产品持续优化</a></li>
+          <li><a href="https://www.canva.com/newsroom/news/ai-controls-canva/">Canva：现在可以关闭生成式 AI 了</a></li>
+          <li><a href="https://www.nngroup.com/articles/raw-data-vs-synthesized-data/">NN/g：AI 生成设计，更需要整理好的研究结论</a></li>
+          <li><a href="https://library.jjangik.kr/">Interaction Library：藏在虚拟书架里的交互灵感</a></li>
+          <li><a href="https://globallane.surge.sh/#explore">环球小径：把出国攻略做成一套交互式工具</a></li>
+          <li><a href="https://tincan.kids/products/tin-can">Tin Can：一款没有屏幕的儿童电话</a></li>
+          <li><a href="https://smith-diction.com/work">PHS：一套会生长的植物品牌识别</a></li>
+          <li><a href="https://andwalsh.com/work/all/insomnia-cookies/">&amp;Walsh：把真正的饼干做成品牌 Logo</a></li>
+          <li><a href="https://www.lovecreative.com/work/everleaf-casestudy">Everleaf：用真实植物与阳光创作包装视觉</a></li>
+          <li><a href="https://googlefonts.github.io/noto-emoji-files/">Google Noto Emoji：免费的 Emoji 表情素材库</a></li>
+          <li><a href="https://mp.weixin.qq.com/s/EDzdPwDuxYes2YSXePmh0Q">Figma 教育版被锁？紧急转移设计文件指南</a></li>
+          <li><a href="https://mp.weixin.qq.com/s/arPdKjXxH9bJcmPBckozPA">老三的本周思考：我们越来越会安排生活，却很难去感受和体验生活</a></li>
+        </ul>
+        <p><a href="https://www.yuque.com/zhanglaosan-bz7nq/blot0b/nuk1vgfa5t3fqwmm?singleDoc">阅读语雀完整原刊</a></p>
+      ]]></content:encoded>
+      <enclosure
+        url="https://sanhao-design-weekly.pages.dev/assets/vol46-figma-specs.png"
+        length="805901"
+        type="image/png"
+      />
+    </item>
 
     <item>
       <title>三号设计周刊 Vol.45</title>
